@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package lnrpc;
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc";
+option go_package = "github.com/ltcsuite/lnd/lnrpc";
 
 /*
  * Comments in this file will be directly parsed into the API
@@ -669,6 +669,9 @@ enum OutputScriptType {
     SCRIPT_TYPE_NON_STANDARD = 7;
     SCRIPT_TYPE_WITNESS_UNKNOWN = 8;
     SCRIPT_TYPE_WITNESS_V1_TAPROOT = 9;
+    SCRIPT_TYPE_WITNESS_MWEB_HOGADDR = 10;
+    SCRIPT_TYPE_WITNESS_MWEB_PEGIN = 11;
+    SCRIPT_TYPE_MWEB = 12;
 }
 
 message OutputDetail {
@@ -1164,9 +1167,8 @@ message SendCoinsRequest {
     int64 sat_per_byte = 5 [deprecated = true];
 
     /*
-    If set, then the amount field will be ignored, and lnd will attempt to
-    send all the coins under control of the internal wallet to the specified
-    address.
+    If set, the amount field should be unset. It indicates lnd will send all
+    wallet coins or all selected coins to the specified address.
     */
     bool send_all = 6;
 
@@ -1179,6 +1181,9 @@ message SendCoinsRequest {
 
     // Whether unconfirmed outputs should be used as inputs for the transaction.
     bool spend_unconfirmed = 9;
+
+    // A list of selected outpoints as inputs for the transaction.
+    repeated OutPoint outpoints = 11;
 }
 message SendCoinsResponse {
     // The transaction ID of the transaction
@@ -1206,6 +1211,7 @@ message ListUnspentResponse {
 - `p2wkh`: Pay to witness key hash (`WITNESS_PUBKEY_HASH` = 0)
 - `np2wkh`: Pay to nested witness key hash (`NESTED_PUBKEY_HASH` = 1)
 - `p2tr`: Pay to taproot pubkey (`TAPROOT_PUBKEY` = 4)
+- `mweb`: MWEB (`MWEB` = 6)
 */
 enum AddressType {
     WITNESS_PUBKEY_HASH = 0;
@@ -1214,6 +1220,8 @@ enum AddressType {
     UNUSED_NESTED_PUBKEY_HASH = 3;
     TAPROOT_PUBKEY = 4;
     UNUSED_TAPROOT_PUBKEY = 5;
+    MWEB = 6;
+    UNUSED_MWEB = 7;
 }
 
 message NewAddressRequest {
@@ -3665,11 +3673,6 @@ message Invoice {
     Note: Output only, don't specify for creating an invoice.
     */
     map<string, AMPInvoiceState> amp_invoice_state = 28;
-
-    /*
-    The minimum number of hop hints to include in this invoice.
-    */
-    int32 min_hop_hints = 29;
 }
 
 enum InvoiceHTLCState {
