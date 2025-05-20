@@ -48,12 +48,12 @@
     }
   },
   "scripts": {
-    "example": "yarn workspace react-native-turbo-lnd-example",
+    "example": "yarn workspace react-native-turbo-lndltc-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
-    "1prepare": "yarn generate-bindings && yarn generate-codegen-specs && bob build",
+    "prepare": "yarn generate-bindings && yarn generate-codegen-specs && bob build",
     "release": "release-it",
     "generate-codegen-specs": "node scripts/generate-codegen-specs.cjs",
     "generate-bindings": "yarn workspace protoc-generator generate"

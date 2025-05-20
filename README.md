@@ -1,17 +1,17 @@
-# react-native-turbo-lnd
+# react-native-turbo-lndltc
 
-A pure C++-only TurboModule for [lnd](https://github.com/lightningnetwork/lnd).
+A pure C++-only TurboModule for [lndltc](https://github.com/ltcsuite/lnd).
 
 Easily embed and interact with the Lightning Network client lnd inside an
 app with a convenient API. This lib uses lnd's
 [falafel](https://github.com/lightninglabs/falafel) bindings in order to run
 lnd embedded inside an app.
 
-* ⚡️ Runs [lnd](https://github.com/lightningnetwork/lnd) embedded inside your
+* ⚡️ Runs [lndltc](https://github.com/ltcsuite/lnd) embedded inside your
 app
 
 * 🕺 Epic [C++ TurboModule](https://github.com/reactwg/react-native-new-architecture/blob/main/docs/turbo-modules-xplat.md)
-bindings for interacting with lnd, sharing the same source-code for all
+bindings for interacting with lndltc, sharing the same source-code for all
 platforms
 
 * 🤯 Convenient and simple API for all lnd gRPC methods and server/bidi streams
@@ -21,7 +21,7 @@ platforms
 
 * 📦 Unopinionated core bindings for other protobuf libraries. Zero dependencies
 
-* 👷‍♂️ Provide your own lnd binaries, or use our prebuilt ones
+* 👷‍♂️ Provide your own lndltc binaries, or use our prebuilt ones
 
 ### Platform support:
 
@@ -35,11 +35,11 @@ platforms
 ✅ Jest mocks (all gRPC methods not yet mocked)
 ```
 
-An opinionated API `react-native-turbo-lnd` using protobuf-es bindings is
+An opinionated API `react-native-turbo-lndltc` using protobuf-es bindings is
 provided for lnd's protobufs, giving auto-complete and type-safety for all
 protobufs and gRPC methods.
 
-An unopinionated core API `react-native-turbo-lnd/core` to lnd's falafel
+An unopinionated core API `react-native-turbo-lndltc/core` to lnd's falafel
 bindings is also available if you want to use another protobuf library.
 This API let's you send and receive protobufs as base64-encoded strings,
 which you can then encode/decode yourself.
@@ -58,7 +58,7 @@ plans to support it.
 1. Install the package:
 
 ```sh
-yarn add react-native-turbo-lnd
+yarn add react-native-turbo-lndltc
 
 ## If you wish to use the protobuf-es bindings:
 yarn add @bufbuild/protobuf
@@ -68,7 +68,7 @@ yarn add @bufbuild/protobuf
 Follow the instructions here for each platform:
 
 ### Android:
-Download the latest `lnd-cgo-android.zip` from [hsjoberg/react-native-turbo-lnd/releases](https://github.com/hsjoberg/react-native-turbo-lnd/releases)
+Download the latest `lnd-cgo-android.zip` from [litecoin-foundation/react-native-turbo-lndltc/releases](https://github.com/litecoin-foundation/react-native-turbo-lndltc/releases)
 containing lnd `.so` binaries and unzip the files to
 `<project root>/android/app/src/main/jniLibs`.
 The structure should look like this:
@@ -86,7 +86,7 @@ android/app/src/main/jniLibs
 
 Note: CMake will by default look for the files in
 `../../../android/app/src/main/jniLibs`, starting from
-`<project root>/node_modules/react-native-turbo-lnd/cpp`.
+`<project root>/node_modules/react-native-turbo-lndltc/cpp`.
 
 If you have another structure or wish to customize it, you can pass in
 `-DLND_JNILIBS_PATH` to CMake. For example from your app/build.gradle:
@@ -104,7 +104,7 @@ defaultConfig {
 
 ### iOS/macOS:
 Download the latest `liblnd-{ios|mac}.zip` file from
-[hsjoberg/react-native-turbo-lnd/releases](https://github.com/hsjoberg/react-native-turbo-lnd/releases)
+[litecoin-foundation/react-native-turbo-lndltc/releases](https://github.com/litecoin-foundation/react-native-turbo-lndltc/releases)
 and unzip it. Then rename `liblnd-fat.a` to `liblnd.a` and place it in
 `<project root>/{ios|macos}/liblnd.a`. Navigate to the folder in Finder and drag
 the `liblnd.a` file into the Xcode project root. Check "Copy items if needed".
@@ -124,7 +124,7 @@ and Embedded Content" section and click on the "+" button. Search for the
 > root of your project, run:
 >
 > ```
-> node node_modules/react-native-turbo-lnd/src/fetch-lnd.js
+> node node_modules/react-native-turbo-lndltc/src/fetch-lnd.js
 > ```
 
 3. Done!
@@ -133,12 +133,12 @@ and Embedded Content" section and click on the "+" button. Search for the
 
 ```TSX
 import { Button, View } from "react-native";
-import { start, getInfo } from "react-native-turbo-lnd";
+import { start, getInfo } from "react-native-turbo-lndltc";
 
 export default function App() {
   const onPressStart = async () => {
     await start(
-      `--lnddir="<TODO>" --noseedbackup --nolisten --bitcoin.active --bitcoin.mainnet --bitcoin.node=neutrino --feeurl="https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json" --routing.assumechanvalid --tlsdisableautofill --neutrino.connect=192.168.10.120:19444`
+      `--lnddir="<TODO>" --noseedbackup --nolisten --litecoin.active --litecoin.mainnet --litecoin.node=neutrino --feeurl="https://litecoinspace.org/api/v1/fees/recommended-lnd" --routing.assumechanvalid --tlsdisableautofill --neutrino.connect=192.168.10.120:19444`
     );
   }
 
@@ -164,6 +164,8 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
+
+This library is a fork of [react-native-turbo-lnd](https://github.com/hsjoberg/react-native-turbo-lnd), which is offered under the MIT License.
 
 ---
 
