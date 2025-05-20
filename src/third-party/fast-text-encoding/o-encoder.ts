@@ -19,7 +19,7 @@ export class FastTextEncoder {
    * @param {{stream: boolean}=} options
    * @return {Uint8Array}
    */
-  encode(string: string, options?: { stream: boolean }): Uint8Array {
+  encode(string: string, options?: { stream: boolean }): Buffer | Uint8Array {
     maybeThrowFailedToOption(options?.stream, "encode", "stream");
     return encodeImpl(string);
   }

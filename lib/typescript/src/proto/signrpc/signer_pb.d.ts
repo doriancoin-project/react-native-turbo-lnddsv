@@ -644,6 +644,18 @@ export type MuSig2SessionRequest = Message<"signrpc.MuSig2SessionRequest"> & {
      * @generated from field: signrpc.MuSig2Version version = 6;
      */
     version: MuSig2Version;
+    /**
+     *
+     * A set of pre generated secret local nonces to use in the musig2 session.
+     * This field is optional. This can be useful for protocols that need to send
+     * nonces ahead of time before the set of signer keys are known. This value
+     * MUST be 97 bytes and be the concatenation of two CSPRNG generated 32 byte
+     * values and local public key used for signing as specified in the key_loc
+     * field.
+     *
+     * @generated from field: bytes pregenerated_local_nonce = 7;
+     */
+    pregeneratedLocalNonce: Uint8Array;
 };
 /**
  * Describes the message signrpc.MuSig2SessionRequest.

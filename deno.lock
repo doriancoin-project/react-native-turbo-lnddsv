@@ -182,7 +182,6 @@
         "npm:eslint@^8.51.0",
         "npm:jest@^29.7.0",
         "npm:prettier@^3.0.3",
-        "npm:protobufjs@^7.5.2",
         "npm:react-native-builder-bob@0.30.0",
         "npm:react-native@0.76.1",
         "npm:react@18.3.1",

@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file neutrinorpc/neutrino.proto.
  */
 export const file_neutrinorpc_neutrino: GenFile = /*@__PURE__*/
-  fileDesc("ChpuZXV0cmlub3JwYy9uZXV0cmluby5wcm90bxILbmV1dHJpbm9ycGMiDwoNU3RhdHVzUmVxdWVzdCJpCg5TdGF0dXNSZXNwb25zZRIOCgZhY3RpdmUYASABKAgSDgoGc3luY2VkGAIgASgIEhQKDGJsb2NrX2hlaWdodBgDIAEoBRISCgpibG9ja19oYXNoGAQgASgJEg0KBXBlZXJzGAUgAygJIiQKDkFkZFBlZXJSZXF1ZXN0EhIKCnBlZXJfYWRkcnMYASABKAkiEQoPQWRkUGVlclJlc3BvbnNlIisKFURpc2Nvbm5lY3RQZWVyUmVxdWVzdBISCgpwZWVyX2FkZHJzGAEgASgJIhgKFkRpc2Nvbm5lY3RQZWVyUmVzcG9uc2UiJQoPSXNCYW5uZWRSZXF1ZXN0EhIKCnBlZXJfYWRkcnMYASABKAkiIgoQSXNCYW5uZWRSZXNwb25zZRIOCgZiYW5uZWQYASABKAgiJQoVR2V0QmxvY2tIZWFkZXJSZXF1ZXN0EgwKBGhhc2gYASABKAkiogIKFkdldEJsb2NrSGVhZGVyUmVzcG9uc2USDAoEaGFzaBgBIAEoCRIVCg1jb25maXJtYXRpb25zGAIgASgDEhUKDXN0cmlwcGVkX3NpemUYAyABKAMSDAoEc2l6ZRgEIAEoAxIOCgZ3ZWlnaHQYBSABKAMSDgoGaGVpZ2h0GAYgASgFEg8KB3ZlcnNpb24YByABKAUSEwoLdmVyc2lvbl9oZXgYCCABKAkSEgoKbWVya2xlcm9vdBgJIAEoCRIMCgR0aW1lGAogASgDEg0KBW5vbmNlGAsgASgNEgwKBGJpdHMYDCABKAkSCwoDbnR4GA0gASgFEhsKE3ByZXZpb3VzX2Jsb2NrX2hhc2gYDiABKAkSDwoHcmF3X2hleBgPIAEoDCIfCg9HZXRCbG9ja1JlcXVlc3QSDAoEaGFzaBgBIAEoCSKoAgoQR2V0QmxvY2tSZXNwb25zZRIMCgRoYXNoGAEgASgJEhUKDWNvbmZpcm1hdGlvbnMYAiABKAMSFQoNc3RyaXBwZWRfc2l6ZRgDIAEoAxIMCgRzaXplGAQgASgDEg4KBndlaWdodBgFIAEoAxIOCgZoZWlnaHQYBiABKAUSDwoHdmVyc2lvbhgHIAEoBRITCgt2ZXJzaW9uX2hleBgIIAEoCRISCgptZXJrbGVyb290GAkgASgJEgoKAnR4GAogAygJEgwKBHRpbWUYCyABKAMSDQoFbm9uY2UYDCABKA0SDAoEYml0cxgNIAEoCRILCgNudHgYDiABKAUSGwoTcHJldmlvdXNfYmxvY2tfaGFzaBgPIAEoCRIPCgdyYXdfaGV4GBAgASgMIiEKEUdldENGaWx0ZXJSZXF1ZXN0EgwKBGhhc2gYASABKAkiJAoSR2V0Q0ZpbHRlclJlc3BvbnNlEg4KBmZpbHRlchgBIAEoDCIlChNHZXRCbG9ja0hhc2hSZXF1ZXN0Eg4KBmhlaWdodBgBIAEoBSIkChRHZXRCbG9ja0hhc2hSZXNwb25zZRIMCgRoYXNoGAEgASgJMocFCgtOZXV0cmlub0tpdBJBCgZTdGF0dXMSGi5uZXV0cmlub3JwYy5TdGF0dXNSZXF1ZXN0GhsubmV1dHJpbm9ycGMuU3RhdHVzUmVzcG9uc2USRAoHQWRkUGVlchIbLm5ldXRyaW5vcnBjLkFkZFBlZXJSZXF1ZXN0GhwubmV1dHJpbm9ycGMuQWRkUGVlclJlc3BvbnNlElkKDkRpc2Nvbm5lY3RQZWVyEiIubmV1dHJpbm9ycGMuRGlzY29ubmVjdFBlZXJSZXF1ZXN0GiMubmV1dHJpbm9ycGMuRGlzY29ubmVjdFBlZXJSZXNwb25zZRJHCghJc0Jhbm5lZBIcLm5ldXRyaW5vcnBjLklzQmFubmVkUmVxdWVzdBodLm5ldXRyaW5vcnBjLklzQmFubmVkUmVzcG9uc2USWQoOR2V0QmxvY2tIZWFkZXISIi5uZXV0cmlub3JwYy5HZXRCbG9ja0hlYWRlclJlcXVlc3QaIy5uZXV0cmlub3JwYy5HZXRCbG9ja0hlYWRlclJlc3BvbnNlEkcKCEdldEJsb2NrEhwubmV1dHJpbm9ycGMuR2V0QmxvY2tSZXF1ZXN0Gh0ubmV1dHJpbm9ycGMuR2V0QmxvY2tSZXNwb25zZRJNCgpHZXRDRmlsdGVyEh4ubmV1dHJpbm9ycGMuR2V0Q0ZpbHRlclJlcXVlc3QaHy5uZXV0cmlub3JwYy5HZXRDRmlsdGVyUmVzcG9uc2USWAoMR2V0QmxvY2tIYXNoEiAubmV1dHJpbm9ycGMuR2V0QmxvY2tIYXNoUmVxdWVzdBohLm5ldXRyaW5vcnBjLkdldEJsb2NrSGFzaFJlc3BvbnNlIgOIAgFCM1oxZ2l0aHViLmNvbS9saWdodG5pbmduZXR3b3JrL2xuZC9sbnJwYy9uZXV0cmlub3JwY2IGcHJvdG8z");
+  fileDesc("ChpuZXV0cmlub3JwYy9uZXV0cmluby5wcm90bxILbmV1dHJpbm9ycGMiDwoNU3RhdHVzUmVxdWVzdCJpCg5TdGF0dXNSZXNwb25zZRIOCgZhY3RpdmUYASABKAgSDgoGc3luY2VkGAIgASgIEhQKDGJsb2NrX2hlaWdodBgDIAEoBRISCgpibG9ja19oYXNoGAQgASgJEg0KBXBlZXJzGAUgAygJIiQKDkFkZFBlZXJSZXF1ZXN0EhIKCnBlZXJfYWRkcnMYASABKAkiEQoPQWRkUGVlclJlc3BvbnNlIisKFURpc2Nvbm5lY3RQZWVyUmVxdWVzdBISCgpwZWVyX2FkZHJzGAEgASgJIhgKFkRpc2Nvbm5lY3RQZWVyUmVzcG9uc2UiJQoPSXNCYW5uZWRSZXF1ZXN0EhIKCnBlZXJfYWRkcnMYASABKAkiIgoQSXNCYW5uZWRSZXNwb25zZRIOCgZiYW5uZWQYASABKAgiJQoVR2V0QmxvY2tIZWFkZXJSZXF1ZXN0EgwKBGhhc2gYASABKAkiogIKFkdldEJsb2NrSGVhZGVyUmVzcG9uc2USDAoEaGFzaBgBIAEoCRIVCg1jb25maXJtYXRpb25zGAIgASgDEhUKDXN0cmlwcGVkX3NpemUYAyABKAMSDAoEc2l6ZRgEIAEoAxIOCgZ3ZWlnaHQYBSABKAMSDgoGaGVpZ2h0GAYgASgFEg8KB3ZlcnNpb24YByABKAUSEwoLdmVyc2lvbl9oZXgYCCABKAkSEgoKbWVya2xlcm9vdBgJIAEoCRIMCgR0aW1lGAogASgDEg0KBW5vbmNlGAsgASgNEgwKBGJpdHMYDCABKAkSCwoDbnR4GA0gASgFEhsKE3ByZXZpb3VzX2Jsb2NrX2hhc2gYDiABKAkSDwoHcmF3X2hleBgPIAEoDCIfCg9HZXRCbG9ja1JlcXVlc3QSDAoEaGFzaBgBIAEoCSKoAgoQR2V0QmxvY2tSZXNwb25zZRIMCgRoYXNoGAEgASgJEhUKDWNvbmZpcm1hdGlvbnMYAiABKAMSFQoNc3RyaXBwZWRfc2l6ZRgDIAEoAxIMCgRzaXplGAQgASgDEg4KBndlaWdodBgFIAEoAxIOCgZoZWlnaHQYBiABKAUSDwoHdmVyc2lvbhgHIAEoBRITCgt2ZXJzaW9uX2hleBgIIAEoCRISCgptZXJrbGVyb290GAkgASgJEgoKAnR4GAogAygJEgwKBHRpbWUYCyABKAMSDQoFbm9uY2UYDCABKA0SDAoEYml0cxgNIAEoCRILCgNudHgYDiABKAUSGwoTcHJldmlvdXNfYmxvY2tfaGFzaBgPIAEoCRIPCgdyYXdfaGV4GBAgASgMIiEKEUdldENGaWx0ZXJSZXF1ZXN0EgwKBGhhc2gYASABKAkiJAoSR2V0Q0ZpbHRlclJlc3BvbnNlEg4KBmZpbHRlchgBIAEoDCIlChNHZXRCbG9ja0hhc2hSZXF1ZXN0Eg4KBmhlaWdodBgBIAEoBSIkChRHZXRCbG9ja0hhc2hSZXNwb25zZRIMCgRoYXNoGAEgASgJMocFCgtOZXV0cmlub0tpdBJBCgZTdGF0dXMSGi5uZXV0cmlub3JwYy5TdGF0dXNSZXF1ZXN0GhsubmV1dHJpbm9ycGMuU3RhdHVzUmVzcG9uc2USRAoHQWRkUGVlchIbLm5ldXRyaW5vcnBjLkFkZFBlZXJSZXF1ZXN0GhwubmV1dHJpbm9ycGMuQWRkUGVlclJlc3BvbnNlElkKDkRpc2Nvbm5lY3RQZWVyEiIubmV1dHJpbm9ycGMuRGlzY29ubmVjdFBlZXJSZXF1ZXN0GiMubmV1dHJpbm9ycGMuRGlzY29ubmVjdFBlZXJSZXNwb25zZRJHCghJc0Jhbm5lZBIcLm5ldXRyaW5vcnBjLklzQmFubmVkUmVxdWVzdBodLm5ldXRyaW5vcnBjLklzQmFubmVkUmVzcG9uc2USWQoOR2V0QmxvY2tIZWFkZXISIi5uZXV0cmlub3JwYy5HZXRCbG9ja0hlYWRlclJlcXVlc3QaIy5uZXV0cmlub3JwYy5HZXRCbG9ja0hlYWRlclJlc3BvbnNlEkcKCEdldEJsb2NrEhwubmV1dHJpbm9ycGMuR2V0QmxvY2tSZXF1ZXN0Gh0ubmV1dHJpbm9ycGMuR2V0QmxvY2tSZXNwb25zZRJNCgpHZXRDRmlsdGVyEh4ubmV1dHJpbm9ycGMuR2V0Q0ZpbHRlclJlcXVlc3QaHy5uZXV0cmlub3JwYy5HZXRDRmlsdGVyUmVzcG9uc2USWAoMR2V0QmxvY2tIYXNoEiAubmV1dHJpbm9ycGMuR2V0QmxvY2tIYXNoUmVxdWVzdBohLm5ldXRyaW5vcnBjLkdldEJsb2NrSGFzaFJlc3BvbnNlIgOIAgFCK1opZ2l0aHViLmNvbS9sdGNzdWl0ZS9sbmQvbG5ycGMvbmV1dHJpbm9ycGNiBnByb3RvMw");
 
 /**
  * @generated from message neutrinorpc.StatusRequest
@@ -535,7 +535,7 @@ export const GetBlockHashResponseSchema: GenMessage<GetBlockHashResponse> = /*@_
  */
 export const NeutrinoKit: GenService<{
   /**
-   * 
+   *
    * Status returns the status of the light client neutrino instance,
    * along with height and hash of the best block, and a list of connected
    * peers.
@@ -548,7 +548,7 @@ export const NeutrinoKit: GenService<{
     output: typeof StatusResponseSchema;
   },
   /**
-   * 
+   *
    * AddPeer adds a new peer that has already been connected to the server.
    *
    * @generated from rpc neutrinorpc.NeutrinoKit.AddPeer
@@ -559,7 +559,7 @@ export const NeutrinoKit: GenService<{
     output: typeof AddPeerResponseSchema;
   },
   /**
-   * 
+   *
    * DisconnectPeer disconnects a peer by target address. Both outbound and
    * inbound nodes will be searched for the target node. An error message will
    * be returned if the peer was not found.
@@ -572,7 +572,7 @@ export const NeutrinoKit: GenService<{
     output: typeof DisconnectPeerResponseSchema;
   },
   /**
-   * 
+   *
    * IsBanned returns true if the peer is banned, otherwise false.
    *
    * @generated from rpc neutrinorpc.NeutrinoKit.IsBanned
@@ -583,7 +583,7 @@ export const NeutrinoKit: GenService<{
     output: typeof IsBannedResponseSchema;
   },
   /**
-   * 
+   *
    * GetBlockHeader returns a block header with a particular block hash.
    *
    * @generated from rpc neutrinorpc.NeutrinoKit.GetBlockHeader
@@ -594,7 +594,7 @@ export const NeutrinoKit: GenService<{
     output: typeof GetBlockHeaderResponseSchema;
   },
   /**
-   * 
+   *
    * GetBlock returns a block with a particular block hash.
    *
    * @generated from rpc neutrinorpc.NeutrinoKit.GetBlock
@@ -605,7 +605,7 @@ export const NeutrinoKit: GenService<{
     output: typeof GetBlockResponseSchema;
   },
   /**
-   * 
+   *
    * GetCFilter returns a compact filter from a block.
    *
    * @generated from rpc neutrinorpc.NeutrinoKit.GetCFilter
@@ -616,7 +616,7 @@ export const NeutrinoKit: GenService<{
     output: typeof GetCFilterResponseSchema;
   },
   /**
-   * 
+   *
    * Deprecated, use chainrpc.GetBlockHash instead.
    * GetBlockHash returns the header hash of a block at a given height.
    *

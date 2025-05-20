@@ -1121,9 +1121,8 @@ export type SendCoinsRequest = Message<"lnrpc.SendCoinsRequest"> & {
     satPerByte: bigint;
     /**
      *
-     * If set, then the amount field will be ignored, and lnd will attempt to
-     * send all the coins under control of the internal wallet to the specified
-     * address.
+     * If set, the amount field should be unset. It indicates lnd will send all
+     * wallet coins or all selected coins to the specified address.
      *
      * @generated from field: bool send_all = 6;
      */
@@ -1147,6 +1146,12 @@ export type SendCoinsRequest = Message<"lnrpc.SendCoinsRequest"> & {
      * @generated from field: bool spend_unconfirmed = 9;
      */
     spendUnconfirmed: boolean;
+    /**
+     * A list of selected outpoints as inputs for the transaction.
+     *
+     * @generated from field: repeated lnrpc.OutPoint outpoints = 11;
+     */
+    outpoints: OutPoint[];
 };
 /**
  * Describes the message lnrpc.SendCoinsRequest.
@@ -5797,13 +5802,6 @@ export type Invoice = Message<"lnrpc.Invoice"> & {
     ampInvoiceState: {
         [key: string]: AMPInvoiceState;
     };
-    /**
-     *
-     * The minimum number of hop hints to include in this invoice.
-     *
-     * @generated from field: int32 min_hop_hints = 29;
-     */
-    minHopHints: number;
 };
 /**
  * Describes the message lnrpc.Invoice.
@@ -8184,7 +8182,19 @@ export declare enum OutputScriptType {
     /**
      * @generated from enum value: SCRIPT_TYPE_WITNESS_V1_TAPROOT = 9;
      */
-    SCRIPT_TYPE_WITNESS_V1_TAPROOT = 9
+    SCRIPT_TYPE_WITNESS_V1_TAPROOT = 9,
+    /**
+     * @generated from enum value: SCRIPT_TYPE_WITNESS_MWEB_HOGADDR = 10;
+     */
+    SCRIPT_TYPE_WITNESS_MWEB_HOGADDR = 10,
+    /**
+     * @generated from enum value: SCRIPT_TYPE_WITNESS_MWEB_PEGIN = 11;
+     */
+    SCRIPT_TYPE_WITNESS_MWEB_PEGIN = 11,
+    /**
+     * @generated from enum value: SCRIPT_TYPE_MWEB = 12;
+     */
+    SCRIPT_TYPE_MWEB = 12
 }
 /**
  * Describes the enum lnrpc.OutputScriptType.
@@ -8197,6 +8207,7 @@ export declare const OutputScriptTypeSchema: GenEnum<OutputScriptType>;
  * - `p2wkh`: Pay to witness key hash (`WITNESS_PUBKEY_HASH` = 0)
  * - `np2wkh`: Pay to nested witness key hash (`NESTED_PUBKEY_HASH` = 1)
  * - `p2tr`: Pay to taproot pubkey (`TAPROOT_PUBKEY` = 4)
+ * - `mweb`: MWEB (`MWEB` = 6)
  *
  * @generated from enum lnrpc.AddressType
  */
@@ -8224,7 +8235,15 @@ export declare enum AddressType {
     /**
      * @generated from enum value: UNUSED_TAPROOT_PUBKEY = 5;
      */
-    UNUSED_TAPROOT_PUBKEY = 5
+    UNUSED_TAPROOT_PUBKEY = 5,
+    /**
+     * @generated from enum value: MWEB = 6;
+     */
+    MWEB = 6,
+    /**
+     * @generated from enum value: UNUSED_MWEB = 7;
+     */
+    UNUSED_MWEB = 7
 }
 /**
  * Describes the enum lnrpc.AddressType.
@@ -9819,8 +9838,8 @@ export type WatchOnly = Message<"lnrpc.WatchOnly"> & {
     /**
      *
      * The list of accounts to import. There _must_ be an account for all of lnd's
-     * main key scopes: BIP49/BIP84 (m/49'/0'/0', m/84'/0'/0', note that the
-     * coin type is always 0, even for testnet/regtest) and lnd's internal key
+     * main key scopes: BIP49/BIP84 (m/49'/2'/0', m/84'/2'/0', note that the
+     * coin type is always 2, even for testnet/regtest) and lnd's internal key
      * scope (m/1017'/<coin_type>'/<account>'), where account is the key family as
      * defined in `keychain/derivation.go` (currently indices 0 to 9).
      *

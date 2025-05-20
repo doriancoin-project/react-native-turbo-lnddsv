@@ -12,14 +12,14 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file walletunlocker.proto.
  */
 export const file_walletunlocker: GenFile = /*@__PURE__*/
-  fileDesc("ChR3YWxsZXR1bmxvY2tlci5wcm90bxIFbG5ycGMiQQoOR2VuU2VlZFJlcXVlc3QSGQoRYWV6ZWVkX3Bhc3NwaHJhc2UYASABKAwSFAoMc2VlZF9lbnRyb3B5GAIgASgMIkgKD0dlblNlZWRSZXNwb25zZRIcChRjaXBoZXJfc2VlZF9tbmVtb25pYxgBIAMoCRIXCg9lbmNpcGhlcmVkX3NlZWQYAiABKAwi2AIKEUluaXRXYWxsZXRSZXF1ZXN0EhcKD3dhbGxldF9wYXNzd29yZBgBIAEoDBIcChRjaXBoZXJfc2VlZF9tbmVtb25pYxgCIAMoCRIZChFhZXplZWRfcGFzc3BocmFzZRgDIAEoDBIXCg9yZWNvdmVyeV93aW5kb3cYBCABKAUSMgoPY2hhbm5lbF9iYWNrdXBzGAUgASgLMhkubG5ycGMuQ2hhbkJhY2t1cFNuYXBzaG90EhYKDnN0YXRlbGVzc19pbml0GAYgASgIEhsKE2V4dGVuZGVkX21hc3Rlcl9rZXkYByABKAkSLgomZXh0ZW5kZWRfbWFzdGVyX2tleV9iaXJ0aGRheV90aW1lc3RhbXAYCCABKAQSJAoKd2F0Y2hfb25seRgJIAEoCzIQLmxucnBjLldhdGNoT25seRIZChFtYWNhcm9vbl9yb290X2tleRgKIAEoDCIsChJJbml0V2FsbGV0UmVzcG9uc2USFgoOYWRtaW5fbWFjYXJvb24YASABKAwifQoJV2F0Y2hPbmx5EiUKHW1hc3Rlcl9rZXlfYmlydGhkYXlfdGltZXN0YW1wGAEgASgEEh4KFm1hc3Rlcl9rZXlfZmluZ2VycHJpbnQYAiABKAwSKQoIYWNjb3VudHMYAyADKAsyFy5sbnJwYy5XYXRjaE9ubHlBY2NvdW50IlUKEFdhdGNoT25seUFjY291bnQSDwoHcHVycG9zZRgBIAEoDRIRCgljb2luX3R5cGUYAiABKA0SDwoHYWNjb3VudBgDIAEoDRIMCgR4cHViGAQgASgJIpMBChNVbmxvY2tXYWxsZXRSZXF1ZXN0EhcKD3dhbGxldF9wYXNzd29yZBgBIAEoDBIXCg9yZWNvdmVyeV93aW5kb3cYAiABKAUSMgoPY2hhbm5lbF9iYWNrdXBzGAMgASgLMhkubG5ycGMuQ2hhbkJhY2t1cFNuYXBzaG90EhYKDnN0YXRlbGVzc19pbml0GAQgASgIIhYKFFVubG9ja1dhbGxldFJlc3BvbnNlIn4KFUNoYW5nZVBhc3N3b3JkUmVxdWVzdBIYChBjdXJyZW50X3Bhc3N3b3JkGAEgASgMEhQKDG5ld19wYXNzd29yZBgCIAEoDBIWCg5zdGF0ZWxlc3NfaW5pdBgDIAEoCBIdChVuZXdfbWFjYXJvb25fcm9vdF9rZXkYBCABKAgiMAoWQ2hhbmdlUGFzc3dvcmRSZXNwb25zZRIWCg5hZG1pbl9tYWNhcm9vbhgBIAEoDDKlAgoOV2FsbGV0VW5sb2NrZXISOAoHR2VuU2VlZBIVLmxucnBjLkdlblNlZWRSZXF1ZXN0GhYubG5ycGMuR2VuU2VlZFJlc3BvbnNlEkEKCkluaXRXYWxsZXQSGC5sbnJwYy5Jbml0V2FsbGV0UmVxdWVzdBoZLmxucnBjLkluaXRXYWxsZXRSZXNwb25zZRJHCgxVbmxvY2tXYWxsZXQSGi5sbnJwYy5VbmxvY2tXYWxsZXRSZXF1ZXN0GhsubG5ycGMuVW5sb2NrV2FsbGV0UmVzcG9uc2USTQoOQ2hhbmdlUGFzc3dvcmQSHC5sbnJwYy5DaGFuZ2VQYXNzd29yZFJlcXVlc3QaHS5sbnJwYy5DaGFuZ2VQYXNzd29yZFJlc3BvbnNlQidaJWdpdGh1Yi5jb20vbGlnaHRuaW5nbmV0d29yay9sbmQvbG5ycGNiBnByb3RvMw", [file_lightning]);
+  fileDesc("ChR3YWxsZXR1bmxvY2tlci5wcm90bxIFbG5ycGMiQQoOR2VuU2VlZFJlcXVlc3QSGQoRYWV6ZWVkX3Bhc3NwaHJhc2UYASABKAwSFAoMc2VlZF9lbnRyb3B5GAIgASgMIkgKD0dlblNlZWRSZXNwb25zZRIcChRjaXBoZXJfc2VlZF9tbmVtb25pYxgBIAMoCRIXCg9lbmNpcGhlcmVkX3NlZWQYAiABKAwi2AIKEUluaXRXYWxsZXRSZXF1ZXN0EhcKD3dhbGxldF9wYXNzd29yZBgBIAEoDBIcChRjaXBoZXJfc2VlZF9tbmVtb25pYxgCIAMoCRIZChFhZXplZWRfcGFzc3BocmFzZRgDIAEoDBIXCg9yZWNvdmVyeV93aW5kb3cYBCABKAUSMgoPY2hhbm5lbF9iYWNrdXBzGAUgASgLMhkubG5ycGMuQ2hhbkJhY2t1cFNuYXBzaG90EhYKDnN0YXRlbGVzc19pbml0GAYgASgIEhsKE2V4dGVuZGVkX21hc3Rlcl9rZXkYByABKAkSLgomZXh0ZW5kZWRfbWFzdGVyX2tleV9iaXJ0aGRheV90aW1lc3RhbXAYCCABKAQSJAoKd2F0Y2hfb25seRgJIAEoCzIQLmxucnBjLldhdGNoT25seRIZChFtYWNhcm9vbl9yb290X2tleRgKIAEoDCIsChJJbml0V2FsbGV0UmVzcG9uc2USFgoOYWRtaW5fbWFjYXJvb24YASABKAwifQoJV2F0Y2hPbmx5EiUKHW1hc3Rlcl9rZXlfYmlydGhkYXlfdGltZXN0YW1wGAEgASgEEh4KFm1hc3Rlcl9rZXlfZmluZ2VycHJpbnQYAiABKAwSKQoIYWNjb3VudHMYAyADKAsyFy5sbnJwYy5XYXRjaE9ubHlBY2NvdW50IlUKEFdhdGNoT25seUFjY291bnQSDwoHcHVycG9zZRgBIAEoDRIRCgljb2luX3R5cGUYAiABKA0SDwoHYWNjb3VudBgDIAEoDRIMCgR4cHViGAQgASgJIpMBChNVbmxvY2tXYWxsZXRSZXF1ZXN0EhcKD3dhbGxldF9wYXNzd29yZBgBIAEoDBIXCg9yZWNvdmVyeV93aW5kb3cYAiABKAUSMgoPY2hhbm5lbF9iYWNrdXBzGAMgASgLMhkubG5ycGMuQ2hhbkJhY2t1cFNuYXBzaG90EhYKDnN0YXRlbGVzc19pbml0GAQgASgIIhYKFFVubG9ja1dhbGxldFJlc3BvbnNlIn4KFUNoYW5nZVBhc3N3b3JkUmVxdWVzdBIYChBjdXJyZW50X3Bhc3N3b3JkGAEgASgMEhQKDG5ld19wYXNzd29yZBgCIAEoDBIWCg5zdGF0ZWxlc3NfaW5pdBgDIAEoCBIdChVuZXdfbWFjYXJvb25fcm9vdF9rZXkYBCABKAgiMAoWQ2hhbmdlUGFzc3dvcmRSZXNwb25zZRIWCg5hZG1pbl9tYWNhcm9vbhgBIAEoDDKlAgoOV2FsbGV0VW5sb2NrZXISOAoHR2VuU2VlZBIVLmxucnBjLkdlblNlZWRSZXF1ZXN0GhYubG5ycGMuR2VuU2VlZFJlc3BvbnNlEkEKCkluaXRXYWxsZXQSGC5sbnJwYy5Jbml0V2FsbGV0UmVxdWVzdBoZLmxucnBjLkluaXRXYWxsZXRSZXNwb25zZRJHCgxVbmxvY2tXYWxsZXQSGi5sbnJwYy5VbmxvY2tXYWxsZXRSZXF1ZXN0GhsubG5ycGMuVW5sb2NrV2FsbGV0UmVzcG9uc2USTQoOQ2hhbmdlUGFzc3dvcmQSHC5sbnJwYy5DaGFuZ2VQYXNzd29yZFJlcXVlc3QaHS5sbnJwYy5DaGFuZ2VQYXNzd29yZFJlc3BvbnNlQh9aHWdpdGh1Yi5jb20vbHRjc3VpdGUvbG5kL2xucnBjYgZwcm90bzM", [file_lightning]);
 
 /**
  * @generated from message lnrpc.GenSeedRequest
  */
 export type GenSeedRequest = Message<"lnrpc.GenSeedRequest"> & {
   /**
-   * 
+   *
    * aezeed_passphrase is an optional user provided passphrase that will be used
    * to encrypt the generated aezeed cipher seed. When using REST, this field
    * must be encoded as base64.
@@ -29,7 +29,7 @@ export type GenSeedRequest = Message<"lnrpc.GenSeedRequest"> & {
   aezeedPassphrase: Uint8Array;
 
   /**
-   * 
+   *
    * seed_entropy is an optional 16-bytes generated via CSPRNG. If not
    * specified, then a fresh set of randomness will be used to create the seed.
    * When using REST, this field must be encoded as base64.
@@ -51,7 +51,7 @@ export const GenSeedRequestSchema: GenMessage<GenSeedRequest> = /*@__PURE__*/
  */
 export type GenSeedResponse = Message<"lnrpc.GenSeedResponse"> & {
   /**
-   * 
+   *
    * cipher_seed_mnemonic is a 24-word mnemonic that encodes a prior aezeed
    * cipher seed obtained by the user. This field is optional, as if not
    * provided, then the daemon will generate a new cipher seed for the user.
@@ -63,7 +63,7 @@ export type GenSeedResponse = Message<"lnrpc.GenSeedResponse"> & {
   cipherSeedMnemonic: string[];
 
   /**
-   * 
+   *
    * enciphered_seed are the raw aezeed cipher seed bytes. This is the raw
    * cipher text before run through our mnemonic encoding scheme.
    *
@@ -84,7 +84,7 @@ export const GenSeedResponseSchema: GenMessage<GenSeedResponse> = /*@__PURE__*/
  */
 export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   /**
-   * 
+   *
    * wallet_password is the passphrase that should be used to encrypt the
    * wallet. This MUST be at least 8 chars in length. After creation, this
    * password is required to unlock the daemon. When using REST, this field
@@ -95,7 +95,7 @@ export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   walletPassword: Uint8Array;
 
   /**
-   * 
+   *
    * cipher_seed_mnemonic is a 24-word mnemonic that encodes a prior aezeed
    * cipher seed obtained by the user. This may have been generated by the
    * GenSeed method, or be an existing seed.
@@ -105,7 +105,7 @@ export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   cipherSeedMnemonic: string[];
 
   /**
-   * 
+   *
    * aezeed_passphrase is an optional user provided passphrase that will be used
    * to encrypt the generated aezeed cipher seed. When using REST, this field
    * must be encoded as base64.
@@ -115,7 +115,7 @@ export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   aezeedPassphrase: Uint8Array;
 
   /**
-   * 
+   *
    * recovery_window is an optional argument specifying the address lookahead
    * when restoring a wallet seed. The recovery window applies to each
    * individual branch of the BIP44 derivation paths. Supplying a recovery
@@ -127,7 +127,7 @@ export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   recoveryWindow: number;
 
   /**
-   * 
+   *
    * channel_backups is an optional argument that allows clients to recover the
    * settled funds within a set of channels. This should be populated if the
    * user was unable to close out all channels and sweep funds before partial or
@@ -140,7 +140,7 @@ export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   channelBackups?: ChanBackupSnapshot;
 
   /**
-   * 
+   *
    * stateless_init is an optional argument instructing the daemon NOT to create
    * any *.macaroon files in its filesystem. If this parameter is set, then the
    * admin macaroon returned in the response MUST be stored by the caller of the
@@ -151,7 +151,7 @@ export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   statelessInit: boolean;
 
   /**
-   * 
+   *
    * extended_master_key is an alternative to specifying cipher_seed_mnemonic and
    * aezeed_passphrase. Instead of deriving the master root key from the entropy
    * of an aezeed cipher seed, the given extended master root key is used
@@ -170,7 +170,7 @@ export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   extendedMasterKey: string;
 
   /**
-   * 
+   *
    * extended_master_key_birthday_timestamp is the optional unix timestamp in
    * seconds to use as the wallet's birthday when using an extended master key
    * to restore the wallet. lnd will only start scanning for funds in blocks that
@@ -184,7 +184,7 @@ export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   extendedMasterKeyBirthdayTimestamp: bigint;
 
   /**
-   * 
+   *
    * watch_only is the third option of initializing a wallet: by importing
    * account xpubs only and therefore creating a watch-only wallet that does not
    * contain any private keys. That means the wallet won't be able to sign for
@@ -196,7 +196,7 @@ export type InitWalletRequest = Message<"lnrpc.InitWalletRequest"> & {
   watchOnly?: WatchOnly;
 
   /**
-   * 
+   *
    * macaroon_root_key is an optional 32 byte macaroon root key that can be
    * provided when initializing the wallet rather than letting lnd generate one
    * on its own.
@@ -218,7 +218,7 @@ export const InitWalletRequestSchema: GenMessage<InitWalletRequest> = /*@__PURE_
  */
 export type InitWalletResponse = Message<"lnrpc.InitWalletResponse"> & {
   /**
-   * 
+   *
    * The binary serialized admin macaroon that can be used to access the daemon
    * after creating the wallet. If the stateless_init parameter was set to true,
    * this is the ONLY copy of the macaroon and MUST be stored safely by the
@@ -242,7 +242,7 @@ export const InitWalletResponseSchema: GenMessage<InitWalletResponse> = /*@__PUR
  */
 export type WatchOnly = Message<"lnrpc.WatchOnly"> & {
   /**
-   * 
+   *
    * The unix timestamp in seconds of when the master key was created. lnd will
    * only start scanning for funds in blocks that are after the birthday which
    * can speed up the process significantly. If the birthday is not known, this
@@ -254,7 +254,7 @@ export type WatchOnly = Message<"lnrpc.WatchOnly"> & {
   masterKeyBirthdayTimestamp: bigint;
 
   /**
-   * 
+   *
    * The fingerprint of the root key (also known as the key with derivation path
    * m/) from which the account public keys were derived from. This may be
    * required by some hardware wallets for proper identification and signing. The
@@ -265,10 +265,10 @@ export type WatchOnly = Message<"lnrpc.WatchOnly"> & {
   masterKeyFingerprint: Uint8Array;
 
   /**
-   * 
+   *
    * The list of accounts to import. There _must_ be an account for all of lnd's
-   * main key scopes: BIP49/BIP84 (m/49'/0'/0', m/84'/0'/0', note that the
-   * coin type is always 0, even for testnet/regtest) and lnd's internal key
+   * main key scopes: BIP49/BIP84 (m/49'/2'/0', m/84'/2'/0', note that the
+   * coin type is always 2, even for testnet/regtest) and lnd's internal key
    * scope (m/1017'/<coin_type>'/<account>'), where account is the key family as
    * defined in `keychain/derivation.go` (currently indices 0 to 9).
    *
@@ -289,7 +289,7 @@ export const WatchOnlySchema: GenMessage<WatchOnly> = /*@__PURE__*/
  */
 export type WatchOnlyAccount = Message<"lnrpc.WatchOnlyAccount"> & {
   /**
-   * 
+   *
    * Purpose is the first number in the derivation path, must be either 49, 84
    * or 1017.
    *
@@ -298,7 +298,7 @@ export type WatchOnlyAccount = Message<"lnrpc.WatchOnlyAccount"> & {
   purpose: number;
 
   /**
-   * 
+   *
    * Coin type is the second number in the derivation path, this is _always_ 0
    * for purposes 49 and 84. It only needs to be set to 1 for purpose 1017 on
    * testnet or regtest.
@@ -308,7 +308,7 @@ export type WatchOnlyAccount = Message<"lnrpc.WatchOnlyAccount"> & {
   coinType: number;
 
   /**
-   * 
+   *
    * Account is the third number in the derivation path. For purposes 49 and 84
    * at least the default account (index 0) needs to be created but optional
    * additional accounts are allowed. For purpose 1017 there needs to be exactly
@@ -320,7 +320,7 @@ export type WatchOnlyAccount = Message<"lnrpc.WatchOnlyAccount"> & {
   account: number;
 
   /**
-   * 
+   *
    * The extended public key at depth 3 for the given account.
    *
    * @generated from field: string xpub = 4;
@@ -340,7 +340,7 @@ export const WatchOnlyAccountSchema: GenMessage<WatchOnlyAccount> = /*@__PURE__*
  */
 export type UnlockWalletRequest = Message<"lnrpc.UnlockWalletRequest"> & {
   /**
-   * 
+   *
    * wallet_password should be the current valid passphrase for the daemon. This
    * will be required to decrypt on-disk material that the daemon requires to
    * function properly. When using REST, this field must be encoded as base64.
@@ -350,7 +350,7 @@ export type UnlockWalletRequest = Message<"lnrpc.UnlockWalletRequest"> & {
   walletPassword: Uint8Array;
 
   /**
-   * 
+   *
    * recovery_window is an optional argument specifying the address lookahead
    * when restoring a wallet seed. The recovery window applies to each
    * individual branch of the BIP44 derivation paths. Supplying a recovery
@@ -362,7 +362,7 @@ export type UnlockWalletRequest = Message<"lnrpc.UnlockWalletRequest"> & {
   recoveryWindow: number;
 
   /**
-   * 
+   *
    * channel_backups is an optional argument that allows clients to recover the
    * settled funds within a set of channels. This should be populated if the
    * user was unable to close out all channels and sweep funds before partial or
@@ -375,7 +375,7 @@ export type UnlockWalletRequest = Message<"lnrpc.UnlockWalletRequest"> & {
   channelBackups?: ChanBackupSnapshot;
 
   /**
-   * 
+   *
    * stateless_init is an optional argument instructing the daemon NOT to create
    * any *.macaroon files in its file system.
    *
@@ -409,7 +409,7 @@ export const UnlockWalletResponseSchema: GenMessage<UnlockWalletResponse> = /*@_
  */
 export type ChangePasswordRequest = Message<"lnrpc.ChangePasswordRequest"> & {
   /**
-   * 
+   *
    * current_password should be the current valid passphrase used to unlock the
    * daemon. When using REST, this field must be encoded as base64.
    *
@@ -418,7 +418,7 @@ export type ChangePasswordRequest = Message<"lnrpc.ChangePasswordRequest"> & {
   currentPassword: Uint8Array;
 
   /**
-   * 
+   *
    * new_password should be the new passphrase that will be needed to unlock the
    * daemon. When using REST, this field must be encoded as base64.
    *
@@ -427,7 +427,7 @@ export type ChangePasswordRequest = Message<"lnrpc.ChangePasswordRequest"> & {
   newPassword: Uint8Array;
 
   /**
-   * 
+   *
    * stateless_init is an optional argument instructing the daemon NOT to create
    * any *.macaroon files in its filesystem. If this parameter is set, then the
    * admin macaroon returned in the response MUST be stored by the caller of the
@@ -438,7 +438,7 @@ export type ChangePasswordRequest = Message<"lnrpc.ChangePasswordRequest"> & {
   statelessInit: boolean;
 
   /**
-   * 
+   *
    * new_macaroon_root_key is an optional argument instructing the daemon to
    * rotate the macaroon root key when set to true. This will invalidate all
    * previously generated macaroons.
@@ -460,7 +460,7 @@ export const ChangePasswordRequestSchema: GenMessage<ChangePasswordRequest> = /*
  */
 export type ChangePasswordResponse = Message<"lnrpc.ChangePasswordResponse"> & {
   /**
-   * 
+   *
    * The binary serialized admin macaroon that can be used to access the daemon
    * after rotating the macaroon root key. If both the stateless_init and
    * new_macaroon_root_key parameter were set to true, this is the ONLY copy of
@@ -488,12 +488,12 @@ export const ChangePasswordResponseSchema: GenMessage<ChangePasswordResponse> = 
  */
 export const WalletUnlocker: GenService<{
   /**
-   * 
+   *
    * GenSeed is the first method that should be used to instantiate a new lnd
    * instance. This method allows a caller to generate a new aezeed cipher seed
    * given an optional passphrase. If provided, the passphrase will be necessary
    * to decrypt the cipherseed to expose the internal wallet seed.
-   * 
+   *
    * Once the cipherseed is obtained and verified by the user, the InitWallet
    * method should be used to commit the newly generated seed, and create the
    * wallet.
@@ -506,16 +506,16 @@ export const WalletUnlocker: GenService<{
     output: typeof GenSeedResponseSchema;
   },
   /**
-   * 
+   *
    * InitWallet is used when lnd is starting up for the first time to fully
    * initialize the daemon and its internal wallet. At the very least a wallet
    * password must be provided. This will be used to encrypt sensitive material
    * on disk.
-   * 
+   *
    * In the case of a recovery scenario, the user can also specify their aezeed
    * mnemonic and passphrase. If set, then the daemon will use this prior state
    * to initialize its internal wallet.
-   * 
+   *
    * Alternatively, this can be used along with the GenSeed RPC to obtain a
    * seed, then present it to the user. Once it has been verified by the user,
    * the seed can be fed into this RPC in order to commit the new wallet.

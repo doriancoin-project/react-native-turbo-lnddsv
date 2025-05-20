@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file devrpc/dev.proto.
  */
 export const file_devrpc_dev: GenFile = /*@__PURE__*/
-  fileDesc("ChBkZXZycGMvZGV2LnByb3RvEgZkZXZycGMiFQoTSW1wb3J0R3JhcGhSZXNwb25zZTJGCgNEZXYSPwoLSW1wb3J0R3JhcGgSEy5sbnJwYy5DaGFubmVsR3JhcGgaGy5kZXZycGMuSW1wb3J0R3JhcGhSZXNwb25zZUIuWixnaXRodWIuY29tL2xpZ2h0bmluZ25ldHdvcmsvbG5kL2xucnBjL2RldnJwY2IGcHJvdG8z", [file_lightning]);
+  fileDesc("ChBkZXZycGMvZGV2LnByb3RvEgZkZXZycGMiFQoTSW1wb3J0R3JhcGhSZXNwb25zZTJGCgNEZXYSPwoLSW1wb3J0R3JhcGgSEy5sbnJwYy5DaGFubmVsR3JhcGgaGy5kZXZycGMuSW1wb3J0R3JhcGhSZXNwb25zZUImWiRnaXRodWIuY29tL2x0Y3N1aXRlL2xuZC9sbnJwYy9kZXZycGNiBnByb3RvMw", [file_lightning]);
 
 /**
  * @generated from message devrpc.ImportGraphResponse
@@ -32,7 +32,7 @@ export const ImportGraphResponseSchema: GenMessage<ImportGraphResponse> = /*@__P
  */
 export const Dev: GenService<{
   /**
-   * 
+   *
    * ImportGraph imports a ChannelGraph into the graph database. Should only be
    * used for development.
    *

@@ -12386,9 +12386,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-turbo-lnd@workspace:.":
+"react-native-turbo-lndltc@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-turbo-lnd@workspace:."
+  resolution: "react-native-turbo-lndltc@workspace:."
   dependencies:
     "@bufbuild/protobuf": ^2.0.0
     "@commitlint/config-conventional": ^17.0.2

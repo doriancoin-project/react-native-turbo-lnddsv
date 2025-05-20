@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file routerrpc/router.proto.
  */
 export const file_routerrpc_router: GenFile = /*@__PURE__*/
-  fileDesc("ChZyb3V0ZXJycGMvcm91dGVyLnByb3RvEglyb3V0ZXJycGMitwUKElNlbmRQYXltZW50UmVxdWVzdBIMCgRkZXN0GAEgASgMEgsKA2FtdBgCIAEoAxIQCghhbXRfbXNhdBgMIAEoAxIUCgxwYXltZW50X2hhc2gYAyABKAwSGAoQZmluYWxfY2x0dl9kZWx0YRgEIAEoBRIUCgxwYXltZW50X2FkZHIYFCABKAwSFwoPcGF5bWVudF9yZXF1ZXN0GAUgASgJEhcKD3RpbWVvdXRfc2Vjb25kcxgGIAEoBRIVCg1mZWVfbGltaXRfc2F0GAcgASgDEhYKDmZlZV9saW1pdF9tc2F0GA0gASgDEh4KEG91dGdvaW5nX2NoYW5faWQYCCABKARCBBgBMAESGQoRb3V0Z29pbmdfY2hhbl9pZHMYEyADKAQSFwoPbGFzdF9ob3BfcHVia2V5GA4gASgMEhIKCmNsdHZfbGltaXQYCSABKAUSJQoLcm91dGVfaGludHMYCiADKAsyEC5sbnJwYy5Sb3V0ZUhpbnQSUQoTZGVzdF9jdXN0b21fcmVjb3JkcxgLIAMoCzI0LnJvdXRlcnJwYy5TZW5kUGF5bWVudFJlcXVlc3QuRGVzdEN1c3RvbVJlY29yZHNFbnRyeRIaChJhbGxvd19zZWxmX3BheW1lbnQYDyABKAgSKAoNZGVzdF9mZWF0dXJlcxgQIAMoDjIRLmxucnBjLkZlYXR1cmVCaXQSEQoJbWF4X3BhcnRzGBEgASgNEhsKE25vX2luZmxpZ2h0X3VwZGF0ZXMYEiABKAgSGwoTbWF4X3NoYXJkX3NpemVfbXNhdBgVIAEoBBILCgNhbXAYFiABKAgSEQoJdGltZV9wcmVmGBcgASgBGjgKFkRlc3RDdXN0b21SZWNvcmRzRW50cnkSCwoDa2V5GAEgASgEEg0KBXZhbHVlGAIgASgMOgI4ASJIChNUcmFja1BheW1lbnRSZXF1ZXN0EhQKDHBheW1lbnRfaGFzaBgBIAEoDBIbChNub19pbmZsaWdodF91cGRhdGVzGAIgASgIIjMKFFRyYWNrUGF5bWVudHNSZXF1ZXN0EhsKE25vX2luZmxpZ2h0X3VwZGF0ZXMYASABKAgiMAoPUm91dGVGZWVSZXF1ZXN0EgwKBGRlc3QYASABKAwSDwoHYW10X3NhdBgCIAEoAyJFChBSb3V0ZUZlZVJlc3BvbnNlEhgKEHJvdXRpbmdfZmVlX21zYXQYASABKAMSFwoPdGltZV9sb2NrX2RlbGF5GAIgASgDIl4KElNlbmRUb1JvdXRlUmVxdWVzdBIUCgxwYXltZW50X2hhc2gYASABKAwSGwoFcm91dGUYAiABKAsyDC5sbnJwYy5Sb3V0ZRIVCg1za2lwX3RlbXBfZXJyGAMgASgIIkgKE1NlbmRUb1JvdXRlUmVzcG9uc2USEAoIcHJlaW1hZ2UYASABKAwSHwoHZmFpbHVyZRgCIAEoCzIOLmxucnBjLkZhaWx1cmUiHAoaUmVzZXRNaXNzaW9uQ29udHJvbFJlcXVlc3QiHQobUmVzZXRNaXNzaW9uQ29udHJvbFJlc3BvbnNlIhwKGlF1ZXJ5TWlzc2lvbkNvbnRyb2xSZXF1ZXN0IkoKG1F1ZXJ5TWlzc2lvbkNvbnRyb2xSZXNwb25zZRIlCgVwYWlycxgCIAMoCzIWLnJvdXRlcnJwYy5QYWlySGlzdG9yeUoECAEQAiJUChxYSW1wb3J0TWlzc2lvbkNvbnRyb2xSZXF1ZXN0EiUKBXBhaXJzGAEgAygLMhYucm91dGVycnBjLlBhaXJIaXN0b3J5Eg0KBWZvcmNlGAIgASgIIh8KHVhJbXBvcnRNaXNzaW9uQ29udHJvbFJlc3BvbnNlIm8KC1BhaXJIaXN0b3J5EhEKCW5vZGVfZnJvbRgBIAEoDBIPCgdub2RlX3RvGAIgASgMEiQKB2hpc3RvcnkYByABKAsyEy5yb3V0ZXJycGMuUGFpckRhdGFKBAgDEARKBAgEEAVKBAgFEAZKBAgGEAcimQEKCFBhaXJEYXRhEhEKCWZhaWxfdGltZRgBIAEoAxIUCgxmYWlsX2FtdF9zYXQYAiABKAMSFQoNZmFpbF9hbXRfbXNhdBgEIAEoAxIUCgxzdWNjZXNzX3RpbWUYBSABKAMSFwoPc3VjY2Vzc19hbXRfc2F0GAYgASgDEhgKEHN1Y2Nlc3NfYW10X21zYXQYByABKANKBAgDEAQiIAoeR2V0TWlzc2lvbkNvbnRyb2xDb25maWdSZXF1ZXN0IlIKH0dldE1pc3Npb25Db250cm9sQ29uZmlnUmVzcG9uc2USLwoGY29uZmlnGAEgASgLMh8ucm91dGVycnBjLk1pc3Npb25Db250cm9sQ29uZmlnIlEKHlNldE1pc3Npb25Db250cm9sQ29uZmlnUmVxdWVzdBIvCgZjb25maWcYASABKAsyHy5yb3V0ZXJycGMuTWlzc2lvbkNvbnRyb2xDb25maWciIQofU2V0TWlzc2lvbkNvbnRyb2xDb25maWdSZXNwb25zZSKTAwoUTWlzc2lvbkNvbnRyb2xDb25maWcSHQoRaGFsZl9saWZlX3NlY29uZHMYASABKARCAhgBEhsKD2hvcF9wcm9iYWJpbGl0eRgCIAEoAkICGAESEgoGd2VpZ2h0GAMgASgCQgIYARIfChdtYXhpbXVtX3BheW1lbnRfcmVzdWx0cxgEIAEoDRImCh5taW5pbXVtX2ZhaWx1cmVfcmVsYXhfaW50ZXJ2YWwYBSABKAQSPwoFbW9kZWwYBiABKA4yMC5yb3V0ZXJycGMuTWlzc2lvbkNvbnRyb2xDb25maWcuUHJvYmFiaWxpdHlNb2RlbBIvCgdhcHJpb3JpGAcgASgLMhwucm91dGVycnBjLkFwcmlvcmlQYXJhbWV0ZXJzSAASLwoHYmltb2RhbBgIIAEoCzIcLnJvdXRlcnJwYy5CaW1vZGFsUGFyYW1ldGVyc0gAIiwKEFByb2JhYmlsaXR5TW9kZWwSCwoHQVBSSU9SSRAAEgsKB0JJTU9EQUwQAUIRCg9Fc3RpbWF0b3JDb25maWciUAoRQmltb2RhbFBhcmFtZXRlcnMSEwoLbm9kZV93ZWlnaHQYASABKAESEgoKc2NhbGVfbXNhdBgCIAEoBBISCgpkZWNheV90aW1lGAMgASgEInIKEUFwcmlvcmlQYXJhbWV0ZXJzEhkKEWhhbGZfbGlmZV9zZWNvbmRzGAEgASgEEhcKD2hvcF9wcm9iYWJpbGl0eRgCIAEoARIOCgZ3ZWlnaHQYAyABKAESGQoRY2FwYWNpdHlfZnJhY3Rpb24YBCABKAEiTwoXUXVlcnlQcm9iYWJpbGl0eVJlcXVlc3QSEQoJZnJvbV9ub2RlGAEgASgMEg8KB3RvX25vZGUYAiABKAwSEAoIYW10X21zYXQYAyABKAMiVQoYUXVlcnlQcm9iYWJpbGl0eVJlc3BvbnNlEhMKC3Byb2JhYmlsaXR5GAEgASgBEiQKB2hpc3RvcnkYAiABKAsyEy5yb3V0ZXJycGMuUGFpckRhdGEiiAEKEUJ1aWxkUm91dGVSZXF1ZXN0EhAKCGFtdF9tc2F0GAEgASgDEhgKEGZpbmFsX2NsdHZfZGVsdGEYAiABKAUSHAoQb3V0Z29pbmdfY2hhbl9pZBgDIAEoBEICMAESEwoLaG9wX3B1YmtleXMYBCADKAwSFAoMcGF5bWVudF9hZGRyGAUgASgMIjEKEkJ1aWxkUm91dGVSZXNwb25zZRIbCgVyb3V0ZRgBIAEoCzIMLmxucnBjLlJvdXRlIhwKGlN1YnNjcmliZUh0bGNFdmVudHNSZXF1ZXN0IssECglIdGxjRXZlbnQSGwoTaW5jb21pbmdfY2hhbm5lbF9pZBgBIAEoBBIbChNvdXRnb2luZ19jaGFubmVsX2lkGAIgASgEEhgKEGluY29taW5nX2h0bGNfaWQYAyABKAQSGAoQb3V0Z29pbmdfaHRsY19pZBgEIAEoBBIUCgx0aW1lc3RhbXBfbnMYBSABKAQSMgoKZXZlbnRfdHlwZRgGIAEoDjIeLnJvdXRlcnJwYy5IdGxjRXZlbnQuRXZlbnRUeXBlEjAKDWZvcndhcmRfZXZlbnQYByABKAsyFy5yb3V0ZXJycGMuRm9yd2FyZEV2ZW50SAASOQoSZm9yd2FyZF9mYWlsX2V2ZW50GAggASgLMhsucm91dGVycnBjLkZvcndhcmRGYWlsRXZlbnRIABIuCgxzZXR0bGVfZXZlbnQYCSABKAsyFi5yb3V0ZXJycGMuU2V0dGxlRXZlbnRIABIzCg9saW5rX2ZhaWxfZXZlbnQYCiABKAsyGC5yb3V0ZXJycGMuTGlua0ZhaWxFdmVudEgAEjYKEHN1YnNjcmliZWRfZXZlbnQYCyABKAsyGi5yb3V0ZXJycGMuU3Vic2NyaWJlZEV2ZW50SAASNQoQZmluYWxfaHRsY19ldmVudBgMIAEoCzIZLnJvdXRlcnJwYy5GaW5hbEh0bGNFdmVudEgAIjwKCUV2ZW50VHlwZRILCgdVTktOT1dOEAASCAoEU0VORBABEgsKB1JFQ0VJVkUQAhILCgdGT1JXQVJEEANCBwoFZXZlbnQidgoISHRsY0luZm8SGQoRaW5jb21pbmdfdGltZWxvY2sYASABKA0SGQoRb3V0Z29pbmdfdGltZWxvY2sYAiABKA0SGQoRaW5jb21pbmdfYW10X21zYXQYAyABKAQSGQoRb3V0Z29pbmdfYW10X21zYXQYBCABKAQiMQoMRm9yd2FyZEV2ZW50EiEKBGluZm8YASABKAsyEy5yb3V0ZXJycGMuSHRsY0luZm8iEgoQRm9yd2FyZEZhaWxFdmVudCIfCgtTZXR0bGVFdmVudBIQCghwcmVpbWFnZRgBIAEoDCIzCg5GaW5hbEh0bGNFdmVudBIPCgdzZXR0bGVkGAEgASgIEhAKCG9mZmNoYWluGAIgASgIIhEKD1N1YnNjcmliZWRFdmVudCKuAQoNTGlua0ZhaWxFdmVudBIhCgRpbmZvGAEgASgLMhMucm91dGVycnBjLkh0bGNJbmZvEjAKDHdpcmVfZmFpbHVyZRgCIAEoDjIaLmxucnBjLkZhaWx1cmUuRmFpbHVyZUNvZGUSMAoOZmFpbHVyZV9kZXRhaWwYAyABKA4yGC5yb3V0ZXJycGMuRmFpbHVyZURldGFpbBIWCg5mYWlsdXJlX3N0cmluZxgEIAEoCSJyCg1QYXltZW50U3RhdHVzEiYKBXN0YXRlGAEgASgOMhcucm91dGVycnBjLlBheW1lbnRTdGF0ZRIQCghwcmVpbWFnZRgCIAEoDBIhCgVodGxjcxgEIAMoCzISLmxucnBjLkhUTENBdHRlbXB0SgQIAxAEIi4KCkNpcmN1aXRLZXkSDwoHY2hhbl9pZBgBIAEoBBIPCgdodGxjX2lkGAIgASgEIrEDChtGb3J3YXJkSHRsY0ludGVyY2VwdFJlcXVlc3QSMwoUaW5jb21pbmdfY2lyY3VpdF9rZXkYASABKAsyFS5yb3V0ZXJycGMuQ2lyY3VpdEtleRIcChRpbmNvbWluZ19hbW91bnRfbXNhdBgFIAEoBBIXCg9pbmNvbWluZ19leHBpcnkYBiABKA0SFAoMcGF5bWVudF9oYXNoGAIgASgMEiIKGm91dGdvaW5nX3JlcXVlc3RlZF9jaGFuX2lkGAcgASgEEhwKFG91dGdvaW5nX2Ftb3VudF9tc2F0GAMgASgEEhcKD291dGdvaW5nX2V4cGlyeRgEIAEoDRJRCg5jdXN0b21fcmVjb3JkcxgIIAMoCzI5LnJvdXRlcnJwYy5Gb3J3YXJkSHRsY0ludGVyY2VwdFJlcXVlc3QuQ3VzdG9tUmVjb3Jkc0VudHJ5EhIKCm9uaW9uX2Jsb2IYCSABKAwSGAoQYXV0b19mYWlsX2hlaWdodBgKIAEoBRo0ChJDdXN0b21SZWNvcmRzRW50cnkSCwoDa2V5GAEgASgEEg0KBXZhbHVlGAIgASgMOgI4ASLlAQocRm9yd2FyZEh0bGNJbnRlcmNlcHRSZXNwb25zZRIzChRpbmNvbWluZ19jaXJjdWl0X2tleRgBIAEoCzIVLnJvdXRlcnJwYy5DaXJjdWl0S2V5EjMKBmFjdGlvbhgCIAEoDjIjLnJvdXRlcnJwYy5SZXNvbHZlSG9sZEZvcndhcmRBY3Rpb24SEAoIcHJlaW1hZ2UYAyABKAwSFwoPZmFpbHVyZV9tZXNzYWdlGAQgASgMEjAKDGZhaWx1cmVfY29kZRgFIAEoDjIaLmxucnBjLkZhaWx1cmUuRmFpbHVyZUNvZGUibwoXVXBkYXRlQ2hhblN0YXR1c1JlcXVlc3QSJwoKY2hhbl9wb2ludBgBIAEoCzITLmxucnBjLkNoYW5uZWxQb2ludBIrCgZhY3Rpb24YAiABKA4yGy5yb3V0ZXJycGMuQ2hhblN0YXR1c0FjdGlvbiIaChhVcGRhdGVDaGFuU3RhdHVzUmVzcG9uc2UqgQQKDUZhaWx1cmVEZXRhaWwSCwoHVU5LTk9XThAAEg0KCU5PX0RFVEFJTBABEhAKDE9OSU9OX0RFQ09ERRACEhUKEUxJTktfTk9UX0VMSUdJQkxFEAMSFAoQT05fQ0hBSU5fVElNRU9VVBAEEhQKEEhUTENfRVhDRUVEU19NQVgQBRIYChRJTlNVRkZJQ0lFTlRfQkFMQU5DRRAGEhYKEklOQ09NUExFVEVfRk9SV0FSRBAHEhMKD0hUTENfQUREX0ZBSUxFRBAIEhUKEUZPUldBUkRTX0RJU0FCTEVEEAkSFAoQSU5WT0lDRV9DQU5DRUxFRBAKEhUKEUlOVk9JQ0VfVU5ERVJQQUlEEAsSGwoXSU5WT0lDRV9FWFBJUllfVE9PX1NPT04QDBIUChBJTlZPSUNFX05PVF9PUEVOEA0SFwoTTVBQX0lOVk9JQ0VfVElNRU9VVBAOEhQKEEFERFJFU1NfTUlTTUFUQ0gQDxIWChJTRVRfVE9UQUxfTUlTTUFUQ0gQEBIVChFTRVRfVE9UQUxfVE9PX0xPVxAREhAKDFNFVF9PVkVSUEFJRBASEhMKD1VOS05PV05fSU5WT0lDRRATEhMKD0lOVkFMSURfS0VZU0VORBAUEhMKD01QUF9JTl9QUk9HUkVTUxAVEhIKDkNJUkNVTEFSX1JPVVRFEBYqrgEKDFBheW1lbnRTdGF0ZRINCglJTl9GTElHSFQQABINCglTVUNDRUVERUQQARISCg5GQUlMRURfVElNRU9VVBACEhMKD0ZBSUxFRF9OT19ST1VURRADEhAKDEZBSUxFRF9FUlJPUhAEEiQKIEZBSUxFRF9JTkNPUlJFQ1RfUEFZTUVOVF9ERVRBSUxTEAUSHwobRkFJTEVEX0lOU1VGRklDSUVOVF9CQUxBTkNFEAYqPAoYUmVzb2x2ZUhvbGRGb3J3YXJkQWN0aW9uEgoKBlNFVFRMRRAAEggKBEZBSUwQARIKCgZSRVNVTUUQAio1ChBDaGFuU3RhdHVzQWN0aW9uEgoKBkVOQUJMRRAAEgsKB0RJU0FCTEUQARIICgRBVVRPEAIytQwKBlJvdXRlchJACg1TZW5kUGF5bWVudFYyEh0ucm91dGVycnBjLlNlbmRQYXltZW50UmVxdWVzdBoOLmxucnBjLlBheW1lbnQwARJCCg5UcmFja1BheW1lbnRWMhIeLnJvdXRlcnJwYy5UcmFja1BheW1lbnRSZXF1ZXN0Gg4ubG5ycGMuUGF5bWVudDABEkIKDVRyYWNrUGF5bWVudHMSHy5yb3V0ZXJycGMuVHJhY2tQYXltZW50c1JlcXVlc3QaDi5sbnJwYy5QYXltZW50MAESSwoQRXN0aW1hdGVSb3V0ZUZlZRIaLnJvdXRlcnJwYy5Sb3V0ZUZlZVJlcXVlc3QaGy5yb3V0ZXJycGMuUm91dGVGZWVSZXNwb25zZRJRCgtTZW5kVG9Sb3V0ZRIdLnJvdXRlcnJwYy5TZW5kVG9Sb3V0ZVJlcXVlc3QaHi5yb3V0ZXJycGMuU2VuZFRvUm91dGVSZXNwb25zZSIDiAIBEkIKDVNlbmRUb1JvdXRlVjISHS5yb3V0ZXJycGMuU2VuZFRvUm91dGVSZXF1ZXN0GhIubG5ycGMuSFRMQ0F0dGVtcHQSZAoTUmVzZXRNaXNzaW9uQ29udHJvbBIlLnJvdXRlcnJwYy5SZXNldE1pc3Npb25Db250cm9sUmVxdWVzdBomLnJvdXRlcnJwYy5SZXNldE1pc3Npb25Db250cm9sUmVzcG9uc2USZAoTUXVlcnlNaXNzaW9uQ29udHJvbBIlLnJvdXRlcnJwYy5RdWVyeU1pc3Npb25Db250cm9sUmVxdWVzdBomLnJvdXRlcnJwYy5RdWVyeU1pc3Npb25Db250cm9sUmVzcG9uc2USagoVWEltcG9ydE1pc3Npb25Db250cm9sEicucm91dGVycnBjLlhJbXBvcnRNaXNzaW9uQ29udHJvbFJlcXVlc3QaKC5yb3V0ZXJycGMuWEltcG9ydE1pc3Npb25Db250cm9sUmVzcG9uc2UScAoXR2V0TWlzc2lvbkNvbnRyb2xDb25maWcSKS5yb3V0ZXJycGMuR2V0TWlzc2lvbkNvbnRyb2xDb25maWdSZXF1ZXN0Gioucm91dGVycnBjLkdldE1pc3Npb25Db250cm9sQ29uZmlnUmVzcG9uc2UScAoXU2V0TWlzc2lvbkNvbnRyb2xDb25maWcSKS5yb3V0ZXJycGMuU2V0TWlzc2lvbkNvbnRyb2xDb25maWdSZXF1ZXN0Gioucm91dGVycnBjLlNldE1pc3Npb25Db250cm9sQ29uZmlnUmVzcG9uc2USWwoQUXVlcnlQcm9iYWJpbGl0eRIiLnJvdXRlcnJwYy5RdWVyeVByb2JhYmlsaXR5UmVxdWVzdBojLnJvdXRlcnJwYy5RdWVyeVByb2JhYmlsaXR5UmVzcG9uc2USSQoKQnVpbGRSb3V0ZRIcLnJvdXRlcnJwYy5CdWlsZFJvdXRlUmVxdWVzdBodLnJvdXRlcnJwYy5CdWlsZFJvdXRlUmVzcG9uc2USVAoTU3Vic2NyaWJlSHRsY0V2ZW50cxIlLnJvdXRlcnJwYy5TdWJzY3JpYmVIdGxjRXZlbnRzUmVxdWVzdBoULnJvdXRlcnJwYy5IdGxjRXZlbnQwARJNCgtTZW5kUGF5bWVudBIdLnJvdXRlcnJwYy5TZW5kUGF5bWVudFJlcXVlc3QaGC5yb3V0ZXJycGMuUGF5bWVudFN0YXR1cyIDiAIBMAESTwoMVHJhY2tQYXltZW50Eh4ucm91dGVycnBjLlRyYWNrUGF5bWVudFJlcXVlc3QaGC5yb3V0ZXJycGMuUGF5bWVudFN0YXR1cyIDiAIBMAESZgoPSHRsY0ludGVyY2VwdG9yEicucm91dGVycnBjLkZvcndhcmRIdGxjSW50ZXJjZXB0UmVzcG9uc2UaJi5yb3V0ZXJycGMuRm9yd2FyZEh0bGNJbnRlcmNlcHRSZXF1ZXN0KAEwARJbChBVcGRhdGVDaGFuU3RhdHVzEiIucm91dGVycnBjLlVwZGF0ZUNoYW5TdGF0dXNSZXF1ZXN0GiMucm91dGVycnBjLlVwZGF0ZUNoYW5TdGF0dXNSZXNwb25zZUIxWi9naXRodWIuY29tL2xpZ2h0bmluZ25ldHdvcmsvbG5kL2xucnBjL3JvdXRlcnJwY2IGcHJvdG8z", [file_lightning]);
+  fileDesc("ChZyb3V0ZXJycGMvcm91dGVyLnByb3RvEglyb3V0ZXJycGMitwUKElNlbmRQYXltZW50UmVxdWVzdBIMCgRkZXN0GAEgASgMEgsKA2FtdBgCIAEoAxIQCghhbXRfbXNhdBgMIAEoAxIUCgxwYXltZW50X2hhc2gYAyABKAwSGAoQZmluYWxfY2x0dl9kZWx0YRgEIAEoBRIUCgxwYXltZW50X2FkZHIYFCABKAwSFwoPcGF5bWVudF9yZXF1ZXN0GAUgASgJEhcKD3RpbWVvdXRfc2Vjb25kcxgGIAEoBRIVCg1mZWVfbGltaXRfc2F0GAcgASgDEhYKDmZlZV9saW1pdF9tc2F0GA0gASgDEh4KEG91dGdvaW5nX2NoYW5faWQYCCABKARCBBgBMAESGQoRb3V0Z29pbmdfY2hhbl9pZHMYEyADKAQSFwoPbGFzdF9ob3BfcHVia2V5GA4gASgMEhIKCmNsdHZfbGltaXQYCSABKAUSJQoLcm91dGVfaGludHMYCiADKAsyEC5sbnJwYy5Sb3V0ZUhpbnQSUQoTZGVzdF9jdXN0b21fcmVjb3JkcxgLIAMoCzI0LnJvdXRlcnJwYy5TZW5kUGF5bWVudFJlcXVlc3QuRGVzdEN1c3RvbVJlY29yZHNFbnRyeRIaChJhbGxvd19zZWxmX3BheW1lbnQYDyABKAgSKAoNZGVzdF9mZWF0dXJlcxgQIAMoDjIRLmxucnBjLkZlYXR1cmVCaXQSEQoJbWF4X3BhcnRzGBEgASgNEhsKE25vX2luZmxpZ2h0X3VwZGF0ZXMYEiABKAgSGwoTbWF4X3NoYXJkX3NpemVfbXNhdBgVIAEoBBILCgNhbXAYFiABKAgSEQoJdGltZV9wcmVmGBcgASgBGjgKFkRlc3RDdXN0b21SZWNvcmRzRW50cnkSCwoDa2V5GAEgASgEEg0KBXZhbHVlGAIgASgMOgI4ASJIChNUcmFja1BheW1lbnRSZXF1ZXN0EhQKDHBheW1lbnRfaGFzaBgBIAEoDBIbChNub19pbmZsaWdodF91cGRhdGVzGAIgASgIIjMKFFRyYWNrUGF5bWVudHNSZXF1ZXN0EhsKE25vX2luZmxpZ2h0X3VwZGF0ZXMYASABKAgiMAoPUm91dGVGZWVSZXF1ZXN0EgwKBGRlc3QYASABKAwSDwoHYW10X3NhdBgCIAEoAyJFChBSb3V0ZUZlZVJlc3BvbnNlEhgKEHJvdXRpbmdfZmVlX21zYXQYASABKAMSFwoPdGltZV9sb2NrX2RlbGF5GAIgASgDIl4KElNlbmRUb1JvdXRlUmVxdWVzdBIUCgxwYXltZW50X2hhc2gYASABKAwSGwoFcm91dGUYAiABKAsyDC5sbnJwYy5Sb3V0ZRIVCg1za2lwX3RlbXBfZXJyGAMgASgIIkgKE1NlbmRUb1JvdXRlUmVzcG9uc2USEAoIcHJlaW1hZ2UYASABKAwSHwoHZmFpbHVyZRgCIAEoCzIOLmxucnBjLkZhaWx1cmUiHAoaUmVzZXRNaXNzaW9uQ29udHJvbFJlcXVlc3QiHQobUmVzZXRNaXNzaW9uQ29udHJvbFJlc3BvbnNlIhwKGlF1ZXJ5TWlzc2lvbkNvbnRyb2xSZXF1ZXN0IkoKG1F1ZXJ5TWlzc2lvbkNvbnRyb2xSZXNwb25zZRIlCgVwYWlycxgCIAMoCzIWLnJvdXRlcnJwYy5QYWlySGlzdG9yeUoECAEQAiJUChxYSW1wb3J0TWlzc2lvbkNvbnRyb2xSZXF1ZXN0EiUKBXBhaXJzGAEgAygLMhYucm91dGVycnBjLlBhaXJIaXN0b3J5Eg0KBWZvcmNlGAIgASgIIh8KHVhJbXBvcnRNaXNzaW9uQ29udHJvbFJlc3BvbnNlIm8KC1BhaXJIaXN0b3J5EhEKCW5vZGVfZnJvbRgBIAEoDBIPCgdub2RlX3RvGAIgASgMEiQKB2hpc3RvcnkYByABKAsyEy5yb3V0ZXJycGMuUGFpckRhdGFKBAgDEARKBAgEEAVKBAgFEAZKBAgGEAcimQEKCFBhaXJEYXRhEhEKCWZhaWxfdGltZRgBIAEoAxIUCgxmYWlsX2FtdF9zYXQYAiABKAMSFQoNZmFpbF9hbXRfbXNhdBgEIAEoAxIUCgxzdWNjZXNzX3RpbWUYBSABKAMSFwoPc3VjY2Vzc19hbXRfc2F0GAYgASgDEhgKEHN1Y2Nlc3NfYW10X21zYXQYByABKANKBAgDEAQiIAoeR2V0TWlzc2lvbkNvbnRyb2xDb25maWdSZXF1ZXN0IlIKH0dldE1pc3Npb25Db250cm9sQ29uZmlnUmVzcG9uc2USLwoGY29uZmlnGAEgASgLMh8ucm91dGVycnBjLk1pc3Npb25Db250cm9sQ29uZmlnIlEKHlNldE1pc3Npb25Db250cm9sQ29uZmlnUmVxdWVzdBIvCgZjb25maWcYASABKAsyHy5yb3V0ZXJycGMuTWlzc2lvbkNvbnRyb2xDb25maWciIQofU2V0TWlzc2lvbkNvbnRyb2xDb25maWdSZXNwb25zZSKTAwoUTWlzc2lvbkNvbnRyb2xDb25maWcSHQoRaGFsZl9saWZlX3NlY29uZHMYASABKARCAhgBEhsKD2hvcF9wcm9iYWJpbGl0eRgCIAEoAkICGAESEgoGd2VpZ2h0GAMgASgCQgIYARIfChdtYXhpbXVtX3BheW1lbnRfcmVzdWx0cxgEIAEoDRImCh5taW5pbXVtX2ZhaWx1cmVfcmVsYXhfaW50ZXJ2YWwYBSABKAQSPwoFbW9kZWwYBiABKA4yMC5yb3V0ZXJycGMuTWlzc2lvbkNvbnRyb2xDb25maWcuUHJvYmFiaWxpdHlNb2RlbBIvCgdhcHJpb3JpGAcgASgLMhwucm91dGVycnBjLkFwcmlvcmlQYXJhbWV0ZXJzSAASLwoHYmltb2RhbBgIIAEoCzIcLnJvdXRlcnJwYy5CaW1vZGFsUGFyYW1ldGVyc0gAIiwKEFByb2JhYmlsaXR5TW9kZWwSCwoHQVBSSU9SSRAAEgsKB0JJTU9EQUwQAUIRCg9Fc3RpbWF0b3JDb25maWciUAoRQmltb2RhbFBhcmFtZXRlcnMSEwoLbm9kZV93ZWlnaHQYASABKAESEgoKc2NhbGVfbXNhdBgCIAEoBBISCgpkZWNheV90aW1lGAMgASgEInIKEUFwcmlvcmlQYXJhbWV0ZXJzEhkKEWhhbGZfbGlmZV9zZWNvbmRzGAEgASgEEhcKD2hvcF9wcm9iYWJpbGl0eRgCIAEoARIOCgZ3ZWlnaHQYAyABKAESGQoRY2FwYWNpdHlfZnJhY3Rpb24YBCABKAEiTwoXUXVlcnlQcm9iYWJpbGl0eVJlcXVlc3QSEQoJZnJvbV9ub2RlGAEgASgMEg8KB3RvX25vZGUYAiABKAwSEAoIYW10X21zYXQYAyABKAMiVQoYUXVlcnlQcm9iYWJpbGl0eVJlc3BvbnNlEhMKC3Byb2JhYmlsaXR5GAEgASgBEiQKB2hpc3RvcnkYAiABKAsyEy5yb3V0ZXJycGMuUGFpckRhdGEiiAEKEUJ1aWxkUm91dGVSZXF1ZXN0EhAKCGFtdF9tc2F0GAEgASgDEhgKEGZpbmFsX2NsdHZfZGVsdGEYAiABKAUSHAoQb3V0Z29pbmdfY2hhbl9pZBgDIAEoBEICMAESEwoLaG9wX3B1YmtleXMYBCADKAwSFAoMcGF5bWVudF9hZGRyGAUgASgMIjEKEkJ1aWxkUm91dGVSZXNwb25zZRIbCgVyb3V0ZRgBIAEoCzIMLmxucnBjLlJvdXRlIhwKGlN1YnNjcmliZUh0bGNFdmVudHNSZXF1ZXN0IssECglIdGxjRXZlbnQSGwoTaW5jb21pbmdfY2hhbm5lbF9pZBgBIAEoBBIbChNvdXRnb2luZ19jaGFubmVsX2lkGAIgASgEEhgKEGluY29taW5nX2h0bGNfaWQYAyABKAQSGAoQb3V0Z29pbmdfaHRsY19pZBgEIAEoBBIUCgx0aW1lc3RhbXBfbnMYBSABKAQSMgoKZXZlbnRfdHlwZRgGIAEoDjIeLnJvdXRlcnJwYy5IdGxjRXZlbnQuRXZlbnRUeXBlEjAKDWZvcndhcmRfZXZlbnQYByABKAsyFy5yb3V0ZXJycGMuRm9yd2FyZEV2ZW50SAASOQoSZm9yd2FyZF9mYWlsX2V2ZW50GAggASgLMhsucm91dGVycnBjLkZvcndhcmRGYWlsRXZlbnRIABIuCgxzZXR0bGVfZXZlbnQYCSABKAsyFi5yb3V0ZXJycGMuU2V0dGxlRXZlbnRIABIzCg9saW5rX2ZhaWxfZXZlbnQYCiABKAsyGC5yb3V0ZXJycGMuTGlua0ZhaWxFdmVudEgAEjYKEHN1YnNjcmliZWRfZXZlbnQYCyABKAsyGi5yb3V0ZXJycGMuU3Vic2NyaWJlZEV2ZW50SAASNQoQZmluYWxfaHRsY19ldmVudBgMIAEoCzIZLnJvdXRlcnJwYy5GaW5hbEh0bGNFdmVudEgAIjwKCUV2ZW50VHlwZRILCgdVTktOT1dOEAASCAoEU0VORBABEgsKB1JFQ0VJVkUQAhILCgdGT1JXQVJEEANCBwoFZXZlbnQidgoISHRsY0luZm8SGQoRaW5jb21pbmdfdGltZWxvY2sYASABKA0SGQoRb3V0Z29pbmdfdGltZWxvY2sYAiABKA0SGQoRaW5jb21pbmdfYW10X21zYXQYAyABKAQSGQoRb3V0Z29pbmdfYW10X21zYXQYBCABKAQiMQoMRm9yd2FyZEV2ZW50EiEKBGluZm8YASABKAsyEy5yb3V0ZXJycGMuSHRsY0luZm8iEgoQRm9yd2FyZEZhaWxFdmVudCIfCgtTZXR0bGVFdmVudBIQCghwcmVpbWFnZRgBIAEoDCIzCg5GaW5hbEh0bGNFdmVudBIPCgdzZXR0bGVkGAEgASgIEhAKCG9mZmNoYWluGAIgASgIIhEKD1N1YnNjcmliZWRFdmVudCKuAQoNTGlua0ZhaWxFdmVudBIhCgRpbmZvGAEgASgLMhMucm91dGVycnBjLkh0bGNJbmZvEjAKDHdpcmVfZmFpbHVyZRgCIAEoDjIaLmxucnBjLkZhaWx1cmUuRmFpbHVyZUNvZGUSMAoOZmFpbHVyZV9kZXRhaWwYAyABKA4yGC5yb3V0ZXJycGMuRmFpbHVyZURldGFpbBIWCg5mYWlsdXJlX3N0cmluZxgEIAEoCSJyCg1QYXltZW50U3RhdHVzEiYKBXN0YXRlGAEgASgOMhcucm91dGVycnBjLlBheW1lbnRTdGF0ZRIQCghwcmVpbWFnZRgCIAEoDBIhCgVodGxjcxgEIAMoCzISLmxucnBjLkhUTENBdHRlbXB0SgQIAxAEIi4KCkNpcmN1aXRLZXkSDwoHY2hhbl9pZBgBIAEoBBIPCgdodGxjX2lkGAIgASgEIrEDChtGb3J3YXJkSHRsY0ludGVyY2VwdFJlcXVlc3QSMwoUaW5jb21pbmdfY2lyY3VpdF9rZXkYASABKAsyFS5yb3V0ZXJycGMuQ2lyY3VpdEtleRIcChRpbmNvbWluZ19hbW91bnRfbXNhdBgFIAEoBBIXCg9pbmNvbWluZ19leHBpcnkYBiABKA0SFAoMcGF5bWVudF9oYXNoGAIgASgMEiIKGm91dGdvaW5nX3JlcXVlc3RlZF9jaGFuX2lkGAcgASgEEhwKFG91dGdvaW5nX2Ftb3VudF9tc2F0GAMgASgEEhcKD291dGdvaW5nX2V4cGlyeRgEIAEoDRJRCg5jdXN0b21fcmVjb3JkcxgIIAMoCzI5LnJvdXRlcnJwYy5Gb3J3YXJkSHRsY0ludGVyY2VwdFJlcXVlc3QuQ3VzdG9tUmVjb3Jkc0VudHJ5EhIKCm9uaW9uX2Jsb2IYCSABKAwSGAoQYXV0b19mYWlsX2hlaWdodBgKIAEoBRo0ChJDdXN0b21SZWNvcmRzRW50cnkSCwoDa2V5GAEgASgEEg0KBXZhbHVlGAIgASgMOgI4ASLlAQocRm9yd2FyZEh0bGNJbnRlcmNlcHRSZXNwb25zZRIzChRpbmNvbWluZ19jaXJjdWl0X2tleRgBIAEoCzIVLnJvdXRlcnJwYy5DaXJjdWl0S2V5EjMKBmFjdGlvbhgCIAEoDjIjLnJvdXRlcnJwYy5SZXNvbHZlSG9sZEZvcndhcmRBY3Rpb24SEAoIcHJlaW1hZ2UYAyABKAwSFwoPZmFpbHVyZV9tZXNzYWdlGAQgASgMEjAKDGZhaWx1cmVfY29kZRgFIAEoDjIaLmxucnBjLkZhaWx1cmUuRmFpbHVyZUNvZGUibwoXVXBkYXRlQ2hhblN0YXR1c1JlcXVlc3QSJwoKY2hhbl9wb2ludBgBIAEoCzITLmxucnBjLkNoYW5uZWxQb2ludBIrCgZhY3Rpb24YAiABKA4yGy5yb3V0ZXJycGMuQ2hhblN0YXR1c0FjdGlvbiIaChhVcGRhdGVDaGFuU3RhdHVzUmVzcG9uc2UqgQQKDUZhaWx1cmVEZXRhaWwSCwoHVU5LTk9XThAAEg0KCU5PX0RFVEFJTBABEhAKDE9OSU9OX0RFQ09ERRACEhUKEUxJTktfTk9UX0VMSUdJQkxFEAMSFAoQT05fQ0hBSU5fVElNRU9VVBAEEhQKEEhUTENfRVhDRUVEU19NQVgQBRIYChRJTlNVRkZJQ0lFTlRfQkFMQU5DRRAGEhYKEklOQ09NUExFVEVfRk9SV0FSRBAHEhMKD0hUTENfQUREX0ZBSUxFRBAIEhUKEUZPUldBUkRTX0RJU0FCTEVEEAkSFAoQSU5WT0lDRV9DQU5DRUxFRBAKEhUKEUlOVk9JQ0VfVU5ERVJQQUlEEAsSGwoXSU5WT0lDRV9FWFBJUllfVE9PX1NPT04QDBIUChBJTlZPSUNFX05PVF9PUEVOEA0SFwoTTVBQX0lOVk9JQ0VfVElNRU9VVBAOEhQKEEFERFJFU1NfTUlTTUFUQ0gQDxIWChJTRVRfVE9UQUxfTUlTTUFUQ0gQEBIVChFTRVRfVE9UQUxfVE9PX0xPVxAREhAKDFNFVF9PVkVSUEFJRBASEhMKD1VOS05PV05fSU5WT0lDRRATEhMKD0lOVkFMSURfS0VZU0VORBAUEhMKD01QUF9JTl9QUk9HUkVTUxAVEhIKDkNJUkNVTEFSX1JPVVRFEBYqrgEKDFBheW1lbnRTdGF0ZRINCglJTl9GTElHSFQQABINCglTVUNDRUVERUQQARISCg5GQUlMRURfVElNRU9VVBACEhMKD0ZBSUxFRF9OT19ST1VURRADEhAKDEZBSUxFRF9FUlJPUhAEEiQKIEZBSUxFRF9JTkNPUlJFQ1RfUEFZTUVOVF9ERVRBSUxTEAUSHwobRkFJTEVEX0lOU1VGRklDSUVOVF9CQUxBTkNFEAYqPAoYUmVzb2x2ZUhvbGRGb3J3YXJkQWN0aW9uEgoKBlNFVFRMRRAAEggKBEZBSUwQARIKCgZSRVNVTUUQAio1ChBDaGFuU3RhdHVzQWN0aW9uEgoKBkVOQUJMRRAAEgsKB0RJU0FCTEUQARIICgRBVVRPEAIytQwKBlJvdXRlchJACg1TZW5kUGF5bWVudFYyEh0ucm91dGVycnBjLlNlbmRQYXltZW50UmVxdWVzdBoOLmxucnBjLlBheW1lbnQwARJCCg5UcmFja1BheW1lbnRWMhIeLnJvdXRlcnJwYy5UcmFja1BheW1lbnRSZXF1ZXN0Gg4ubG5ycGMuUGF5bWVudDABEkIKDVRyYWNrUGF5bWVudHMSHy5yb3V0ZXJycGMuVHJhY2tQYXltZW50c1JlcXVlc3QaDi5sbnJwYy5QYXltZW50MAESSwoQRXN0aW1hdGVSb3V0ZUZlZRIaLnJvdXRlcnJwYy5Sb3V0ZUZlZVJlcXVlc3QaGy5yb3V0ZXJycGMuUm91dGVGZWVSZXNwb25zZRJRCgtTZW5kVG9Sb3V0ZRIdLnJvdXRlcnJwYy5TZW5kVG9Sb3V0ZVJlcXVlc3QaHi5yb3V0ZXJycGMuU2VuZFRvUm91dGVSZXNwb25zZSIDiAIBEkIKDVNlbmRUb1JvdXRlVjISHS5yb3V0ZXJycGMuU2VuZFRvUm91dGVSZXF1ZXN0GhIubG5ycGMuSFRMQ0F0dGVtcHQSZAoTUmVzZXRNaXNzaW9uQ29udHJvbBIlLnJvdXRlcnJwYy5SZXNldE1pc3Npb25Db250cm9sUmVxdWVzdBomLnJvdXRlcnJwYy5SZXNldE1pc3Npb25Db250cm9sUmVzcG9uc2USZAoTUXVlcnlNaXNzaW9uQ29udHJvbBIlLnJvdXRlcnJwYy5RdWVyeU1pc3Npb25Db250cm9sUmVxdWVzdBomLnJvdXRlcnJwYy5RdWVyeU1pc3Npb25Db250cm9sUmVzcG9uc2USagoVWEltcG9ydE1pc3Npb25Db250cm9sEicucm91dGVycnBjLlhJbXBvcnRNaXNzaW9uQ29udHJvbFJlcXVlc3QaKC5yb3V0ZXJycGMuWEltcG9ydE1pc3Npb25Db250cm9sUmVzcG9uc2UScAoXR2V0TWlzc2lvbkNvbnRyb2xDb25maWcSKS5yb3V0ZXJycGMuR2V0TWlzc2lvbkNvbnRyb2xDb25maWdSZXF1ZXN0Gioucm91dGVycnBjLkdldE1pc3Npb25Db250cm9sQ29uZmlnUmVzcG9uc2UScAoXU2V0TWlzc2lvbkNvbnRyb2xDb25maWcSKS5yb3V0ZXJycGMuU2V0TWlzc2lvbkNvbnRyb2xDb25maWdSZXF1ZXN0Gioucm91dGVycnBjLlNldE1pc3Npb25Db250cm9sQ29uZmlnUmVzcG9uc2USWwoQUXVlcnlQcm9iYWJpbGl0eRIiLnJvdXRlcnJwYy5RdWVyeVByb2JhYmlsaXR5UmVxdWVzdBojLnJvdXRlcnJwYy5RdWVyeVByb2JhYmlsaXR5UmVzcG9uc2USSQoKQnVpbGRSb3V0ZRIcLnJvdXRlcnJwYy5CdWlsZFJvdXRlUmVxdWVzdBodLnJvdXRlcnJwYy5CdWlsZFJvdXRlUmVzcG9uc2USVAoTU3Vic2NyaWJlSHRsY0V2ZW50cxIlLnJvdXRlcnJwYy5TdWJzY3JpYmVIdGxjRXZlbnRzUmVxdWVzdBoULnJvdXRlcnJwYy5IdGxjRXZlbnQwARJNCgtTZW5kUGF5bWVudBIdLnJvdXRlcnJwYy5TZW5kUGF5bWVudFJlcXVlc3QaGC5yb3V0ZXJycGMuUGF5bWVudFN0YXR1cyIDiAIBMAESTwoMVHJhY2tQYXltZW50Eh4ucm91dGVycnBjLlRyYWNrUGF5bWVudFJlcXVlc3QaGC5yb3V0ZXJycGMuUGF5bWVudFN0YXR1cyIDiAIBMAESZgoPSHRsY0ludGVyY2VwdG9yEicucm91dGVycnBjLkZvcndhcmRIdGxjSW50ZXJjZXB0UmVzcG9uc2UaJi5yb3V0ZXJycGMuRm9yd2FyZEh0bGNJbnRlcmNlcHRSZXF1ZXN0KAEwARJbChBVcGRhdGVDaGFuU3RhdHVzEiIucm91dGVycnBjLlVwZGF0ZUNoYW5TdGF0dXNSZXF1ZXN0GiMucm91dGVycnBjLlVwZGF0ZUNoYW5TdGF0dXNSZXNwb25zZUIpWidnaXRodWIuY29tL2x0Y3N1aXRlL2xuZC9sbnJwYy9yb3V0ZXJycGNiBnByb3RvMw", [file_lightning]);
 
 /**
  * @generated from message routerrpc.SendPaymentRequest
@@ -26,9 +26,9 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   dest: Uint8Array;
 
   /**
-   * 
+   *
    * Number of satoshis to send.
-   * 
+   *
    * The fields amt and amt_msat are mutually exclusive.
    *
    * @generated from field: int64 amt = 2;
@@ -36,9 +36,9 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   amt: bigint;
 
   /**
-   * 
+   *
    * Number of millisatoshis to send.
-   * 
+   *
    * The fields amt and amt_msat are mutually exclusive.
    *
    * @generated from field: int64 amt_msat = 12;
@@ -53,7 +53,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   paymentHash: Uint8Array;
 
   /**
-   * 
+   *
    * The CLTV delta from the current height that should be used to set the
    * timelock for the final hop.
    *
@@ -69,7 +69,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   paymentAddr: Uint8Array;
 
   /**
-   * 
+   *
    * A bare-bones invoice for a payment within the Lightning Network.  With the
    * details of the invoice, the sender has all the data necessary to send a
    * payment to the recipient. The amount in the payment request may be zero. In
@@ -81,7 +81,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   paymentRequest: string;
 
   /**
-   * 
+   *
    * An upper limit on the amount of time we should spend when attempting to
    * fulfill the payment. This is expressed in seconds. If we cannot make a
    * successful payment within this time frame, an error will be returned.
@@ -92,12 +92,12 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   timeoutSeconds: number;
 
   /**
-   * 
+   *
    * The maximum number of satoshis that will be paid as a fee of the payment.
    * If this field is left to the default value of 0, only zero-fee routes will
    * be considered. This usually means single hop routes connecting directly to
    * the destination. To send the payment without a fee limit, use max int here.
-   * 
+   *
    * The fields fee_limit_sat and fee_limit_msat are mutually exclusive.
    *
    * @generated from field: int64 fee_limit_sat = 7;
@@ -105,13 +105,13 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   feeLimitSat: bigint;
 
   /**
-   * 
+   *
    * The maximum number of millisatoshis that will be paid as a fee of the
    * payment. If this field is left to the default value of 0, only zero-fee
    * routes will be considered. This usually means single hop routes connecting
    * directly to the destination. To send the payment without a fee limit, use
    * max int here.
-   * 
+   *
    * The fields fee_limit_sat and fee_limit_msat are mutually exclusive.
    *
    * @generated from field: int64 fee_limit_msat = 13;
@@ -119,7 +119,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   feeLimitMsat: bigint;
 
   /**
-   * 
+   *
    * Deprecated, use outgoing_chan_ids. The channel id of the channel that must
    * be taken to the first hop. If zero, any channel may be used (unless
    * outgoing_chan_ids are set).
@@ -130,7 +130,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   outgoingChanId: string;
 
   /**
-   * 
+   *
    * The channel ids of the channels are allowed for the first hop. If empty,
    * any channel may be used.
    *
@@ -139,7 +139,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   outgoingChanIds: bigint[];
 
   /**
-   * 
+   *
    * The pubkey of the last hop of the route. If empty, any hop may be used.
    *
    * @generated from field: bytes last_hop_pubkey = 14;
@@ -147,7 +147,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   lastHopPubkey: Uint8Array;
 
   /**
-   * 
+   *
    * An optional maximum total time lock for the route. This should not exceed
    * lnd's `--max-cltv-expiry` setting. If zero, then the value of
    * `--max-cltv-expiry` is enforced.
@@ -157,7 +157,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   cltvLimit: number;
 
   /**
-   * 
+   *
    * Optional route hints to reach the destination through private channels.
    *
    * @generated from field: repeated lnrpc.RouteHint route_hints = 10;
@@ -165,7 +165,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   routeHints: RouteHint[];
 
   /**
-   * 
+   *
    * An optional field that can be used to pass an arbitrary set of TLV records
    * to a peer which understands the new records. This can be used to pass
    * application specific data during the payment attempt. Record types are
@@ -184,7 +184,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   allowSelfPayment: boolean;
 
   /**
-   * 
+   *
    * Features assumed to be supported by the final node. All transitive feature
    * dependencies must also be set properly. For a given feature bit pair, either
    * optional or remote may be set, but not both. If this field is nil or empty,
@@ -196,7 +196,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   destFeatures: FeatureBit[];
 
   /**
-   * 
+   *
    * The maximum number of partial payments that may be use to complete the full
    * amount.
    *
@@ -205,7 +205,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   maxParts: number;
 
   /**
-   * 
+   *
    * If set, only the final payment update is streamed back. Intermediate updates
    * that show which htlcs are still in flight are suppressed.
    *
@@ -214,7 +214,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   noInflightUpdates: boolean;
 
   /**
-   * 
+   *
    * The largest payment split that should be attempted when making a payment if
    * splitting is necessary. Setting this value will effectively cause lnd to
    * split more aggressively, vs only when it thinks it needs to. Note that this
@@ -225,7 +225,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   maxShardSizeMsat: bigint;
 
   /**
-   * 
+   *
    * If set, an AMP-payment will be attempted.
    *
    * @generated from field: bool amp = 22;
@@ -233,7 +233,7 @@ export type SendPaymentRequest = Message<"routerrpc.SendPaymentRequest"> & {
   amp: boolean;
 
   /**
-   * 
+   *
    * The time preference for this payment. Set to -1 to optimize for fees
    * only, to 1 to optimize for reliability only or a value inbetween for a mix.
    *
@@ -261,7 +261,7 @@ export type TrackPaymentRequest = Message<"routerrpc.TrackPaymentRequest"> & {
   paymentHash: Uint8Array;
 
   /**
-   * 
+   *
    * If set, only the final payment update is streamed back. Intermediate updates
    * that show which htlcs are still in flight are suppressed.
    *
@@ -282,7 +282,7 @@ export const TrackPaymentRequestSchema: GenMessage<TrackPaymentRequest> = /*@__P
  */
 export type TrackPaymentsRequest = Message<"routerrpc.TrackPaymentsRequest"> & {
   /**
-   * 
+   *
    * If set, only the final payment updates are streamed back. Intermediate
    * updates that show which htlcs are still in flight are suppressed.
    *
@@ -303,7 +303,7 @@ export const TrackPaymentsRequestSchema: GenMessage<TrackPaymentsRequest> = /*@_
  */
 export type RouteFeeRequest = Message<"routerrpc.RouteFeeRequest"> & {
   /**
-   * 
+   *
    * The destination once wishes to obtain a routing fee quote to.
    *
    * @generated from field: bytes dest = 1;
@@ -311,7 +311,7 @@ export type RouteFeeRequest = Message<"routerrpc.RouteFeeRequest"> & {
   dest: Uint8Array;
 
   /**
-   * 
+   *
    * The amount one wishes to send to the target destination.
    *
    * @generated from field: int64 amt_sat = 2;
@@ -331,7 +331,7 @@ export const RouteFeeRequestSchema: GenMessage<RouteFeeRequest> = /*@__PURE__*/
  */
 export type RouteFeeResponse = Message<"routerrpc.RouteFeeResponse"> & {
   /**
-   * 
+   *
    * A lower bound of the estimated fee to the target destination within the
    * network, expressed in milli-satoshis.
    *
@@ -340,7 +340,7 @@ export type RouteFeeResponse = Message<"routerrpc.RouteFeeResponse"> & {
   routingFeeMsat: bigint;
 
   /**
-   * 
+   *
    * An estimate of the worst case time delay that can occur. Note that callers
    * will still need to factor in the final CLTV delta of the last hop into this
    * value.
@@ -376,7 +376,7 @@ export type SendToRouteRequest = Message<"routerrpc.SendToRouteRequest"> & {
   route?: Route;
 
   /**
-   * 
+   *
    * Whether the payment should be marked as failed when a temporary error is
    * returned from the given route. Set it to true so the payment won't be
    * failed unless a terminal error is occurred, such as payment timeout, no
@@ -566,7 +566,7 @@ export type PairData = Message<"routerrpc.PairData"> & {
   failTime: bigint;
 
   /**
-   * 
+   *
    * Lowest amount that failed to forward rounded to whole sats. This may be
    * set to zero if the failure is independent of amount.
    *
@@ -575,7 +575,7 @@ export type PairData = Message<"routerrpc.PairData"> & {
   failAmtSat: bigint;
 
   /**
-   * 
+   *
    * Lowest amount that failed to forward in millisats. This may be
    * set to zero if the failure is independent of amount.
    *
@@ -630,7 +630,7 @@ export const GetMissionControlConfigRequestSchema: GenMessage<GetMissionControlC
  */
 export type GetMissionControlConfigResponse = Message<"routerrpc.GetMissionControlConfigResponse"> & {
   /**
-   * 
+   *
    * Mission control's currently active config.
    *
    * @generated from field: routerrpc.MissionControlConfig config = 1;
@@ -650,7 +650,7 @@ export const GetMissionControlConfigResponseSchema: GenMessage<GetMissionControl
  */
 export type SetMissionControlConfigRequest = Message<"routerrpc.SetMissionControlConfigRequest"> & {
   /**
-   * 
+   *
    * The config to set for mission control. Note that all values *must* be set,
    * because the full config will be applied.
    *
@@ -684,7 +684,7 @@ export const SetMissionControlConfigResponseSchema: GenMessage<SetMissionControl
  */
 export type MissionControlConfig = Message<"routerrpc.MissionControlConfig"> & {
   /**
-   * 
+   *
    * Deprecated, use AprioriParameters. The amount of time mission control will
    * take to restore a penalized node or channel back to 50% success probability,
    * expressed in seconds. Setting this value to a higher value will penalize
@@ -697,7 +697,7 @@ export type MissionControlConfig = Message<"routerrpc.MissionControlConfig"> & {
   halfLifeSeconds: bigint;
 
   /**
-   * 
+   *
    * Deprecated, use AprioriParameters. The probability of success mission
    * control should assign to hop in a route where it has no other information
    * available. Higher values will make mission control more willing to try hops
@@ -710,7 +710,7 @@ export type MissionControlConfig = Message<"routerrpc.MissionControlConfig"> & {
   hopProbability: number;
 
   /**
-   * 
+   *
    * Deprecated, use AprioriParameters. The importance that mission control
    * should place on historical results, expressed as a value in [0;1]. Setting
    * this value to 1 will ignore all historical payments and just use the hop
@@ -724,7 +724,7 @@ export type MissionControlConfig = Message<"routerrpc.MissionControlConfig"> & {
   weight: number;
 
   /**
-   * 
+   *
    * The maximum number of payment results that mission control will store.
    *
    * @generated from field: uint32 maximum_payment_results = 4;
@@ -732,7 +732,7 @@ export type MissionControlConfig = Message<"routerrpc.MissionControlConfig"> & {
   maximumPaymentResults: number;
 
   /**
-   * 
+   *
    * The minimum time that must have passed since the previously recorded failure
    * before we raise the failure amount.
    *
@@ -741,7 +741,7 @@ export type MissionControlConfig = Message<"routerrpc.MissionControlConfig"> & {
   minimumFailureRelaxInterval: bigint;
 
   /**
-   * 
+   *
    * ProbabilityModel defines which probability estimator should be used in
    * pathfinding. Note that the bimodal estimator is experimental.
    *
@@ -750,7 +750,7 @@ export type MissionControlConfig = Message<"routerrpc.MissionControlConfig"> & {
   model: MissionControlConfig_ProbabilityModel;
 
   /**
-   * 
+   *
    * EstimatorConfig is populated dependent on the estimator type.
    *
    * @generated from oneof routerrpc.MissionControlConfig.EstimatorConfig
@@ -803,7 +803,7 @@ export const MissionControlConfig_ProbabilityModelSchema: GenEnum<MissionControl
  */
 export type BimodalParameters = Message<"routerrpc.BimodalParameters"> & {
   /**
-   * 
+   *
    * NodeWeight defines how strongly other previous forwardings on channels of a
    * router should be taken into account when computing a channel's probability
    * to route. The allowed values are in the range [0, 1], where a value of 0
@@ -814,7 +814,7 @@ export type BimodalParameters = Message<"routerrpc.BimodalParameters"> & {
   nodeWeight: number;
 
   /**
-   * 
+   *
    * ScaleMsat describes the scale over which channels statistically have some
    * liquidity left. The value determines how quickly the bimodal distribution
    * drops off from the edges of a channel. A larger value (compared to typical
@@ -827,7 +827,7 @@ export type BimodalParameters = Message<"routerrpc.BimodalParameters"> & {
   scaleMsat: bigint;
 
   /**
-   * 
+   *
    * DecayTime describes the information decay of knowledge about previous
    * successes and failures in channels. The smaller the decay time, the quicker
    * we forget about past forwardings.
@@ -849,7 +849,7 @@ export const BimodalParametersSchema: GenMessage<BimodalParameters> = /*@__PURE_
  */
 export type AprioriParameters = Message<"routerrpc.AprioriParameters"> & {
   /**
-   * 
+   *
    * The amount of time mission control will take to restore a penalized node
    * or channel back to 50% success probability, expressed in seconds. Setting
    * this value to a higher value will penalize failures for longer, making
@@ -861,7 +861,7 @@ export type AprioriParameters = Message<"routerrpc.AprioriParameters"> & {
   halfLifeSeconds: bigint;
 
   /**
-   * 
+   *
    * The probability of success mission control should assign to hop in a route
    * where it has no other information available. Higher values will make mission
    * control more willing to try hops that we have no information about, lower
@@ -872,7 +872,7 @@ export type AprioriParameters = Message<"routerrpc.AprioriParameters"> & {
   hopProbability: number;
 
   /**
-   * 
+   *
    * The importance that mission control should place on historical results,
    * expressed as a value in [0;1]. Setting this value to 1 will ignore all
    * historical payments and just use the hop probability to assess the
@@ -885,7 +885,7 @@ export type AprioriParameters = Message<"routerrpc.AprioriParameters"> & {
   weight: number;
 
   /**
-   * 
+   *
    * The fraction of a channel's capacity that we consider to have liquidity. For
    * amounts that come close to or exceed the fraction, an additional penalty is
    * applied. A value of 1.0 disables the capacity factor. Allowed values are in
@@ -967,7 +967,7 @@ export const QueryProbabilityResponseSchema: GenMessage<QueryProbabilityResponse
  */
 export type BuildRouteRequest = Message<"routerrpc.BuildRouteRequest"> & {
   /**
-   * 
+   *
    * The amount to send expressed in msat. If set to zero, the minimum routable
    * amount is used.
    *
@@ -976,7 +976,7 @@ export type BuildRouteRequest = Message<"routerrpc.BuildRouteRequest"> & {
   amtMsat: bigint;
 
   /**
-   * 
+   *
    * CLTV delta from the current height that should be used for the timelock
    * of the final hop
    *
@@ -985,7 +985,7 @@ export type BuildRouteRequest = Message<"routerrpc.BuildRouteRequest"> & {
   finalCltvDelta: number;
 
   /**
-   * 
+   *
    * The channel id of the channel that must be taken to the first hop. If zero,
    * any channel may be used.
    *
@@ -994,7 +994,7 @@ export type BuildRouteRequest = Message<"routerrpc.BuildRouteRequest"> & {
   outgoingChanId: string;
 
   /**
-   * 
+   *
    * A list of hops that defines the route. This does not include the source hop
    * pubkey.
    *
@@ -1022,7 +1022,7 @@ export const BuildRouteRequestSchema: GenMessage<BuildRouteRequest> = /*@__PURE_
  */
 export type BuildRouteResponse = Message<"routerrpc.BuildRouteResponse"> & {
   /**
-   * 
+   *
    * Fully specified route that can be used to execute the payment.
    *
    * @generated from field: lnrpc.Route route = 1;
@@ -1051,7 +1051,7 @@ export const SubscribeHtlcEventsRequestSchema: GenMessage<SubscribeHtlcEventsReq
   messageDesc(file_routerrpc_router, 26);
 
 /**
- * 
+ *
  * HtlcEvent contains the htlc event that was processed. These are served on a
  * best-effort basis; events are not persisted, delivery is not guaranteed
  * (in the event of a crash in the switch, forward events may be lost) and
@@ -1063,7 +1063,7 @@ export const SubscribeHtlcEventsRequestSchema: GenMessage<SubscribeHtlcEventsReq
  */
 export type HtlcEvent = Message<"routerrpc.HtlcEvent"> & {
   /**
-   * 
+   *
    * The short channel id that the incoming htlc arrived at our node on. This
    * value is zero for sends.
    *
@@ -1072,7 +1072,7 @@ export type HtlcEvent = Message<"routerrpc.HtlcEvent"> & {
   incomingChannelId: bigint;
 
   /**
-   * 
+   *
    * The short channel id that the outgoing htlc left our node on. This value
    * is zero for receives.
    *
@@ -1081,7 +1081,7 @@ export type HtlcEvent = Message<"routerrpc.HtlcEvent"> & {
   outgoingChannelId: bigint;
 
   /**
-   * 
+   *
    * Incoming id is the index of the incoming htlc in the incoming channel.
    * This value is zero for sends.
    *
@@ -1090,7 +1090,7 @@ export type HtlcEvent = Message<"routerrpc.HtlcEvent"> & {
   incomingHtlcId: bigint;
 
   /**
-   * 
+   *
    * Outgoing id is the index of the outgoing htlc in the outgoing channel.
    * This value is zero for receives.
    *
@@ -1099,7 +1099,7 @@ export type HtlcEvent = Message<"routerrpc.HtlcEvent"> & {
   outgoingHtlcId: bigint;
 
   /**
-   * 
+   *
    * The time in unix nanoseconds that the event occurred.
    *
    * @generated from field: uint64 timestamp_ns = 5;
@@ -1107,7 +1107,7 @@ export type HtlcEvent = Message<"routerrpc.HtlcEvent"> & {
   timestampNs: bigint;
 
   /**
-   * 
+   *
    * The event type indicates whether the htlc was part of a send, receive or
    * forward.
    *
@@ -1340,7 +1340,7 @@ export type LinkFailEvent = Message<"routerrpc.LinkFailEvent"> & {
   wireFailure: Failure_FailureCode;
 
   /**
-   * 
+   *
    * FailureDetail provides additional information about the reason for the
    * failure. This detail enriches the information provided by the wire message
    * and may be 'no detail' if the wire message requires no additional metadata.
@@ -1376,7 +1376,7 @@ export type PaymentStatus = Message<"routerrpc.PaymentStatus"> & {
   state: PaymentState;
 
   /**
-   * 
+   *
    * The pre-image of the payment when state is SUCCEEDED.
    *
    * @generated from field: bytes preimage = 2;
@@ -1384,7 +1384,7 @@ export type PaymentStatus = Message<"routerrpc.PaymentStatus"> & {
   preimage: Uint8Array;
 
   /**
-   * 
+   *
    * The HTLCs made in attempt to settle the payment [EXPERIMENTAL].
    *
    * @generated from field: repeated lnrpc.HTLCAttempt htlcs = 4;
@@ -1430,7 +1430,7 @@ export const CircuitKeySchema: GenMessage<CircuitKey> = /*@__PURE__*/
  */
 export type ForwardHtlcInterceptRequest = Message<"routerrpc.ForwardHtlcInterceptRequest"> & {
   /**
-   * 
+   *
    * The key of this forwarded htlc. It defines the incoming channel id and
    * the index in this channel.
    *
@@ -1453,7 +1453,7 @@ export type ForwardHtlcInterceptRequest = Message<"routerrpc.ForwardHtlcIntercep
   incomingExpiry: number;
 
   /**
-   * 
+   *
    * The htlc payment hash. This value is not guaranteed to be unique per
    * request.
    *
@@ -1551,7 +1551,7 @@ export type ForwardHtlcInterceptResponse = Message<"routerrpc.ForwardHtlcInterce
 
   /**
    * Encrypted failure message in case the resolve action is Fail.
-   * 
+   *
    * If failure_message is specified, the failure_code field must be set
    * to zero.
    *
@@ -1562,9 +1562,9 @@ export type ForwardHtlcInterceptResponse = Message<"routerrpc.ForwardHtlcInterce
   /**
    * Return the specified failure code in case the resolve action is Fail. The
    * message data fields are populated automatically.
-   * 
+   *
    * If a non-zero failure_code is specified, failure_message must not be set.
-   * 
+   *
    * For backwards-compatibility reasons, TEMPORARY_CHANNEL_FAILURE is the
    * default value for this field.
    *
@@ -1746,7 +1746,7 @@ export const FailureDetailSchema: GenEnum<FailureDetail> = /*@__PURE__*/
  */
 export enum PaymentState {
   /**
-   * 
+   *
    * Payment is still in flight.
    *
    * @generated from enum value: IN_FLIGHT = 0;
@@ -1754,7 +1754,7 @@ export enum PaymentState {
   IN_FLIGHT = 0,
 
   /**
-   * 
+   *
    * Payment completed successfully.
    *
    * @generated from enum value: SUCCEEDED = 1;
@@ -1762,7 +1762,7 @@ export enum PaymentState {
   SUCCEEDED = 1,
 
   /**
-   * 
+   *
    * There are more routes to try, but the payment timeout was exceeded.
    *
    * @generated from enum value: FAILED_TIMEOUT = 2;
@@ -1770,7 +1770,7 @@ export enum PaymentState {
   FAILED_TIMEOUT = 2,
 
   /**
-   * 
+   *
    * All possible routes were tried and failed permanently. Or were no
    * routes to the destination at all.
    *
@@ -1779,7 +1779,7 @@ export enum PaymentState {
   FAILED_NO_ROUTE = 3,
 
   /**
-   * 
+   *
    * A non-recoverable error has occurred.
    *
    * @generated from enum value: FAILED_ERROR = 4;
@@ -1787,7 +1787,7 @@ export enum PaymentState {
   FAILED_ERROR = 4,
 
   /**
-   * 
+   *
    * Payment details incorrect (unknown hash, invalid amt or
    * invalid final cltv delta)
    *
@@ -1796,7 +1796,7 @@ export enum PaymentState {
   FAILED_INCORRECT_PAYMENT_DETAILS = 5,
 
   /**
-   * 
+   *
    * Insufficient local balance.
    *
    * @generated from enum value: FAILED_INSUFFICIENT_BALANCE = 6;
@@ -1870,7 +1870,7 @@ export const ChanStatusActionSchema: GenEnum<ChanStatusAction> = /*@__PURE__*/
  */
 export const Router: GenService<{
   /**
-   * 
+   *
    * SendPaymentV2 attempts to route a payment described by the passed
    * PaymentRequest to the final destination. The call returns a stream of
    * payment updates.
@@ -1883,7 +1883,7 @@ export const Router: GenService<{
     output: typeof PaymentSchema;
   },
   /**
-   * 
+   *
    * TrackPaymentV2 returns an update stream for the payment identified by the
    * payment hash.
    *
@@ -1895,7 +1895,7 @@ export const Router: GenService<{
     output: typeof PaymentSchema;
   },
   /**
-   * 
+   *
    * TrackPayments returns an update stream for every payment that is not in a
    * terminal state. Note that if payments are in-flight while starting a new
    * subscription, the start of the payment stream could produce out-of-order
@@ -1911,7 +1911,7 @@ export const Router: GenService<{
     output: typeof PaymentSchema;
   },
   /**
-   * 
+   *
    * EstimateRouteFee allows callers to obtain a lower bound w.r.t how much it
    * may cost to send an HTLC to the target end destination.
    *
@@ -1923,7 +1923,7 @@ export const Router: GenService<{
     output: typeof RouteFeeResponseSchema;
   },
   /**
-   * 
+   *
    * Deprecated, use SendToRouteV2. SendToRoute attempts to make a payment via
    * the specified route. This method differs from SendPayment in that it
    * allows users to specify a full route manually. This can be used for
@@ -1939,7 +1939,7 @@ export const Router: GenService<{
     output: typeof SendToRouteResponseSchema;
   },
   /**
-   * 
+   *
    * SendToRouteV2 attempts to make a payment via the specified route. This
    * method differs from SendPayment in that it allows users to specify a full
    * route manually. This can be used for things like rebalancing, and atomic
@@ -1953,7 +1953,7 @@ export const Router: GenService<{
     output: typeof HTLCAttemptSchema;
   },
   /**
-   * 
+   *
    * ResetMissionControl clears all mission control state and starts with a clean
    * slate.
    *
@@ -1965,7 +1965,7 @@ export const Router: GenService<{
     output: typeof ResetMissionControlResponseSchema;
   },
   /**
-   * 
+   *
    * QueryMissionControl exposes the internal mission control state to callers.
    * It is a development feature.
    *
@@ -1977,7 +1977,7 @@ export const Router: GenService<{
     output: typeof QueryMissionControlResponseSchema;
   },
   /**
-   * 
+   *
    * XImportMissionControl is an experimental API that imports the state provided
    * to the internal mission control's state, using all results which are more
    * recent than our existing values. These values will only be imported
@@ -1991,7 +1991,7 @@ export const Router: GenService<{
     output: typeof XImportMissionControlResponseSchema;
   },
   /**
-   * 
+   *
    * GetMissionControlConfig returns mission control's current config.
    *
    * @generated from rpc routerrpc.Router.GetMissionControlConfig
@@ -2002,7 +2002,7 @@ export const Router: GenService<{
     output: typeof GetMissionControlConfigResponseSchema;
   },
   /**
-   * 
+   *
    * SetMissionControlConfig will set mission control's config, if the config
    * provided is valid.
    *
@@ -2014,7 +2014,7 @@ export const Router: GenService<{
     output: typeof SetMissionControlConfigResponseSchema;
   },
   /**
-   * 
+   *
    * Deprecated. QueryProbability returns the current success probability
    * estimate for a given node pair and amount. The call returns a zero success
    * probability if no channel is available or if the amount violates min/max
@@ -2028,7 +2028,7 @@ export const Router: GenService<{
     output: typeof QueryProbabilityResponseSchema;
   },
   /**
-   * 
+   *
    * BuildRoute builds a fully specified route based on a list of hop public
    * keys. It retrieves the relevant channel policies from the graph in order to
    * calculate the correct fees and time locks.
@@ -2041,7 +2041,7 @@ export const Router: GenService<{
     output: typeof BuildRouteResponseSchema;
   },
   /**
-   * 
+   *
    * SubscribeHtlcEvents creates a uni-directional stream from the server to
    * the client which delivers a stream of htlc events.
    *
@@ -2053,7 +2053,7 @@ export const Router: GenService<{
     output: typeof HtlcEventSchema;
   },
   /**
-   * 
+   *
    * Deprecated, use SendPaymentV2. SendPayment attempts to route a payment
    * described by the passed PaymentRequest to the final destination. The call
    * returns a stream of payment status updates.
@@ -2067,7 +2067,7 @@ export const Router: GenService<{
     output: typeof PaymentStatusSchema;
   },
   /**
-   * 
+   *
    * Deprecated, use TrackPaymentV2. TrackPayment returns an update stream for
    * the payment identified by the payment hash.
    *
@@ -2095,7 +2095,7 @@ export const Router: GenService<{
     output: typeof ForwardHtlcInterceptRequestSchema;
   },
   /**
-   * 
+   *
    * UpdateChanStatus attempts to manually set the state of a channel
    * (enabled, disabled, or auto). A manual "disable" request will cause the
    * channel to stay disabled until a subsequent manual request of either

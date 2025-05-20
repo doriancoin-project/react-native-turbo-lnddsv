@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file lnclipb/lncli.proto.
  */
 export const file_lnclipb_lncli: GenFile = /*@__PURE__*/
-  fileDesc("ChNsbmNsaXBiL2xuY2xpLnByb3RvEgdsbmNsaXBiIk8KD1ZlcnNpb25SZXNwb25zZRIeCgVsbmNsaRgBIAEoCzIPLnZlcnJwYy5WZXJzaW9uEhwKA2xuZBgCIAEoCzIPLnZlcnJwYy5WZXJzaW9uQi9aLWdpdGh1Yi5jb20vbGlnaHRuaW5nbmV0d29yay9sbmQvbG5ycGMvbG5jbGlwYmIGcHJvdG8z", [file_verrpc_verrpc]);
+  fileDesc("ChNsbmNsaXBiL2xuY2xpLnByb3RvEgdsbmNsaXBiIk8KD1ZlcnNpb25SZXNwb25zZRIeCgVsbmNsaRgBIAEoCzIPLnZlcnJwYy5WZXJzaW9uEhwKA2xuZBgCIAEoCzIPLnZlcnJwYy5WZXJzaW9uQidaJWdpdGh1Yi5jb20vbHRjc3VpdGUvbG5kL2xucnBjL2xuY2xpcGJiBnByb3RvMw", [file_verrpc_verrpc]);
 
 /**
  * @generated from message lnclipb.VersionResponse
