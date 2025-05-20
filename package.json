@@ -1,7 +1,7 @@
 {
-  "name": "react-native-turbo-lnd",
-  "version": "0.1.2",
-  "description": "C++ TurboModule for lnd! ⚡️",
+  "name": "react-native-turbo-lndltc",
+  "version": "0.0.1",
+  "description": "C++ TurboModule for lndltc! ⚡️",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -65,14 +65,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hsjoberg/react-native-turbo-lnd.git"
+    "url": "git+https://github.com/litecoin-foundation/react-native-turbo-lndltc.git"
   },
-  "author": "Hampus Sjöberg <hampus.sjoberg@protonmail.com> (https://github.com/hsjoberg)",
+  "author": "Loshan <losh11@litecoin.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hsjoberg/react-native-turbo-lnd/issues"
+    "url": "https://github.com/litecoin-foundation/react-native-turbo-lndltc/issues"
   },
-  "homepage": "https://github.com/hsjoberg/react-native-turbo-lnd#readme",
+  "homepage": "https://github.com/litecoin-foundation/react-native-turbo-lndltc#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
