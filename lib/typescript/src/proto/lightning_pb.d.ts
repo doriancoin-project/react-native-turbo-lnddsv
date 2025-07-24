@@ -891,6 +891,41 @@ export type OutPoint = Message<"lnrpc.OutPoint"> & {
  */
 export declare const OutPointSchema: GenMessage<OutPoint>;
 /**
+ * Accepts either a regular UTXO (lnrpc.OutPoint) or an MWEB input blob.
+ *
+ * @generated from message lnrpc.TxInput
+ */
+export type TxInput = Message<"lnrpc.TxInput"> & {
+    /**
+     * @generated from oneof lnrpc.TxInput.input
+     */
+    input: {
+        /**
+         * legacy on-chain outpoint
+         *
+         * @generated from field: lnrpc.OutPoint utxo = 1;
+         */
+        value: OutPoint;
+        case: "utxo";
+    } | {
+        /**
+         * raw MWEB input/commitment
+         *
+         * @generated from field: bytes mweb_id = 2;
+         */
+        value: Uint8Array;
+        case: "mwebId";
+    } | {
+        case: undefined;
+        value?: undefined;
+    };
+};
+/**
+ * Describes the message lnrpc.TxInput.
+ * Use `create(TxInputSchema)` to create a new message.
+ */
+export declare const TxInputSchema: GenMessage<TxInput>;
+/**
  * @generated from message lnrpc.PreviousOutPoint
  */
 export type PreviousOutPoint = Message<"lnrpc.PreviousOutPoint"> & {

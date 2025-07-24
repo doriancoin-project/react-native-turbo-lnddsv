@@ -1083,6 +1083,10 @@ enum ChangeAddressType {
     // CHANGE_ADDRESS_TYPE_P2TR indicates to use P2TR address for change output
     // (BIP0086 key scope).
     CHANGE_ADDRESS_TYPE_P2TR = 1;
+
+    // ChangeAddressType_CHANGE_ADDRESS_TYPE_MWEB indicates to use MWEB address
+    // for change output.
+    CHANGE_ADDRESS_TYPE_MWEB = 2;
 }
 
 message FundPsbtRequest {
@@ -1165,7 +1169,7 @@ message TxTemplate {
     If no inputs are specified, coin selection will be performed instead and
     inputs of sufficient value will be added to the resulting PSBT.
     */
-    repeated lnrpc.OutPoint inputs = 1;
+    repeated lnrpc.TxInput inputs = 1;
 
     /*
     A map of all addresses and the amounts to send to in the funded PSBT.

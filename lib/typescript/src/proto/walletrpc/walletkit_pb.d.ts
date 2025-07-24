@@ -1,5 +1,5 @@
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
-import type { OutPoint, TransactionDetails, Utxo } from "../lightning_pb";
+import type { OutPoint, TransactionDetails, TxInput, Utxo } from "../lightning_pb";
 import type { KeyDescriptorSchema, KeyLocatorSchema, TxOut } from "../signrpc/signer_pb";
 import type { Message } from "@bufbuild/protobuf";
 /**
@@ -1401,9 +1401,9 @@ export type TxTemplate = Message<"walletrpc.TxTemplate"> & {
      * If no inputs are specified, coin selection will be performed instead and
      * inputs of sufficient value will be added to the resulting PSBT.
      *
-     * @generated from field: repeated lnrpc.OutPoint inputs = 1;
+     * @generated from field: repeated lnrpc.TxInput inputs = 1;
      */
-    inputs: OutPoint[];
+    inputs: TxInput[];
     /**
      *
      * A map of all addresses and the amounts to send to in the funded PSBT.
@@ -1844,7 +1844,14 @@ export declare enum ChangeAddressType {
      *
      * @generated from enum value: CHANGE_ADDRESS_TYPE_P2TR = 1;
      */
-    P2TR = 1
+    P2TR = 1,
+    /**
+     * ChangeAddressType_CHANGE_ADDRESS_TYPE_MWEB indicates to use MWEB address
+     * for change output.
+     *
+     * @generated from enum value: CHANGE_ADDRESS_TYPE_MWEB = 2;
+     */
+    MWEB = 2
 }
 /**
  * Describes the enum walletrpc.ChangeAddressType.
