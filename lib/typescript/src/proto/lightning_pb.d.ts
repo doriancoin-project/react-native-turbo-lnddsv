@@ -122,6 +122,108 @@ export type SendCustomMessageResponse = Message<"lnrpc.SendCustomMessageResponse
  */
 export declare const SendCustomMessageResponseSchema: GenMessage<SendCustomMessageResponse>;
 /**
+ * MwebOutput represents an MWEB output with all its associated data
+ *
+ * @generated from message lnrpc.MwebOutput
+ */
+export type MwebOutput = Message<"lnrpc.MwebOutput"> & {
+    /**
+     * The 33-byte commitment for the MWEB output
+     *
+     * @generated from field: bytes commitment = 1;
+     */
+    commitment: Uint8Array;
+    /**
+     * The 33-byte sender public key
+     *
+     * @generated from field: bytes sender_pub_key = 2;
+     */
+    senderPubKey: Uint8Array;
+    /**
+     * The 33-byte receiver public key
+     *
+     * @generated from field: bytes receiver_pub_key = 3;
+     */
+    receiverPubKey: Uint8Array;
+    /**
+     * The MWEB output message containing encrypted data
+     *
+     * @generated from field: lnrpc.MwebOutputMessage message = 4;
+     */
+    message?: MwebOutputMessage;
+    /**
+     * The 32-byte range proof hash
+     *
+     * @generated from field: bytes range_proof_hash = 5;
+     */
+    rangeProofHash: Uint8Array;
+    /**
+     * The 64-byte signature
+     *
+     * @generated from field: bytes signature = 6;
+     */
+    signature: Uint8Array;
+    /**
+     * The full range proof (optional, may be large)
+     *
+     * @generated from field: bytes range_proof = 7;
+     */
+    rangeProof: Uint8Array;
+};
+/**
+ * Describes the message lnrpc.MwebOutput.
+ * Use `create(MwebOutputSchema)` to create a new message.
+ */
+export declare const MwebOutputSchema: GenMessage<MwebOutput>;
+/**
+ * MwebOutputMessage contains the encrypted message data in an MWEB output
+ *
+ * @generated from message lnrpc.MwebOutputMessage
+ */
+export type MwebOutputMessage = Message<"lnrpc.MwebOutputMessage"> & {
+    /**
+     * Feature bits indicating which fields are present
+     *
+     * @generated from field: uint32 features = 1;
+     */
+    features: number;
+    /**
+     * The 33-byte key exchange public key
+     *
+     * @generated from field: bytes key_exchange_pub_key = 2;
+     */
+    keyExchangePubKey: Uint8Array;
+    /**
+     * The view tag (1 byte)
+     *
+     * @generated from field: uint32 view_tag = 3;
+     */
+    viewTag: number;
+    /**
+     * The masked value (8 bytes)
+     *
+     * @generated from field: uint64 masked_value = 4;
+     */
+    maskedValue: bigint;
+    /**
+     * The masked nonce (16 bytes)
+     *
+     * @generated from field: bytes masked_nonce = 5;
+     */
+    maskedNonce: Uint8Array;
+    /**
+     * Extra data (variable length)
+     *
+     * @generated from field: bytes extra_data = 6;
+     */
+    extraData: Uint8Array;
+};
+/**
+ * Describes the message lnrpc.MwebOutputMessage.
+ * Use `create(MwebOutputMessageSchema)` to create a new message.
+ */
+export declare const MwebOutputMessageSchema: GenMessage<MwebOutputMessage>;
+/**
  * @generated from message lnrpc.Utxo
  */
 export type Utxo = Message<"lnrpc.Utxo"> & {
@@ -161,6 +263,12 @@ export type Utxo = Message<"lnrpc.Utxo"> & {
      * @generated from field: int64 confirmations = 6;
      */
     confirmations: bigint;
+    /**
+     * The MWEB output data (only present for MWEB address types)
+     *
+     * @generated from field: lnrpc.MwebOutput mweb_output = 7;
+     */
+    mwebOutput?: MwebOutput;
 };
 /**
  * Describes the message lnrpc.Utxo.
