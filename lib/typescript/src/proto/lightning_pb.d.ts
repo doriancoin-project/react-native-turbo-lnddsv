@@ -169,6 +169,12 @@ export type MwebOutput = Message<"lnrpc.MwebOutput"> & {
      * @generated from field: bytes range_proof = 7;
      */
     rangeProof: Uint8Array;
+    /**
+     * The 32-byte output hash identifying this MWEB output
+     *
+     * @generated from field: bytes hash = 8;
+     */
+    hash: Uint8Array;
 };
 /**
  * Describes the message lnrpc.MwebOutput.
