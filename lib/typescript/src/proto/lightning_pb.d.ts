@@ -122,6 +122,114 @@ export type SendCustomMessageResponse = Message<"lnrpc.SendCustomMessageResponse
  */
 export declare const SendCustomMessageResponseSchema: GenMessage<SendCustomMessageResponse>;
 /**
+ * MwebOutput represents an MWEB output with all its associated data
+ *
+ * @generated from message lnrpc.MwebOutput
+ */
+export type MwebOutput = Message<"lnrpc.MwebOutput"> & {
+    /**
+     * The 33-byte commitment for the MWEB output
+     *
+     * @generated from field: bytes commitment = 1;
+     */
+    commitment: Uint8Array;
+    /**
+     * The 33-byte sender public key
+     *
+     * @generated from field: bytes sender_pub_key = 2;
+     */
+    senderPubKey: Uint8Array;
+    /**
+     * The 33-byte receiver public key
+     *
+     * @generated from field: bytes receiver_pub_key = 3;
+     */
+    receiverPubKey: Uint8Array;
+    /**
+     * The MWEB output message containing encrypted data
+     *
+     * @generated from field: lnrpc.MwebOutputMessage message = 4;
+     */
+    message?: MwebOutputMessage;
+    /**
+     * The 32-byte range proof hash
+     *
+     * @generated from field: bytes range_proof_hash = 5;
+     */
+    rangeProofHash: Uint8Array;
+    /**
+     * The 64-byte signature
+     *
+     * @generated from field: bytes signature = 6;
+     */
+    signature: Uint8Array;
+    /**
+     * The full range proof (optional, may be large)
+     *
+     * @generated from field: bytes range_proof = 7;
+     */
+    rangeProof: Uint8Array;
+    /**
+     * The 32-byte output hash identifying this MWEB output
+     *
+     * @generated from field: bytes hash = 8;
+     */
+    hash: Uint8Array;
+};
+/**
+ * Describes the message lnrpc.MwebOutput.
+ * Use `create(MwebOutputSchema)` to create a new message.
+ */
+export declare const MwebOutputSchema: GenMessage<MwebOutput>;
+/**
+ * MwebOutputMessage contains the encrypted message data in an MWEB output
+ *
+ * @generated from message lnrpc.MwebOutputMessage
+ */
+export type MwebOutputMessage = Message<"lnrpc.MwebOutputMessage"> & {
+    /**
+     * Feature bits indicating which fields are present
+     *
+     * @generated from field: uint32 features = 1;
+     */
+    features: number;
+    /**
+     * The 33-byte key exchange public key
+     *
+     * @generated from field: bytes key_exchange_pub_key = 2;
+     */
+    keyExchangePubKey: Uint8Array;
+    /**
+     * The view tag (1 byte)
+     *
+     * @generated from field: uint32 view_tag = 3;
+     */
+    viewTag: number;
+    /**
+     * The masked value (8 bytes)
+     *
+     * @generated from field: uint64 masked_value = 4;
+     */
+    maskedValue: bigint;
+    /**
+     * The masked nonce (16 bytes)
+     *
+     * @generated from field: bytes masked_nonce = 5;
+     */
+    maskedNonce: Uint8Array;
+    /**
+     * Extra data (variable length)
+     *
+     * @generated from field: bytes extra_data = 6;
+     */
+    extraData: Uint8Array;
+};
+/**
+ * Describes the message lnrpc.MwebOutputMessage.
+ * Use `create(MwebOutputMessageSchema)` to create a new message.
+ */
+export declare const MwebOutputMessageSchema: GenMessage<MwebOutputMessage>;
+/**
  * @generated from message lnrpc.Utxo
  */
 export type Utxo = Message<"lnrpc.Utxo"> & {
@@ -161,6 +269,12 @@ export type Utxo = Message<"lnrpc.Utxo"> & {
      * @generated from field: int64 confirmations = 6;
      */
     confirmations: bigint;
+    /**
+     * The MWEB output data (only present for MWEB address types)
+     *
+     * @generated from field: lnrpc.MwebOutput mweb_output = 7;
+     */
+    mwebOutput?: MwebOutput;
 };
 /**
  * Describes the message lnrpc.Utxo.
@@ -891,6 +1005,41 @@ export type OutPoint = Message<"lnrpc.OutPoint"> & {
  */
 export declare const OutPointSchema: GenMessage<OutPoint>;
 /**
+ * Accepts either a regular UTXO (lnrpc.OutPoint) or an MWEB input blob.
+ *
+ * @generated from message lnrpc.TxInput
+ */
+export type TxInput = Message<"lnrpc.TxInput"> & {
+    /**
+     * @generated from oneof lnrpc.TxInput.input
+     */
+    input: {
+        /**
+         * legacy on-chain outpoint
+         *
+         * @generated from field: lnrpc.OutPoint utxo = 1;
+         */
+        value: OutPoint;
+        case: "utxo";
+    } | {
+        /**
+         * raw MWEB input/commitment
+         *
+         * @generated from field: bytes mweb_id = 2;
+         */
+        value: Uint8Array;
+        case: "mwebId";
+    } | {
+        case: undefined;
+        value?: undefined;
+    };
+};
+/**
+ * Describes the message lnrpc.TxInput.
+ * Use `create(TxInputSchema)` to create a new message.
+ */
+export declare const TxInputSchema: GenMessage<TxInput>;
+/**
  * @generated from message lnrpc.PreviousOutPoint
  */
 export type PreviousOutPoint = Message<"lnrpc.PreviousOutPoint"> & {
@@ -1121,9 +1270,8 @@ export type SendCoinsRequest = Message<"lnrpc.SendCoinsRequest"> & {
     satPerByte: bigint;
     /**
      *
-     * If set, then the amount field will be ignored, and lnd will attempt to
-     * send all the coins under control of the internal wallet to the specified
-     * address.
+     * If set, the amount field should be unset. It indicates lnd will send all
+     * wallet coins or all selected coins to the specified address.
      *
      * @generated from field: bool send_all = 6;
      */
@@ -1147,6 +1295,12 @@ export type SendCoinsRequest = Message<"lnrpc.SendCoinsRequest"> & {
      * @generated from field: bool spend_unconfirmed = 9;
      */
     spendUnconfirmed: boolean;
+    /**
+     * A list of selected outpoints as inputs for the transaction.
+     *
+     * @generated from field: repeated lnrpc.OutPoint outpoints = 11;
+     */
+    outpoints: OutPoint[];
 };
 /**
  * Describes the message lnrpc.SendCoinsRequest.
@@ -5797,13 +5951,6 @@ export type Invoice = Message<"lnrpc.Invoice"> & {
     ampInvoiceState: {
         [key: string]: AMPInvoiceState;
     };
-    /**
-     *
-     * The minimum number of hop hints to include in this invoice.
-     *
-     * @generated from field: int32 min_hop_hints = 29;
-     */
-    minHopHints: number;
 };
 /**
  * Describes the message lnrpc.Invoice.
@@ -8184,7 +8331,19 @@ export declare enum OutputScriptType {
     /**
      * @generated from enum value: SCRIPT_TYPE_WITNESS_V1_TAPROOT = 9;
      */
-    SCRIPT_TYPE_WITNESS_V1_TAPROOT = 9
+    SCRIPT_TYPE_WITNESS_V1_TAPROOT = 9,
+    /**
+     * @generated from enum value: SCRIPT_TYPE_WITNESS_MWEB_HOGADDR = 10;
+     */
+    SCRIPT_TYPE_WITNESS_MWEB_HOGADDR = 10,
+    /**
+     * @generated from enum value: SCRIPT_TYPE_WITNESS_MWEB_PEGIN = 11;
+     */
+    SCRIPT_TYPE_WITNESS_MWEB_PEGIN = 11,
+    /**
+     * @generated from enum value: SCRIPT_TYPE_MWEB = 12;
+     */
+    SCRIPT_TYPE_MWEB = 12
 }
 /**
  * Describes the enum lnrpc.OutputScriptType.
@@ -8197,6 +8356,7 @@ export declare const OutputScriptTypeSchema: GenEnum<OutputScriptType>;
  * - `p2wkh`: Pay to witness key hash (`WITNESS_PUBKEY_HASH` = 0)
  * - `np2wkh`: Pay to nested witness key hash (`NESTED_PUBKEY_HASH` = 1)
  * - `p2tr`: Pay to taproot pubkey (`TAPROOT_PUBKEY` = 4)
+ * - `mweb`: MWEB (`MWEB` = 6)
  *
  * @generated from enum lnrpc.AddressType
  */
@@ -8224,7 +8384,15 @@ export declare enum AddressType {
     /**
      * @generated from enum value: UNUSED_TAPROOT_PUBKEY = 5;
      */
-    UNUSED_TAPROOT_PUBKEY = 5
+    UNUSED_TAPROOT_PUBKEY = 5,
+    /**
+     * @generated from enum value: MWEB = 6;
+     */
+    MWEB = 6,
+    /**
+     * @generated from enum value: UNUSED_MWEB = 7;
+     */
+    UNUSED_MWEB = 7
 }
 /**
  * Describes the enum lnrpc.AddressType.
@@ -9819,8 +9987,8 @@ export type WatchOnly = Message<"lnrpc.WatchOnly"> & {
     /**
      *
      * The list of accounts to import. There _must_ be an account for all of lnd's
-     * main key scopes: BIP49/BIP84 (m/49'/0'/0', m/84'/0'/0', note that the
-     * coin type is always 0, even for testnet/regtest) and lnd's internal key
+     * main key scopes: BIP49/BIP84 (m/49'/2'/0', m/84'/2'/0', note that the
+     * coin type is always 2, even for testnet/regtest) and lnd's internal key
      * scope (m/1017'/<coin_type>'/<account>'), where account is the key family as
      * defined in `keychain/derivation.go` (currently indices 0 to 9).
      *

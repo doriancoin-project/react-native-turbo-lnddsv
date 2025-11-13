@@ -10,14 +10,14 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file chainrpc/chainnotifier.proto.
  */
 export const file_chainrpc_chainnotifier: GenFile = /*@__PURE__*/
-  fileDesc("ChxjaGFpbnJwYy9jaGFpbm5vdGlmaWVyLnByb3RvEghjaGFpbnJwYyJqCgtDb25mUmVxdWVzdBIMCgR0eGlkGAEgASgMEg4KBnNjcmlwdBgCIAEoDBIRCgludW1fY29uZnMYAyABKA0SEwoLaGVpZ2h0X2hpbnQYBCABKA0SFQoNaW5jbHVkZV9ibG9jaxgFIAEoCCJsCgtDb25mRGV0YWlscxIOCgZyYXdfdHgYASABKAwSEgoKYmxvY2tfaGFzaBgCIAEoDBIUCgxibG9ja19oZWlnaHQYAyABKA0SEAoIdHhfaW5kZXgYBCABKA0SEQoJcmF3X2Jsb2NrGAUgASgMIgcKBVJlb3JnIl0KCUNvbmZFdmVudBIlCgRjb25mGAEgASgLMhUuY2hhaW5ycGMuQ29uZkRldGFpbHNIABIgCgVyZW9yZxgCIAEoCzIPLmNoYWlucnBjLlJlb3JnSABCBwoFZXZlbnQiJwoIT3V0cG9pbnQSDAoEaGFzaBgBIAEoDBINCgVpbmRleBgCIAEoDSJZCgxTcGVuZFJlcXVlc3QSJAoIb3V0cG9pbnQYASABKAsyEi5jaGFpbnJwYy5PdXRwb2ludBIOCgZzY3JpcHQYAiABKAwSEwoLaGVpZ2h0X2hpbnQYAyABKA0ipwEKDFNwZW5kRGV0YWlscxItChFzcGVuZGluZ19vdXRwb2ludBgBIAEoCzISLmNoYWlucnBjLk91dHBvaW50EhcKD3Jhd19zcGVuZGluZ190eBgCIAEoDBIYChBzcGVuZGluZ190eF9oYXNoGAMgASgMEhwKFHNwZW5kaW5nX2lucHV0X2luZGV4GAQgASgNEhcKD3NwZW5kaW5nX2hlaWdodBgFIAEoDSJgCgpTcGVuZEV2ZW50EicKBXNwZW5kGAEgASgLMhYuY2hhaW5ycGMuU3BlbmREZXRhaWxzSAASIAoFcmVvcmcYAiABKAsyDy5jaGFpbnJwYy5SZW9yZ0gAQgcKBWV2ZW50IioKCkJsb2NrRXBvY2gSDAoEaGFzaBgBIAEoDBIOCgZoZWlnaHQYAiABKA0y5wEKDUNoYWluTm90aWZpZXISSQoZUmVnaXN0ZXJDb25maXJtYXRpb25zTnRmbhIVLmNoYWlucnBjLkNvbmZSZXF1ZXN0GhMuY2hhaW5ycGMuQ29uZkV2ZW50MAESQwoRUmVnaXN0ZXJTcGVuZE50Zm4SFi5jaGFpbnJwYy5TcGVuZFJlcXVlc3QaFC5jaGFpbnJwYy5TcGVuZEV2ZW50MAESRgoWUmVnaXN0ZXJCbG9ja0Vwb2NoTnRmbhIULmNoYWlucnBjLkJsb2NrRXBvY2gaFC5jaGFpbnJwYy5CbG9ja0Vwb2NoMAFCMFouZ2l0aHViLmNvbS9saWdodG5pbmduZXR3b3JrL2xuZC9sbnJwYy9jaGFpbnJwY2IGcHJvdG8z");
+  fileDesc("ChxjaGFpbnJwYy9jaGFpbm5vdGlmaWVyLnByb3RvEghjaGFpbnJwYyJqCgtDb25mUmVxdWVzdBIMCgR0eGlkGAEgASgMEg4KBnNjcmlwdBgCIAEoDBIRCgludW1fY29uZnMYAyABKA0SEwoLaGVpZ2h0X2hpbnQYBCABKA0SFQoNaW5jbHVkZV9ibG9jaxgFIAEoCCJsCgtDb25mRGV0YWlscxIOCgZyYXdfdHgYASABKAwSEgoKYmxvY2tfaGFzaBgCIAEoDBIUCgxibG9ja19oZWlnaHQYAyABKA0SEAoIdHhfaW5kZXgYBCABKA0SEQoJcmF3X2Jsb2NrGAUgASgMIgcKBVJlb3JnIl0KCUNvbmZFdmVudBIlCgRjb25mGAEgASgLMhUuY2hhaW5ycGMuQ29uZkRldGFpbHNIABIgCgVyZW9yZxgCIAEoCzIPLmNoYWlucnBjLlJlb3JnSABCBwoFZXZlbnQiJwoIT3V0cG9pbnQSDAoEaGFzaBgBIAEoDBINCgVpbmRleBgCIAEoDSJZCgxTcGVuZFJlcXVlc3QSJAoIb3V0cG9pbnQYASABKAsyEi5jaGFpbnJwYy5PdXRwb2ludBIOCgZzY3JpcHQYAiABKAwSEwoLaGVpZ2h0X2hpbnQYAyABKA0ipwEKDFNwZW5kRGV0YWlscxItChFzcGVuZGluZ19vdXRwb2ludBgBIAEoCzISLmNoYWlucnBjLk91dHBvaW50EhcKD3Jhd19zcGVuZGluZ190eBgCIAEoDBIYChBzcGVuZGluZ190eF9oYXNoGAMgASgMEhwKFHNwZW5kaW5nX2lucHV0X2luZGV4GAQgASgNEhcKD3NwZW5kaW5nX2hlaWdodBgFIAEoDSJgCgpTcGVuZEV2ZW50EicKBXNwZW5kGAEgASgLMhYuY2hhaW5ycGMuU3BlbmREZXRhaWxzSAASIAoFcmVvcmcYAiABKAsyDy5jaGFpbnJwYy5SZW9yZ0gAQgcKBWV2ZW50IioKCkJsb2NrRXBvY2gSDAoEaGFzaBgBIAEoDBIOCgZoZWlnaHQYAiABKA0y5wEKDUNoYWluTm90aWZpZXISSQoZUmVnaXN0ZXJDb25maXJtYXRpb25zTnRmbhIVLmNoYWlucnBjLkNvbmZSZXF1ZXN0GhMuY2hhaW5ycGMuQ29uZkV2ZW50MAESQwoRUmVnaXN0ZXJTcGVuZE50Zm4SFi5jaGFpbnJwYy5TcGVuZFJlcXVlc3QaFC5jaGFpbnJwYy5TcGVuZEV2ZW50MAESRgoWUmVnaXN0ZXJCbG9ja0Vwb2NoTnRmbhIULmNoYWlucnBjLkJsb2NrRXBvY2gaFC5jaGFpbnJwYy5CbG9ja0Vwb2NoMAFCKFomZ2l0aHViLmNvbS9sdGNzdWl0ZS9sbmQvbG5ycGMvY2hhaW5ycGNiBnByb3RvMw");
 
 /**
  * @generated from message chainrpc.ConfRequest
  */
 export type ConfRequest = Message<"chainrpc.ConfRequest"> & {
   /**
-   * 
+   *
    * The transaction hash for which we should request a confirmation notification
    * for. If set to a hash of all zeros, then the confirmation notification will
    * be requested for the script instead.
@@ -27,7 +27,7 @@ export type ConfRequest = Message<"chainrpc.ConfRequest"> & {
   txid: Uint8Array;
 
   /**
-   * 
+   *
    * An output script within a transaction with the hash above which will be used
    * by light clients to match block filters. If the transaction hash is set to a
    * hash of all zeros, then a confirmation notification will be requested for
@@ -38,7 +38,7 @@ export type ConfRequest = Message<"chainrpc.ConfRequest"> & {
   script: Uint8Array;
 
   /**
-   * 
+   *
    * The number of desired confirmations the transaction/output script should
    * reach before dispatching a confirmation notification.
    *
@@ -47,7 +47,7 @@ export type ConfRequest = Message<"chainrpc.ConfRequest"> & {
   numConfs: number;
 
   /**
-   * 
+   *
    * The earliest height in the chain for which the transaction/output script
    * could have been included in a block. This should in most cases be set to the
    * broadcast height of the transaction/output script.
@@ -57,7 +57,7 @@ export type ConfRequest = Message<"chainrpc.ConfRequest"> & {
   heightHint: number;
 
   /**
-   * 
+   *
    * If true, then the block that mines the specified txid/script will be
    * included in eventual the notification event.
    *
@@ -107,7 +107,7 @@ export type ConfDetails = Message<"chainrpc.ConfDetails"> & {
   txIndex: number;
 
   /**
-   * 
+   *
    * The raw bytes of the block that mined the transaction. Only included if
    * include_block was set in the request.
    *
@@ -147,7 +147,7 @@ export type ConfEvent = Message<"chainrpc.ConfEvent"> & {
    */
   event: {
     /**
-     * 
+     *
      * An event that includes the confirmation details of the request
      * (txid/ouput script).
      *
@@ -157,7 +157,7 @@ export type ConfEvent = Message<"chainrpc.ConfEvent"> & {
     case: "conf";
   } | {
     /**
-     * 
+     *
      * An event send when the transaction of the request is reorged out of the
      * chain.
      *
@@ -206,7 +206,7 @@ export const OutpointSchema: GenMessage<Outpoint> = /*@__PURE__*/
  */
 export type SpendRequest = Message<"chainrpc.SpendRequest"> & {
   /**
-   * 
+   *
    * The outpoint for which we should request a spend notification for. If set to
    * a zero outpoint, then the spend notification will be requested for the
    * script instead. A zero or nil outpoint is not supported for Taproot spends
@@ -220,7 +220,7 @@ export type SpendRequest = Message<"chainrpc.SpendRequest"> & {
   outpoint?: Outpoint;
 
   /**
-   * 
+   *
    * The output script for the outpoint above. This will be used by light clients
    * to match block filters. If the outpoint is set to a zero outpoint, then a
    * spend notification will be requested for this script instead.
@@ -230,7 +230,7 @@ export type SpendRequest = Message<"chainrpc.SpendRequest"> & {
   script: Uint8Array;
 
   /**
-   * 
+   *
    * The earliest height in the chain for which the outpoint/output script could
    * have been spent. This should in most cases be set to the broadcast height of
    * the outpoint/output script.
@@ -303,7 +303,7 @@ export type SpendEvent = Message<"chainrpc.SpendEvent"> & {
    */
   event: {
     /**
-     * 
+     *
      * An event that includes the details of the spending transaction of the
      * request (outpoint/output script).
      *
@@ -313,7 +313,7 @@ export type SpendEvent = Message<"chainrpc.SpendEvent"> & {
     case: "spend";
   } | {
     /**
-     * 
+     *
      * An event sent when the spending transaction of the request was
      * reorged out of the chain.
      *
@@ -365,11 +365,11 @@ export const BlockEpochSchema: GenMessage<BlockEpoch> = /*@__PURE__*/
  */
 export const ChainNotifier: GenService<{
   /**
-   * 
+   *
    * RegisterConfirmationsNtfn is a synchronous response-streaming RPC that
    * registers an intent for a client to be notified once a confirmation request
    * has reached its required number of confirmations on-chain.
-   * 
+   *
    * A confirmation request must have a valid output script. It is also possible
    * to give a transaction ID. If the transaction ID is not set, a notification
    * is sent once the output script confirms. If the transaction ID is also set,
@@ -384,11 +384,11 @@ export const ChainNotifier: GenService<{
     output: typeof ConfEventSchema;
   },
   /**
-   * 
+   *
    * RegisterSpendNtfn is a synchronous response-streaming RPC that registers an
    * intent for a client to be notification once a spend request has been spent
    * by a transaction that has confirmed on-chain.
-   * 
+   *
    * A client can specify whether the spend request should be for a particular
    * outpoint  or for an output script by specifying a zero outpoint.
    *
@@ -400,13 +400,13 @@ export const ChainNotifier: GenService<{
     output: typeof SpendEventSchema;
   },
   /**
-   * 
+   *
    * RegisterBlockEpochNtfn is a synchronous response-streaming RPC that
    * registers an intent for a client to be notified of blocks in the chain. The
    * stream will return a hash and height tuple of a block for each new/stale
    * block in the chain. It is the client's responsibility to determine whether
    * the tuple returned is for a new or stale block in the chain.
-   * 
+   *
    * A client can also request a historical backlog of blocks from a particular
    * point. This allows clients to be idempotent by ensuring that they do not
    * missing processing a single block within the chain.
@@ -427,7 +427,7 @@ export const ChainNotifier: GenService<{
 
 // Merged from chainkit_pb.ts
 export const file_chainrpc_chainkit: GenFile = /*@__PURE__*/
-  fileDesc("ChdjaGFpbnJwYy9jaGFpbmtpdC5wcm90bxIIY2hhaW5ycGMiJQoPR2V0QmxvY2tSZXF1ZXN0EhIKCmJsb2NrX2hhc2gYASABKAwiJQoQR2V0QmxvY2tSZXNwb25zZRIRCglyYXdfYmxvY2sYASABKAwiFQoTR2V0QmVzdEJsb2NrUmVxdWVzdCJAChRHZXRCZXN0QmxvY2tSZXNwb25zZRISCgpibG9ja19oYXNoGAEgASgMEhQKDGJsb2NrX2hlaWdodBgCIAEoBSIrChNHZXRCbG9ja0hhc2hSZXF1ZXN0EhQKDGJsb2NrX2hlaWdodBgBIAEoAyIqChRHZXRCbG9ja0hhc2hSZXNwb25zZRISCgpibG9ja19oYXNoGAEgASgMMusBCghDaGFpbktpdBJBCghHZXRCbG9jaxIZLmNoYWlucnBjLkdldEJsb2NrUmVxdWVzdBoaLmNoYWlucnBjLkdldEJsb2NrUmVzcG9uc2USTQoMR2V0QmVzdEJsb2NrEh0uY2hhaW5ycGMuR2V0QmVzdEJsb2NrUmVxdWVzdBoeLmNoYWlucnBjLkdldEJlc3RCbG9ja1Jlc3BvbnNlEk0KDEdldEJsb2NrSGFzaBIdLmNoYWlucnBjLkdldEJsb2NrSGFzaFJlcXVlc3QaHi5jaGFpbnJwYy5HZXRCbG9ja0hhc2hSZXNwb25zZUIwWi5naXRodWIuY29tL2xpZ2h0bmluZ25ldHdvcmsvbG5kL2xucnBjL2NoYWlucnBjYgZwcm90bzM");
+  fileDesc("ChdjaGFpbnJwYy9jaGFpbmtpdC5wcm90bxIIY2hhaW5ycGMiJQoPR2V0QmxvY2tSZXF1ZXN0EhIKCmJsb2NrX2hhc2gYASABKAwiJQoQR2V0QmxvY2tSZXNwb25zZRIRCglyYXdfYmxvY2sYASABKAwiKwoVR2V0QmxvY2tIZWFkZXJSZXF1ZXN0EhIKCmJsb2NrX2hhc2gYASABKAwiMgoWR2V0QmxvY2tIZWFkZXJSZXNwb25zZRIYChByYXdfYmxvY2tfaGVhZGVyGAEgASgMIhUKE0dldEJlc3RCbG9ja1JlcXVlc3QiQAoUR2V0QmVzdEJsb2NrUmVzcG9uc2USEgoKYmxvY2tfaGFzaBgBIAEoDBIUCgxibG9ja19oZWlnaHQYAiABKAUiKwoTR2V0QmxvY2tIYXNoUmVxdWVzdBIUCgxibG9ja19oZWlnaHQYASABKAMiKgoUR2V0QmxvY2tIYXNoUmVzcG9uc2USEgoKYmxvY2tfaGFzaBgBIAEoDDLAAgoIQ2hhaW5LaXQSQQoIR2V0QmxvY2sSGS5jaGFpbnJwYy5HZXRCbG9ja1JlcXVlc3QaGi5jaGFpbnJwYy5HZXRCbG9ja1Jlc3BvbnNlElMKDkdldEJsb2NrSGVhZGVyEh8uY2hhaW5ycGMuR2V0QmxvY2tIZWFkZXJSZXF1ZXN0GiAuY2hhaW5ycGMuR2V0QmxvY2tIZWFkZXJSZXNwb25zZRJNCgxHZXRCZXN0QmxvY2sSHS5jaGFpbnJwYy5HZXRCZXN0QmxvY2tSZXF1ZXN0Gh4uY2hhaW5ycGMuR2V0QmVzdEJsb2NrUmVzcG9uc2USTQoMR2V0QmxvY2tIYXNoEh0uY2hhaW5ycGMuR2V0QmxvY2tIYXNoUmVxdWVzdBoeLmNoYWlucnBjLkdldEJsb2NrSGFzaFJlc3BvbnNlQihaJmdpdGh1Yi5jb20vbHRjc3VpdGUvbG5kL2xucnBjL2NoYWlucnBjYgZwcm90bzM");
 
 /**
  * @generated from message chainrpc.GetBlockRequest
@@ -471,6 +471,44 @@ export const GetBlockResponseSchema: GenMessage<GetBlockResponse> = /*@__PURE__*
   messageDesc(file_chainrpc_chainkit, 1);
 
 /**
+ * @generated from message chainrpc.GetBlockHeaderRequest
+ */
+export type GetBlockHeaderRequest = Message<"chainrpc.GetBlockHeaderRequest"> & {
+  /**
+   * The hash of the block with the requested header.
+   *
+   * @generated from field: bytes block_hash = 1;
+   */
+  blockHash: Uint8Array;
+};
+
+/**
+ * Describes the message chainrpc.GetBlockHeaderRequest.
+ * Use `create(GetBlockHeaderRequestSchema)` to create a new message.
+ */
+export const GetBlockHeaderRequestSchema: GenMessage<GetBlockHeaderRequest> = /*@__PURE__*/
+  messageDesc(file_chainrpc_chainkit, 2);
+
+/**
+ * @generated from message chainrpc.GetBlockHeaderResponse
+ */
+export type GetBlockHeaderResponse = Message<"chainrpc.GetBlockHeaderResponse"> & {
+  /**
+   * The header of the block with the requested hash.
+   *
+   * @generated from field: bytes raw_block_header = 1;
+   */
+  rawBlockHeader: Uint8Array;
+};
+
+/**
+ * Describes the message chainrpc.GetBlockHeaderResponse.
+ * Use `create(GetBlockHeaderResponseSchema)` to create a new message.
+ */
+export const GetBlockHeaderResponseSchema: GenMessage<GetBlockHeaderResponse> = /*@__PURE__*/
+  messageDesc(file_chainrpc_chainkit, 3);
+
+/**
  * @generated from message chainrpc.GetBestBlockRequest
  */
 export type GetBestBlockRequest = Message<"chainrpc.GetBestBlockRequest"> & {
@@ -481,7 +519,7 @@ export type GetBestBlockRequest = Message<"chainrpc.GetBestBlockRequest"> & {
  * Use `create(GetBestBlockRequestSchema)` to create a new message.
  */
 export const GetBestBlockRequestSchema: GenMessage<GetBestBlockRequest> = /*@__PURE__*/
-  messageDesc(file_chainrpc_chainkit, 2);
+  messageDesc(file_chainrpc_chainkit, 4);
 
 /**
  * @generated from message chainrpc.GetBestBlockResponse
@@ -507,7 +545,7 @@ export type GetBestBlockResponse = Message<"chainrpc.GetBestBlockResponse"> & {
  * Use `create(GetBestBlockResponseSchema)` to create a new message.
  */
 export const GetBestBlockResponseSchema: GenMessage<GetBestBlockResponse> = /*@__PURE__*/
-  messageDesc(file_chainrpc_chainkit, 3);
+  messageDesc(file_chainrpc_chainkit, 5);
 
 /**
  * @generated from message chainrpc.GetBlockHashRequest
@@ -526,7 +564,7 @@ export type GetBlockHashRequest = Message<"chainrpc.GetBlockHashRequest"> & {
  * Use `create(GetBlockHashRequestSchema)` to create a new message.
  */
 export const GetBlockHashRequestSchema: GenMessage<GetBlockHashRequest> = /*@__PURE__*/
-  messageDesc(file_chainrpc_chainkit, 4);
+  messageDesc(file_chainrpc_chainkit, 6);
 
 /**
  * @generated from message chainrpc.GetBlockHashResponse
@@ -545,7 +583,7 @@ export type GetBlockHashResponse = Message<"chainrpc.GetBlockHashResponse"> & {
  * Use `create(GetBlockHashResponseSchema)` to create a new message.
  */
 export const GetBlockHashResponseSchema: GenMessage<GetBlockHashResponse> = /*@__PURE__*/
-  messageDesc(file_chainrpc_chainkit, 5);
+  messageDesc(file_chainrpc_chainkit, 7);
 
 /**
  * ChainKit is a service that can be used to get information from the
@@ -564,6 +602,17 @@ export const ChainKit: GenService<{
     methodKind: "unary";
     input: typeof GetBlockRequestSchema;
     output: typeof GetBlockResponseSchema;
+  },
+  /**
+   * lncli: `chain getblockheader`
+   * GetBlockHeader returns a block header with a particular block hash.
+   *
+   * @generated from rpc chainrpc.ChainKit.GetBlockHeader
+   */
+  getBlockHeader: {
+    methodKind: "unary";
+    input: typeof GetBlockHeaderRequestSchema;
+    output: typeof GetBlockHeaderResponseSchema;
   },
   /**
    * lncli: `chain getbestblock`

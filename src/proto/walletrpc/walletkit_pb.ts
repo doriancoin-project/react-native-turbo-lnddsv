@@ -4,7 +4,7 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import type { OutPoint, TransactionDetails, Utxo } from "../lightning_pb";
+import type { OutPoint, TransactionDetails, TxInput, Utxo } from "../lightning_pb";
 import { file_lightning } from "../lightning_pb";
 import type { KeyDescriptorSchema, KeyLocatorSchema, TxOut } from "../signrpc/signer_pb";
 import { file_signrpc_signer } from "../signrpc/signer_pb";
@@ -14,7 +14,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file walletrpc/walletkit.proto.
  */
 export const file_walletrpc_walletkit: GenFile = /*@__PURE__*/
-  fileDesc("Chl3YWxsZXRycGMvd2FsbGV0a2l0LnByb3RvEgl3YWxsZXRycGMiZQoSTGlzdFVuc3BlbnRSZXF1ZXN0EhEKCW1pbl9jb25mcxgBIAEoBRIRCgltYXhfY29uZnMYAiABKAUSDwoHYWNjb3VudBgDIAEoCRIYChB1bmNvbmZpcm1lZF9vbmx5GAQgASgIIjEKE0xpc3RVbnNwZW50UmVzcG9uc2USGgoFdXR4b3MYASADKAsyCy5sbnJwYy5VdHhvIl8KEkxlYXNlT3V0cHV0UmVxdWVzdBIKCgJpZBgBIAEoDBIhCghvdXRwb2ludBgCIAEoCzIPLmxucnBjLk91dFBvaW50EhoKEmV4cGlyYXRpb25fc2Vjb25kcxgDIAEoBCIpChNMZWFzZU91dHB1dFJlc3BvbnNlEhIKCmV4cGlyYXRpb24YASABKAQiRQoUUmVsZWFzZU91dHB1dFJlcXVlc3QSCgoCaWQYASABKAwSIQoIb3V0cG9pbnQYAiABKAsyDy5sbnJwYy5PdXRQb2ludCIXChVSZWxlYXNlT3V0cHV0UmVzcG9uc2UiNgoGS2V5UmVxEhgKEGtleV9maW5nZXJfcHJpbnQYASABKAUSEgoKa2V5X2ZhbWlseRgCIAEoBSJUCgtBZGRyUmVxdWVzdBIPCgdhY2NvdW50GAEgASgJEiQKBHR5cGUYAiABKA4yFi53YWxsZXRycGMuQWRkcmVzc1R5cGUSDgoGY2hhbmdlGAMgASgIIhwKDEFkZHJSZXNwb25zZRIMCgRhZGRyGAEgASgJIucBCgdBY2NvdW50EgwKBG5hbWUYASABKAkSLAoMYWRkcmVzc190eXBlGAIgASgOMhYud2FsbGV0cnBjLkFkZHJlc3NUeXBlEhsKE2V4dGVuZGVkX3B1YmxpY19rZXkYAyABKAkSHgoWbWFzdGVyX2tleV9maW5nZXJwcmludBgEIAEoDBIXCg9kZXJpdmF0aW9uX3BhdGgYBSABKAkSGgoSZXh0ZXJuYWxfa2V5X2NvdW50GAYgASgNEhoKEmludGVybmFsX2tleV9jb3VudBgHIAEoDRISCgp3YXRjaF9vbmx5GAggASgIIkgKD0FkZHJlc3NQcm9wZXJ0eRIPCgdhZGRyZXNzGAEgASgJEhMKC2lzX2ludGVybmFsGAIgASgIEg8KB2JhbGFuY2UYAyABKAMimgEKFEFjY291bnRXaXRoQWRkcmVzc2VzEgwKBG5hbWUYASABKAkSLAoMYWRkcmVzc190eXBlGAIgASgOMhYud2FsbGV0cnBjLkFkZHJlc3NUeXBlEhcKD2Rlcml2YXRpb25fcGF0aBgDIAEoCRItCglhZGRyZXNzZXMYBCADKAsyGi53YWxsZXRycGMuQWRkcmVzc1Byb3BlcnR5IlEKE0xpc3RBY2NvdW50c1JlcXVlc3QSDAoEbmFtZRgBIAEoCRIsCgxhZGRyZXNzX3R5cGUYAiABKA4yFi53YWxsZXRycGMuQWRkcmVzc1R5cGUiPAoUTGlzdEFjY291bnRzUmVzcG9uc2USJAoIYWNjb3VudHMYASADKAsyEi53YWxsZXRycGMuQWNjb3VudCI8ChZSZXF1aXJlZFJlc2VydmVSZXF1ZXN0EiIKGmFkZGl0aW9uYWxfcHVibGljX2NoYW5uZWxzGAEgASgNIjMKF1JlcXVpcmVkUmVzZXJ2ZVJlc3BvbnNlEhgKEHJlcXVpcmVkX3Jlc2VydmUYASABKAMiSgoUTGlzdEFkZHJlc3Nlc1JlcXVlc3QSFAoMYWNjb3VudF9uYW1lGAEgASgJEhwKFHNob3dfY3VzdG9tX2FjY291bnRzGAIgASgIIlgKFUxpc3RBZGRyZXNzZXNSZXNwb25zZRI/ChZhY2NvdW50X3dpdGhfYWRkcmVzc2VzGAEgAygLMh8ud2FsbGV0cnBjLkFjY291bnRXaXRoQWRkcmVzc2VzIjcKGlNpZ25NZXNzYWdlV2l0aEFkZHJSZXF1ZXN0EgsKA21zZxgBIAEoDBIMCgRhZGRyGAIgASgJIjAKG1NpZ25NZXNzYWdlV2l0aEFkZHJSZXNwb25zZRIRCglzaWduYXR1cmUYASABKAkiTAocVmVyaWZ5TWVzc2FnZVdpdGhBZGRyUmVxdWVzdBILCgNtc2cYASABKAwSEQoJc2lnbmF0dXJlGAIgASgJEgwKBGFkZHIYAyABKAkiPgodVmVyaWZ5TWVzc2FnZVdpdGhBZGRyUmVzcG9uc2USDQoFdmFsaWQYASABKAgSDgoGcHVia2V5GAIgASgMIqABChRJbXBvcnRBY2NvdW50UmVxdWVzdBIMCgRuYW1lGAEgASgJEhsKE2V4dGVuZGVkX3B1YmxpY19rZXkYAiABKAkSHgoWbWFzdGVyX2tleV9maW5nZXJwcmludBgDIAEoDBIsCgxhZGRyZXNzX3R5cGUYBCABKA4yFi53YWxsZXRycGMuQWRkcmVzc1R5cGUSDwoHZHJ5X3J1bhgFIAEoCCJ8ChVJbXBvcnRBY2NvdW50UmVzcG9uc2USIwoHYWNjb3VudBgBIAEoCzISLndhbGxldHJwYy5BY2NvdW50Eh4KFmRyeV9ydW5fZXh0ZXJuYWxfYWRkcnMYAiADKAkSHgoWZHJ5X3J1bl9pbnRlcm5hbF9hZGRycxgDIAMoCSJaChZJbXBvcnRQdWJsaWNLZXlSZXF1ZXN0EhIKCnB1YmxpY19rZXkYASABKAwSLAoMYWRkcmVzc190eXBlGAIgASgOMhYud2FsbGV0cnBjLkFkZHJlc3NUeXBlIhkKF0ltcG9ydFB1YmxpY0tleVJlc3BvbnNlIuIBChZJbXBvcnRUYXBzY3JpcHRSZXF1ZXN0EhsKE2ludGVybmFsX3B1YmxpY19rZXkYASABKAwSMQoJZnVsbF90cmVlGAIgASgLMhwud2FsbGV0cnBjLlRhcHNjcmlwdEZ1bGxUcmVlSAASOwoOcGFydGlhbF9yZXZlYWwYAyABKAsyIS53YWxsZXRycGMuVGFwc2NyaXB0UGFydGlhbFJldmVhbEgAEhgKDnJvb3RfaGFzaF9vbmx5GAQgASgMSAASFwoNZnVsbF9rZXlfb25seRgFIAEoCEgAQggKBnNjcmlwdCI7ChFUYXBzY3JpcHRGdWxsVHJlZRImCgphbGxfbGVhdmVzGAEgAygLMhIud2FsbGV0cnBjLlRhcExlYWYiLwoHVGFwTGVhZhIUCgxsZWFmX3ZlcnNpb24YASABKA0SDgoGc2NyaXB0GAIgASgMImEKFlRhcHNjcmlwdFBhcnRpYWxSZXZlYWwSKQoNcmV2ZWFsZWRfbGVhZhgBIAEoCzISLndhbGxldHJwYy5UYXBMZWFmEhwKFGZ1bGxfaW5jbHVzaW9uX3Byb29mGAIgASgMIi8KF0ltcG9ydFRhcHNjcmlwdFJlc3BvbnNlEhQKDHAydHJfYWRkcmVzcxgBIAEoCSIsCgtUcmFuc2FjdGlvbhIOCgZ0eF9oZXgYASABKAwSDQoFbGFiZWwYAiABKAkiKAoPUHVibGlzaFJlc3BvbnNlEhUKDXB1Ymxpc2hfZXJyb3IYASABKAkihgEKElNlbmRPdXRwdXRzUmVxdWVzdBISCgpzYXRfcGVyX2t3GAEgASgDEh8KB291dHB1dHMYAiADKAsyDi5zaWducnBjLlR4T3V0Eg0KBWxhYmVsGAMgASgJEhEKCW1pbl9jb25mcxgEIAEoBRIZChFzcGVuZF91bmNvbmZpcm1lZBgFIAEoCCIlChNTZW5kT3V0cHV0c1Jlc3BvbnNlEg4KBnJhd190eBgBIAEoDCIpChJFc3RpbWF0ZUZlZVJlcXVlc3QSEwoLY29uZl90YXJnZXQYASABKAUiKQoTRXN0aW1hdGVGZWVSZXNwb25zZRISCgpzYXRfcGVyX2t3GAEgASgDItICCgxQZW5kaW5nU3dlZXASIQoIb3V0cG9pbnQYASABKAsyDy5sbnJwYy5PdXRQb2ludBIsCgx3aXRuZXNzX3R5cGUYAiABKA4yFi53YWxsZXRycGMuV2l0bmVzc1R5cGUSEgoKYW1vdW50X3NhdBgDIAEoDRIYCgxzYXRfcGVyX2J5dGUYBCABKA1CAhgBEhoKEmJyb2FkY2FzdF9hdHRlbXB0cxgFIAEoDRIdChVuZXh0X2Jyb2FkY2FzdF9oZWlnaHQYBiABKA0SHQoVcmVxdWVzdGVkX2NvbmZfdGFyZ2V0GAggASgNEiIKFnJlcXVlc3RlZF9zYXRfcGVyX2J5dGUYCSABKA1CAhgBEhUKDXNhdF9wZXJfdmJ5dGUYCiABKAQSHwoXcmVxdWVzdGVkX3NhdF9wZXJfdmJ5dGUYCyABKAQSDQoFZm9yY2UYByABKAgiFgoUUGVuZGluZ1N3ZWVwc1JlcXVlc3QiSAoVUGVuZGluZ1N3ZWVwc1Jlc3BvbnNlEi8KDnBlbmRpbmdfc3dlZXBzGAEgAygLMhcud2FsbGV0cnBjLlBlbmRpbmdTd2VlcCKIAQoOQnVtcEZlZVJlcXVlc3QSIQoIb3V0cG9pbnQYASABKAsyDy5sbnJwYy5PdXRQb2ludBITCgt0YXJnZXRfY29uZhgCIAEoDRIYCgxzYXRfcGVyX2J5dGUYAyABKA1CAhgBEg0KBWZvcmNlGAQgASgIEhUKDXNhdF9wZXJfdmJ5dGUYBSABKAQiEQoPQnVtcEZlZVJlc3BvbnNlIiQKEUxpc3RTd2VlcHNSZXF1ZXN0Eg8KB3ZlcmJvc2UYASABKAgizAEKEkxpc3RTd2VlcHNSZXNwb25zZRI4ChN0cmFuc2FjdGlvbl9kZXRhaWxzGAEgASgLMhkubG5ycGMuVHJhbnNhY3Rpb25EZXRhaWxzSAASRwoPdHJhbnNhY3Rpb25faWRzGAIgASgLMiwud2FsbGV0cnBjLkxpc3RTd2VlcHNSZXNwb25zZS5UcmFuc2FjdGlvbklEc0gAGikKDlRyYW5zYWN0aW9uSURzEhcKD3RyYW5zYWN0aW9uX2lkcxgBIAMoCUIICgZzd2VlcHMiSQoXTGFiZWxUcmFuc2FjdGlvblJlcXVlc3QSDAoEdHhpZBgBIAEoDBINCgVsYWJlbBgCIAEoCRIRCglvdmVyd3JpdGUYAyABKAgiGgoYTGFiZWxUcmFuc2FjdGlvblJlc3BvbnNlIv0BCg9GdW5kUHNidFJlcXVlc3QSDgoEcHNidBgBIAEoDEgAEiQKA3JhdxgCIAEoCzIVLndhbGxldHJwYy5UeFRlbXBsYXRlSAASFQoLdGFyZ2V0X2NvbmYYAyABKA1IARIXCg1zYXRfcGVyX3ZieXRlGAQgASgESAESDwoHYWNjb3VudBgFIAEoCRIRCgltaW5fY29uZnMYBiABKAUSGQoRc3BlbmRfdW5jb25maXJtZWQYByABKAgSMQoLY2hhbmdlX3R5cGUYCCABKA4yHC53YWxsZXRycGMuQ2hhbmdlQWRkcmVzc1R5cGVCCgoIdGVtcGxhdGVCBgoEZmVlcyJwChBGdW5kUHNidFJlc3BvbnNlEhMKC2Z1bmRlZF9wc2J0GAEgASgMEhsKE2NoYW5nZV9vdXRwdXRfaW5kZXgYAiABKAUSKgoMbG9ja2VkX3V0eG9zGAMgAygLMhQud2FsbGV0cnBjLlV0eG9MZWFzZSKSAQoKVHhUZW1wbGF0ZRIfCgZpbnB1dHMYASADKAsyDy5sbnJwYy5PdXRQb2ludBIzCgdvdXRwdXRzGAIgAygLMiIud2FsbGV0cnBjLlR4VGVtcGxhdGUuT3V0cHV0c0VudHJ5Gi4KDE91dHB1dHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAQ6AjgBInAKCVV0eG9MZWFzZRIKCgJpZBgBIAEoDBIhCghvdXRwb2ludBgCIAEoCzIPLmxucnBjLk91dFBvaW50EhIKCmV4cGlyYXRpb24YAyABKAQSEQoJcGtfc2NyaXB0GAQgASgMEg0KBXZhbHVlGAUgASgEIiYKD1NpZ25Qc2J0UmVxdWVzdBITCgtmdW5kZWRfcHNidBgBIAEoDCI+ChBTaWduUHNidFJlc3BvbnNlEhMKC3NpZ25lZF9wc2J0GAEgASgMEhUKDXNpZ25lZF9pbnB1dHMYAiADKA0iOwoTRmluYWxpemVQc2J0UmVxdWVzdBITCgtmdW5kZWRfcHNidBgBIAEoDBIPCgdhY2NvdW50GAUgASgJIkEKFEZpbmFsaXplUHNidFJlc3BvbnNlEhMKC3NpZ25lZF9wc2J0GAEgASgMEhQKDHJhd19maW5hbF90eBgCIAEoDCITChFMaXN0TGVhc2VzUmVxdWVzdCJAChJMaXN0TGVhc2VzUmVzcG9uc2USKgoMbG9ja2VkX3V0eG9zGAEgAygLMhQud2FsbGV0cnBjLlV0eG9MZWFzZSqOAQoLQWRkcmVzc1R5cGUSCwoHVU5LTk9XThAAEhcKE1dJVE5FU1NfUFVCS0VZX0hBU0gQARIeChpORVNURURfV0lUTkVTU19QVUJLRVlfSEFTSBACEiUKIUhZQlJJRF9ORVNURURfV0lUTkVTU19QVUJLRVlfSEFTSBADEhIKDlRBUFJPT1RfUFVCS0VZEAQqjwYKC1dpdG5lc3NUeXBlEhMKD1VOS05PV05fV0lUTkVTUxAAEhgKFENPTU1JVE1FTlRfVElNRV9MT0NLEAESFwoTQ09NTUlUTUVOVF9OT19ERUxBWRACEhUKEUNPTU1JVE1FTlRfUkVWT0tFEAMSFwoTSFRMQ19PRkZFUkVEX1JFVk9LRRAEEhgKFEhUTENfQUNDRVBURURfUkVWT0tFEAUSJQohSFRMQ19PRkZFUkVEX1RJTUVPVVRfU0VDT05EX0xFVkVMEAYSJgoiSFRMQ19BQ0NFUFRFRF9TVUNDRVNTX1NFQ09ORF9MRVZFTBAHEh8KG0hUTENfT0ZGRVJFRF9SRU1PVEVfVElNRU9VVBAIEiAKHEhUTENfQUNDRVBURURfUkVNT1RFX1NVQ0NFU1MQCRIcChhIVExDX1NFQ09ORF9MRVZFTF9SRVZPS0UQChIUChBXSVRORVNTX0tFWV9IQVNIEAsSGwoXTkVTVEVEX1dJVE5FU1NfS0VZX0hBU0gQDBIVChFDT01NSVRNRU5UX0FOQ0hPUhANEiEKHUNPTU1JVE1FTlRfTk9fREVMQVlfVFdFQUtMRVNTEA4SIgoeQ09NTUlUTUVOVF9UT19SRU1PVEVfQ09ORklSTUVEEA8SNQoxSFRMQ19PRkZFUkVEX1RJTUVPVVRfU0VDT05EX0xFVkVMX0lOUFVUX0NPTkZJUk1FRBAQEjYKMkhUTENfQUNDRVBURURfU1VDQ0VTU19TRUNPTkRfTEVWRUxfSU5QVVRfQ09ORklSTUVEEBESHgoaTEVBU0VfQ09NTUlUTUVOVF9USU1FX0xPQ0sQEhIoCiRMRUFTRV9DT01NSVRNRU5UX1RPX1JFTU9URV9DT05GSVJNRUQQExIrCidMRUFTRV9IVExDX09GRkVSRURfVElNRU9VVF9TRUNPTkRfTEVWRUwQFBIsCihMRUFTRV9IVExDX0FDQ0VQVEVEX1NVQ0NFU1NfU0VDT05EX0xFVkVMEBUSGQoVVEFQUk9PVF9QVUJfS0VZX1NQRU5EEBYqVgoRQ2hhbmdlQWRkcmVzc1R5cGUSIwofQ0hBTkdFX0FERFJFU1NfVFlQRV9VTlNQRUNJRklFRBAAEhwKGENIQU5HRV9BRERSRVNTX1RZUEVfUDJUUhABMtEPCglXYWxsZXRLaXQSTAoLTGlzdFVuc3BlbnQSHS53YWxsZXRycGMuTGlzdFVuc3BlbnRSZXF1ZXN0Gh4ud2FsbGV0cnBjLkxpc3RVbnNwZW50UmVzcG9uc2USTAoLTGVhc2VPdXRwdXQSHS53YWxsZXRycGMuTGVhc2VPdXRwdXRSZXF1ZXN0Gh4ud2FsbGV0cnBjLkxlYXNlT3V0cHV0UmVzcG9uc2USUgoNUmVsZWFzZU91dHB1dBIfLndhbGxldHJwYy5SZWxlYXNlT3V0cHV0UmVxdWVzdBogLndhbGxldHJwYy5SZWxlYXNlT3V0cHV0UmVzcG9uc2USSQoKTGlzdExlYXNlcxIcLndhbGxldHJwYy5MaXN0TGVhc2VzUmVxdWVzdBodLndhbGxldHJwYy5MaXN0TGVhc2VzUmVzcG9uc2USOgoNRGVyaXZlTmV4dEtleRIRLndhbGxldHJwYy5LZXlSZXEaFi5zaWducnBjLktleURlc2NyaXB0b3ISOAoJRGVyaXZlS2V5EhMuc2lnbnJwYy5LZXlMb2NhdG9yGhYuc2lnbnJwYy5LZXlEZXNjcmlwdG9yEjsKCE5leHRBZGRyEhYud2FsbGV0cnBjLkFkZHJSZXF1ZXN0Ghcud2FsbGV0cnBjLkFkZHJSZXNwb25zZRJPCgxMaXN0QWNjb3VudHMSHi53YWxsZXRycGMuTGlzdEFjY291bnRzUmVxdWVzdBofLndhbGxldHJwYy5MaXN0QWNjb3VudHNSZXNwb25zZRJYCg9SZXF1aXJlZFJlc2VydmUSIS53YWxsZXRycGMuUmVxdWlyZWRSZXNlcnZlUmVxdWVzdBoiLndhbGxldHJwYy5SZXF1aXJlZFJlc2VydmVSZXNwb25zZRJSCg1MaXN0QWRkcmVzc2VzEh8ud2FsbGV0cnBjLkxpc3RBZGRyZXNzZXNSZXF1ZXN0GiAud2FsbGV0cnBjLkxpc3RBZGRyZXNzZXNSZXNwb25zZRJkChNTaWduTWVzc2FnZVdpdGhBZGRyEiUud2FsbGV0cnBjLlNpZ25NZXNzYWdlV2l0aEFkZHJSZXF1ZXN0GiYud2FsbGV0cnBjLlNpZ25NZXNzYWdlV2l0aEFkZHJSZXNwb25zZRJqChVWZXJpZnlNZXNzYWdlV2l0aEFkZHISJy53YWxsZXRycGMuVmVyaWZ5TWVzc2FnZVdpdGhBZGRyUmVxdWVzdBooLndhbGxldHJwYy5WZXJpZnlNZXNzYWdlV2l0aEFkZHJSZXNwb25zZRJSCg1JbXBvcnRBY2NvdW50Eh8ud2FsbGV0cnBjLkltcG9ydEFjY291bnRSZXF1ZXN0GiAud2FsbGV0cnBjLkltcG9ydEFjY291bnRSZXNwb25zZRJYCg9JbXBvcnRQdWJsaWNLZXkSIS53YWxsZXRycGMuSW1wb3J0UHVibGljS2V5UmVxdWVzdBoiLndhbGxldHJwYy5JbXBvcnRQdWJsaWNLZXlSZXNwb25zZRJYCg9JbXBvcnRUYXBzY3JpcHQSIS53YWxsZXRycGMuSW1wb3J0VGFwc2NyaXB0UmVxdWVzdBoiLndhbGxldHJwYy5JbXBvcnRUYXBzY3JpcHRSZXNwb25zZRJIChJQdWJsaXNoVHJhbnNhY3Rpb24SFi53YWxsZXRycGMuVHJhbnNhY3Rpb24aGi53YWxsZXRycGMuUHVibGlzaFJlc3BvbnNlEkwKC1NlbmRPdXRwdXRzEh0ud2FsbGV0cnBjLlNlbmRPdXRwdXRzUmVxdWVzdBoeLndhbGxldHJwYy5TZW5kT3V0cHV0c1Jlc3BvbnNlEkwKC0VzdGltYXRlRmVlEh0ud2FsbGV0cnBjLkVzdGltYXRlRmVlUmVxdWVzdBoeLndhbGxldHJwYy5Fc3RpbWF0ZUZlZVJlc3BvbnNlElIKDVBlbmRpbmdTd2VlcHMSHy53YWxsZXRycGMuUGVuZGluZ1N3ZWVwc1JlcXVlc3QaIC53YWxsZXRycGMuUGVuZGluZ1N3ZWVwc1Jlc3BvbnNlEkAKB0J1bXBGZWUSGS53YWxsZXRycGMuQnVtcEZlZVJlcXVlc3QaGi53YWxsZXRycGMuQnVtcEZlZVJlc3BvbnNlEkkKCkxpc3RTd2VlcHMSHC53YWxsZXRycGMuTGlzdFN3ZWVwc1JlcXVlc3QaHS53YWxsZXRycGMuTGlzdFN3ZWVwc1Jlc3BvbnNlElsKEExhYmVsVHJhbnNhY3Rpb24SIi53YWxsZXRycGMuTGFiZWxUcmFuc2FjdGlvblJlcXVlc3QaIy53YWxsZXRycGMuTGFiZWxUcmFuc2FjdGlvblJlc3BvbnNlEkMKCEZ1bmRQc2J0Ehoud2FsbGV0cnBjLkZ1bmRQc2J0UmVxdWVzdBobLndhbGxldHJwYy5GdW5kUHNidFJlc3BvbnNlEkMKCFNpZ25Qc2J0Ehoud2FsbGV0cnBjLlNpZ25Qc2J0UmVxdWVzdBobLndhbGxldHJwYy5TaWduUHNidFJlc3BvbnNlEk8KDEZpbmFsaXplUHNidBIeLndhbGxldHJwYy5GaW5hbGl6ZVBzYnRSZXF1ZXN0Gh8ud2FsbGV0cnBjLkZpbmFsaXplUHNidFJlc3BvbnNlQjFaL2dpdGh1Yi5jb20vbGlnaHRuaW5nbmV0d29yay9sbmQvbG5ycGMvd2FsbGV0cnBjYgZwcm90bzM", [file_lightning, file_signrpc_signer]);
+  fileDesc("Chl3YWxsZXRycGMvd2FsbGV0a2l0LnByb3RvEgl3YWxsZXRycGMiZQoSTGlzdFVuc3BlbnRSZXF1ZXN0EhEKCW1pbl9jb25mcxgBIAEoBRIRCgltYXhfY29uZnMYAiABKAUSDwoHYWNjb3VudBgDIAEoCRIYChB1bmNvbmZpcm1lZF9vbmx5GAQgASgIIjEKE0xpc3RVbnNwZW50UmVzcG9uc2USGgoFdXR4b3MYASADKAsyCy5sbnJwYy5VdHhvIl8KEkxlYXNlT3V0cHV0UmVxdWVzdBIKCgJpZBgBIAEoDBIhCghvdXRwb2ludBgCIAEoCzIPLmxucnBjLk91dFBvaW50EhoKEmV4cGlyYXRpb25fc2Vjb25kcxgDIAEoBCIpChNMZWFzZU91dHB1dFJlc3BvbnNlEhIKCmV4cGlyYXRpb24YASABKAQiRQoUUmVsZWFzZU91dHB1dFJlcXVlc3QSCgoCaWQYASABKAwSIQoIb3V0cG9pbnQYAiABKAsyDy5sbnJwYy5PdXRQb2ludCIXChVSZWxlYXNlT3V0cHV0UmVzcG9uc2UiNgoGS2V5UmVxEhgKEGtleV9maW5nZXJfcHJpbnQYASABKAUSEgoKa2V5X2ZhbWlseRgCIAEoBSJUCgtBZGRyUmVxdWVzdBIPCgdhY2NvdW50GAEgASgJEiQKBHR5cGUYAiABKA4yFi53YWxsZXRycGMuQWRkcmVzc1R5cGUSDgoGY2hhbmdlGAMgASgIIhwKDEFkZHJSZXNwb25zZRIMCgRhZGRyGAEgASgJIucBCgdBY2NvdW50EgwKBG5hbWUYASABKAkSLAoMYWRkcmVzc190eXBlGAIgASgOMhYud2FsbGV0cnBjLkFkZHJlc3NUeXBlEhsKE2V4dGVuZGVkX3B1YmxpY19rZXkYAyABKAkSHgoWbWFzdGVyX2tleV9maW5nZXJwcmludBgEIAEoDBIXCg9kZXJpdmF0aW9uX3BhdGgYBSABKAkSGgoSZXh0ZXJuYWxfa2V5X2NvdW50GAYgASgNEhoKEmludGVybmFsX2tleV9jb3VudBgHIAEoDRISCgp3YXRjaF9vbmx5GAggASgIIkgKD0FkZHJlc3NQcm9wZXJ0eRIPCgdhZGRyZXNzGAEgASgJEhMKC2lzX2ludGVybmFsGAIgASgIEg8KB2JhbGFuY2UYAyABKAMimgEKFEFjY291bnRXaXRoQWRkcmVzc2VzEgwKBG5hbWUYASABKAkSLAoMYWRkcmVzc190eXBlGAIgASgOMhYud2FsbGV0cnBjLkFkZHJlc3NUeXBlEhcKD2Rlcml2YXRpb25fcGF0aBgDIAEoCRItCglhZGRyZXNzZXMYBCADKAsyGi53YWxsZXRycGMuQWRkcmVzc1Byb3BlcnR5IlEKE0xpc3RBY2NvdW50c1JlcXVlc3QSDAoEbmFtZRgBIAEoCRIsCgxhZGRyZXNzX3R5cGUYAiABKA4yFi53YWxsZXRycGMuQWRkcmVzc1R5cGUiPAoUTGlzdEFjY291bnRzUmVzcG9uc2USJAoIYWNjb3VudHMYASADKAsyEi53YWxsZXRycGMuQWNjb3VudCI8ChZSZXF1aXJlZFJlc2VydmVSZXF1ZXN0EiIKGmFkZGl0aW9uYWxfcHVibGljX2NoYW5uZWxzGAEgASgNIjMKF1JlcXVpcmVkUmVzZXJ2ZVJlc3BvbnNlEhgKEHJlcXVpcmVkX3Jlc2VydmUYASABKAMiSgoUTGlzdEFkZHJlc3Nlc1JlcXVlc3QSFAoMYWNjb3VudF9uYW1lGAEgASgJEhwKFHNob3dfY3VzdG9tX2FjY291bnRzGAIgASgIIlgKFUxpc3RBZGRyZXNzZXNSZXNwb25zZRI/ChZhY2NvdW50X3dpdGhfYWRkcmVzc2VzGAEgAygLMh8ud2FsbGV0cnBjLkFjY291bnRXaXRoQWRkcmVzc2VzIjcKGlNpZ25NZXNzYWdlV2l0aEFkZHJSZXF1ZXN0EgsKA21zZxgBIAEoDBIMCgRhZGRyGAIgASgJIjAKG1NpZ25NZXNzYWdlV2l0aEFkZHJSZXNwb25zZRIRCglzaWduYXR1cmUYASABKAkiTAocVmVyaWZ5TWVzc2FnZVdpdGhBZGRyUmVxdWVzdBILCgNtc2cYASABKAwSEQoJc2lnbmF0dXJlGAIgASgJEgwKBGFkZHIYAyABKAkiPgodVmVyaWZ5TWVzc2FnZVdpdGhBZGRyUmVzcG9uc2USDQoFdmFsaWQYASABKAgSDgoGcHVia2V5GAIgASgMIqABChRJbXBvcnRBY2NvdW50UmVxdWVzdBIMCgRuYW1lGAEgASgJEhsKE2V4dGVuZGVkX3B1YmxpY19rZXkYAiABKAkSHgoWbWFzdGVyX2tleV9maW5nZXJwcmludBgDIAEoDBIsCgxhZGRyZXNzX3R5cGUYBCABKA4yFi53YWxsZXRycGMuQWRkcmVzc1R5cGUSDwoHZHJ5X3J1bhgFIAEoCCJ8ChVJbXBvcnRBY2NvdW50UmVzcG9uc2USIwoHYWNjb3VudBgBIAEoCzISLndhbGxldHJwYy5BY2NvdW50Eh4KFmRyeV9ydW5fZXh0ZXJuYWxfYWRkcnMYAiADKAkSHgoWZHJ5X3J1bl9pbnRlcm5hbF9hZGRycxgDIAMoCSJaChZJbXBvcnRQdWJsaWNLZXlSZXF1ZXN0EhIKCnB1YmxpY19rZXkYASABKAwSLAoMYWRkcmVzc190eXBlGAIgASgOMhYud2FsbGV0cnBjLkFkZHJlc3NUeXBlIhkKF0ltcG9ydFB1YmxpY0tleVJlc3BvbnNlIuIBChZJbXBvcnRUYXBzY3JpcHRSZXF1ZXN0EhsKE2ludGVybmFsX3B1YmxpY19rZXkYASABKAwSMQoJZnVsbF90cmVlGAIgASgLMhwud2FsbGV0cnBjLlRhcHNjcmlwdEZ1bGxUcmVlSAASOwoOcGFydGlhbF9yZXZlYWwYAyABKAsyIS53YWxsZXRycGMuVGFwc2NyaXB0UGFydGlhbFJldmVhbEgAEhgKDnJvb3RfaGFzaF9vbmx5GAQgASgMSAASFwoNZnVsbF9rZXlfb25seRgFIAEoCEgAQggKBnNjcmlwdCI7ChFUYXBzY3JpcHRGdWxsVHJlZRImCgphbGxfbGVhdmVzGAEgAygLMhIud2FsbGV0cnBjLlRhcExlYWYiLwoHVGFwTGVhZhIUCgxsZWFmX3ZlcnNpb24YASABKA0SDgoGc2NyaXB0GAIgASgMImEKFlRhcHNjcmlwdFBhcnRpYWxSZXZlYWwSKQoNcmV2ZWFsZWRfbGVhZhgBIAEoCzISLndhbGxldHJwYy5UYXBMZWFmEhwKFGZ1bGxfaW5jbHVzaW9uX3Byb29mGAIgASgMIi8KF0ltcG9ydFRhcHNjcmlwdFJlc3BvbnNlEhQKDHAydHJfYWRkcmVzcxgBIAEoCSIsCgtUcmFuc2FjdGlvbhIOCgZ0eF9oZXgYASABKAwSDQoFbGFiZWwYAiABKAkiKAoPUHVibGlzaFJlc3BvbnNlEhUKDXB1Ymxpc2hfZXJyb3IYASABKAkihgEKElNlbmRPdXRwdXRzUmVxdWVzdBISCgpzYXRfcGVyX2t3GAEgASgDEh8KB291dHB1dHMYAiADKAsyDi5zaWducnBjLlR4T3V0Eg0KBWxhYmVsGAMgASgJEhEKCW1pbl9jb25mcxgEIAEoBRIZChFzcGVuZF91bmNvbmZpcm1lZBgFIAEoCCIlChNTZW5kT3V0cHV0c1Jlc3BvbnNlEg4KBnJhd190eBgBIAEoDCIpChJFc3RpbWF0ZUZlZVJlcXVlc3QSEwoLY29uZl90YXJnZXQYASABKAUiKQoTRXN0aW1hdGVGZWVSZXNwb25zZRISCgpzYXRfcGVyX2t3GAEgASgDItICCgxQZW5kaW5nU3dlZXASIQoIb3V0cG9pbnQYASABKAsyDy5sbnJwYy5PdXRQb2ludBIsCgx3aXRuZXNzX3R5cGUYAiABKA4yFi53YWxsZXRycGMuV2l0bmVzc1R5cGUSEgoKYW1vdW50X3NhdBgDIAEoDRIYCgxzYXRfcGVyX2J5dGUYBCABKA1CAhgBEhoKEmJyb2FkY2FzdF9hdHRlbXB0cxgFIAEoDRIdChVuZXh0X2Jyb2FkY2FzdF9oZWlnaHQYBiABKA0SHQoVcmVxdWVzdGVkX2NvbmZfdGFyZ2V0GAggASgNEiIKFnJlcXVlc3RlZF9zYXRfcGVyX2J5dGUYCSABKA1CAhgBEhUKDXNhdF9wZXJfdmJ5dGUYCiABKAQSHwoXcmVxdWVzdGVkX3NhdF9wZXJfdmJ5dGUYCyABKAQSDQoFZm9yY2UYByABKAgiFgoUUGVuZGluZ1N3ZWVwc1JlcXVlc3QiSAoVUGVuZGluZ1N3ZWVwc1Jlc3BvbnNlEi8KDnBlbmRpbmdfc3dlZXBzGAEgAygLMhcud2FsbGV0cnBjLlBlbmRpbmdTd2VlcCKIAQoOQnVtcEZlZVJlcXVlc3QSIQoIb3V0cG9pbnQYASABKAsyDy5sbnJwYy5PdXRQb2ludBITCgt0YXJnZXRfY29uZhgCIAEoDRIYCgxzYXRfcGVyX2J5dGUYAyABKA1CAhgBEg0KBWZvcmNlGAQgASgIEhUKDXNhdF9wZXJfdmJ5dGUYBSABKAQiEQoPQnVtcEZlZVJlc3BvbnNlIiQKEUxpc3RTd2VlcHNSZXF1ZXN0Eg8KB3ZlcmJvc2UYASABKAgizAEKEkxpc3RTd2VlcHNSZXNwb25zZRI4ChN0cmFuc2FjdGlvbl9kZXRhaWxzGAEgASgLMhkubG5ycGMuVHJhbnNhY3Rpb25EZXRhaWxzSAASRwoPdHJhbnNhY3Rpb25faWRzGAIgASgLMiwud2FsbGV0cnBjLkxpc3RTd2VlcHNSZXNwb25zZS5UcmFuc2FjdGlvbklEc0gAGikKDlRyYW5zYWN0aW9uSURzEhcKD3RyYW5zYWN0aW9uX2lkcxgBIAMoCUIICgZzd2VlcHMiSQoXTGFiZWxUcmFuc2FjdGlvblJlcXVlc3QSDAoEdHhpZBgBIAEoDBINCgVsYWJlbBgCIAEoCRIRCglvdmVyd3JpdGUYAyABKAgiGgoYTGFiZWxUcmFuc2FjdGlvblJlc3BvbnNlIv0BCg9GdW5kUHNidFJlcXVlc3QSDgoEcHNidBgBIAEoDEgAEiQKA3JhdxgCIAEoCzIVLndhbGxldHJwYy5UeFRlbXBsYXRlSAASFQoLdGFyZ2V0X2NvbmYYAyABKA1IARIXCg1zYXRfcGVyX3ZieXRlGAQgASgESAESDwoHYWNjb3VudBgFIAEoCRIRCgltaW5fY29uZnMYBiABKAUSGQoRc3BlbmRfdW5jb25maXJtZWQYByABKAgSMQoLY2hhbmdlX3R5cGUYCCABKA4yHC53YWxsZXRycGMuQ2hhbmdlQWRkcmVzc1R5cGVCCgoIdGVtcGxhdGVCBgoEZmVlcyJwChBGdW5kUHNidFJlc3BvbnNlEhMKC2Z1bmRlZF9wc2J0GAEgASgMEhsKE2NoYW5nZV9vdXRwdXRfaW5kZXgYAiABKAUSKgoMbG9ja2VkX3V0eG9zGAMgAygLMhQud2FsbGV0cnBjLlV0eG9MZWFzZSKRAQoKVHhUZW1wbGF0ZRIeCgZpbnB1dHMYASADKAsyDi5sbnJwYy5UeElucHV0EjMKB291dHB1dHMYAiADKAsyIi53YWxsZXRycGMuVHhUZW1wbGF0ZS5PdXRwdXRzRW50cnkaLgoMT3V0cHV0c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBDoCOAEicAoJVXR4b0xlYXNlEgoKAmlkGAEgASgMEiEKCG91dHBvaW50GAIgASgLMg8ubG5ycGMuT3V0UG9pbnQSEgoKZXhwaXJhdGlvbhgDIAEoBBIRCglwa19zY3JpcHQYBCABKAwSDQoFdmFsdWUYBSABKAQiJgoPU2lnblBzYnRSZXF1ZXN0EhMKC2Z1bmRlZF9wc2J0GAEgASgMIj4KEFNpZ25Qc2J0UmVzcG9uc2USEwoLc2lnbmVkX3BzYnQYASABKAwSFQoNc2lnbmVkX2lucHV0cxgCIAMoDSI7ChNGaW5hbGl6ZVBzYnRSZXF1ZXN0EhMKC2Z1bmRlZF9wc2J0GAEgASgMEg8KB2FjY291bnQYBSABKAkiQQoURmluYWxpemVQc2J0UmVzcG9uc2USEwoLc2lnbmVkX3BzYnQYASABKAwSFAoMcmF3X2ZpbmFsX3R4GAIgASgMIhMKEUxpc3RMZWFzZXNSZXF1ZXN0IkAKEkxpc3RMZWFzZXNSZXNwb25zZRIqCgxsb2NrZWRfdXR4b3MYASADKAsyFC53YWxsZXRycGMuVXR4b0xlYXNlKo4BCgtBZGRyZXNzVHlwZRILCgdVTktOT1dOEAASFwoTV0lUTkVTU19QVUJLRVlfSEFTSBABEh4KGk5FU1RFRF9XSVRORVNTX1BVQktFWV9IQVNIEAISJQohSFlCUklEX05FU1RFRF9XSVRORVNTX1BVQktFWV9IQVNIEAMSEgoOVEFQUk9PVF9QVUJLRVkQBCqPBgoLV2l0bmVzc1R5cGUSEwoPVU5LTk9XTl9XSVRORVNTEAASGAoUQ09NTUlUTUVOVF9USU1FX0xPQ0sQARIXChNDT01NSVRNRU5UX05PX0RFTEFZEAISFQoRQ09NTUlUTUVOVF9SRVZPS0UQAxIXChNIVExDX09GRkVSRURfUkVWT0tFEAQSGAoUSFRMQ19BQ0NFUFRFRF9SRVZPS0UQBRIlCiFIVExDX09GRkVSRURfVElNRU9VVF9TRUNPTkRfTEVWRUwQBhImCiJIVExDX0FDQ0VQVEVEX1NVQ0NFU1NfU0VDT05EX0xFVkVMEAcSHwobSFRMQ19PRkZFUkVEX1JFTU9URV9USU1FT1VUEAgSIAocSFRMQ19BQ0NFUFRFRF9SRU1PVEVfU1VDQ0VTUxAJEhwKGEhUTENfU0VDT05EX0xFVkVMX1JFVk9LRRAKEhQKEFdJVE5FU1NfS0VZX0hBU0gQCxIbChdORVNURURfV0lUTkVTU19LRVlfSEFTSBAMEhUKEUNPTU1JVE1FTlRfQU5DSE9SEA0SIQodQ09NTUlUTUVOVF9OT19ERUxBWV9UV0VBS0xFU1MQDhIiCh5DT01NSVRNRU5UX1RPX1JFTU9URV9DT05GSVJNRUQQDxI1CjFIVExDX09GRkVSRURfVElNRU9VVF9TRUNPTkRfTEVWRUxfSU5QVVRfQ09ORklSTUVEEBASNgoySFRMQ19BQ0NFUFRFRF9TVUNDRVNTX1NFQ09ORF9MRVZFTF9JTlBVVF9DT05GSVJNRUQQERIeChpMRUFTRV9DT01NSVRNRU5UX1RJTUVfTE9DSxASEigKJExFQVNFX0NPTU1JVE1FTlRfVE9fUkVNT1RFX0NPTkZJUk1FRBATEisKJ0xFQVNFX0hUTENfT0ZGRVJFRF9USU1FT1VUX1NFQ09ORF9MRVZFTBAUEiwKKExFQVNFX0hUTENfQUNDRVBURURfU1VDQ0VTU19TRUNPTkRfTEVWRUwQFRIZChVUQVBST09UX1BVQl9LRVlfU1BFTkQQFip0ChFDaGFuZ2VBZGRyZXNzVHlwZRIjCh9DSEFOR0VfQUREUkVTU19UWVBFX1VOU1BFQ0lGSUVEEAASHAoYQ0hBTkdFX0FERFJFU1NfVFlQRV9QMlRSEAESHAoYQ0hBTkdFX0FERFJFU1NfVFlQRV9NV0VCEAIy0Q8KCVdhbGxldEtpdBJMCgtMaXN0VW5zcGVudBIdLndhbGxldHJwYy5MaXN0VW5zcGVudFJlcXVlc3QaHi53YWxsZXRycGMuTGlzdFVuc3BlbnRSZXNwb25zZRJMCgtMZWFzZU91dHB1dBIdLndhbGxldHJwYy5MZWFzZU91dHB1dFJlcXVlc3QaHi53YWxsZXRycGMuTGVhc2VPdXRwdXRSZXNwb25zZRJSCg1SZWxlYXNlT3V0cHV0Eh8ud2FsbGV0cnBjLlJlbGVhc2VPdXRwdXRSZXF1ZXN0GiAud2FsbGV0cnBjLlJlbGVhc2VPdXRwdXRSZXNwb25zZRJJCgpMaXN0TGVhc2VzEhwud2FsbGV0cnBjLkxpc3RMZWFzZXNSZXF1ZXN0Gh0ud2FsbGV0cnBjLkxpc3RMZWFzZXNSZXNwb25zZRI6Cg1EZXJpdmVOZXh0S2V5EhEud2FsbGV0cnBjLktleVJlcRoWLnNpZ25ycGMuS2V5RGVzY3JpcHRvchI4CglEZXJpdmVLZXkSEy5zaWducnBjLktleUxvY2F0b3IaFi5zaWducnBjLktleURlc2NyaXB0b3ISOwoITmV4dEFkZHISFi53YWxsZXRycGMuQWRkclJlcXVlc3QaFy53YWxsZXRycGMuQWRkclJlc3BvbnNlEk8KDExpc3RBY2NvdW50cxIeLndhbGxldHJwYy5MaXN0QWNjb3VudHNSZXF1ZXN0Gh8ud2FsbGV0cnBjLkxpc3RBY2NvdW50c1Jlc3BvbnNlElgKD1JlcXVpcmVkUmVzZXJ2ZRIhLndhbGxldHJwYy5SZXF1aXJlZFJlc2VydmVSZXF1ZXN0GiIud2FsbGV0cnBjLlJlcXVpcmVkUmVzZXJ2ZVJlc3BvbnNlElIKDUxpc3RBZGRyZXNzZXMSHy53YWxsZXRycGMuTGlzdEFkZHJlc3Nlc1JlcXVlc3QaIC53YWxsZXRycGMuTGlzdEFkZHJlc3Nlc1Jlc3BvbnNlEmQKE1NpZ25NZXNzYWdlV2l0aEFkZHISJS53YWxsZXRycGMuU2lnbk1lc3NhZ2VXaXRoQWRkclJlcXVlc3QaJi53YWxsZXRycGMuU2lnbk1lc3NhZ2VXaXRoQWRkclJlc3BvbnNlEmoKFVZlcmlmeU1lc3NhZ2VXaXRoQWRkchInLndhbGxldHJwYy5WZXJpZnlNZXNzYWdlV2l0aEFkZHJSZXF1ZXN0Gigud2FsbGV0cnBjLlZlcmlmeU1lc3NhZ2VXaXRoQWRkclJlc3BvbnNlElIKDUltcG9ydEFjY291bnQSHy53YWxsZXRycGMuSW1wb3J0QWNjb3VudFJlcXVlc3QaIC53YWxsZXRycGMuSW1wb3J0QWNjb3VudFJlc3BvbnNlElgKD0ltcG9ydFB1YmxpY0tleRIhLndhbGxldHJwYy5JbXBvcnRQdWJsaWNLZXlSZXF1ZXN0GiIud2FsbGV0cnBjLkltcG9ydFB1YmxpY0tleVJlc3BvbnNlElgKD0ltcG9ydFRhcHNjcmlwdBIhLndhbGxldHJwYy5JbXBvcnRUYXBzY3JpcHRSZXF1ZXN0GiIud2FsbGV0cnBjLkltcG9ydFRhcHNjcmlwdFJlc3BvbnNlEkgKElB1Ymxpc2hUcmFuc2FjdGlvbhIWLndhbGxldHJwYy5UcmFuc2FjdGlvbhoaLndhbGxldHJwYy5QdWJsaXNoUmVzcG9uc2USTAoLU2VuZE91dHB1dHMSHS53YWxsZXRycGMuU2VuZE91dHB1dHNSZXF1ZXN0Gh4ud2FsbGV0cnBjLlNlbmRPdXRwdXRzUmVzcG9uc2USTAoLRXN0aW1hdGVGZWUSHS53YWxsZXRycGMuRXN0aW1hdGVGZWVSZXF1ZXN0Gh4ud2FsbGV0cnBjLkVzdGltYXRlRmVlUmVzcG9uc2USUgoNUGVuZGluZ1N3ZWVwcxIfLndhbGxldHJwYy5QZW5kaW5nU3dlZXBzUmVxdWVzdBogLndhbGxldHJwYy5QZW5kaW5nU3dlZXBzUmVzcG9uc2USQAoHQnVtcEZlZRIZLndhbGxldHJwYy5CdW1wRmVlUmVxdWVzdBoaLndhbGxldHJwYy5CdW1wRmVlUmVzcG9uc2USSQoKTGlzdFN3ZWVwcxIcLndhbGxldHJwYy5MaXN0U3dlZXBzUmVxdWVzdBodLndhbGxldHJwYy5MaXN0U3dlZXBzUmVzcG9uc2USWwoQTGFiZWxUcmFuc2FjdGlvbhIiLndhbGxldHJwYy5MYWJlbFRyYW5zYWN0aW9uUmVxdWVzdBojLndhbGxldHJwYy5MYWJlbFRyYW5zYWN0aW9uUmVzcG9uc2USQwoIRnVuZFBzYnQSGi53YWxsZXRycGMuRnVuZFBzYnRSZXF1ZXN0Ghsud2FsbGV0cnBjLkZ1bmRQc2J0UmVzcG9uc2USQwoIU2lnblBzYnQSGi53YWxsZXRycGMuU2lnblBzYnRSZXF1ZXN0Ghsud2FsbGV0cnBjLlNpZ25Qc2J0UmVzcG9uc2USTwoMRmluYWxpemVQc2J0Eh4ud2FsbGV0cnBjLkZpbmFsaXplUHNidFJlcXVlc3QaHy53YWxsZXRycGMuRmluYWxpemVQc2J0UmVzcG9uc2VCKVonZ2l0aHViLmNvbS9sdGNzdWl0ZS9sbmQvbG5ycGMvd2FsbGV0cnBjYgZwcm90bzM", [file_lightning, file_signrpc_signer]);
 
 /**
  * @generated from message walletrpc.ListUnspentRequest
@@ -42,7 +42,7 @@ export type ListUnspentRequest = Message<"walletrpc.ListUnspentRequest"> & {
   account: string;
 
   /**
-   * 
+   *
    * When min_confs and max_confs are zero, setting false implicitly
    * overrides max_confs to be MaxInt32, otherwise max_confs remains
    * zero. An error is returned if the value is true and both min_confs
@@ -84,7 +84,7 @@ export const ListUnspentResponseSchema: GenMessage<ListUnspentResponse> = /*@__P
  */
 export type LeaseOutputRequest = Message<"walletrpc.LeaseOutputRequest"> & {
   /**
-   * 
+   *
    * An ID of 32 random bytes that must be unique for each distinct application
    * using this RPC which will be used to bound the output lease to.
    *
@@ -120,7 +120,7 @@ export const LeaseOutputRequestSchema: GenMessage<LeaseOutputRequest> = /*@__PUR
  */
 export type LeaseOutputResponse = Message<"walletrpc.LeaseOutputResponse"> & {
   /**
-   * 
+   *
    * The absolute expiration of the output lease represented as a unix timestamp.
    *
    * @generated from field: uint64 expiration = 1;
@@ -179,7 +179,7 @@ export const ReleaseOutputResponseSchema: GenMessage<ReleaseOutputResponse> = /*
  */
 export type KeyReq = Message<"walletrpc.KeyReq"> & {
   /**
-   * 
+   *
    * Is the key finger print of the root pubkey that this request is targeting.
    * This allows the WalletKit to possibly serve out keys for multiple HD chains
    * via public derivation.
@@ -189,7 +189,7 @@ export type KeyReq = Message<"walletrpc.KeyReq"> & {
   keyFingerPrint: number;
 
   /**
-   * 
+   *
    * The target key family to derive a key from. In other contexts, this is
    * known as the "account".
    *
@@ -210,7 +210,7 @@ export const KeyReqSchema: GenMessage<KeyReq> = /*@__PURE__*/
  */
 export type AddrRequest = Message<"walletrpc.AddrRequest"> & {
   /**
-   * 
+   *
    * The name of the account to retrieve the next address of. If empty, the
    * default wallet account is used.
    *
@@ -219,7 +219,7 @@ export type AddrRequest = Message<"walletrpc.AddrRequest"> & {
   account: string;
 
   /**
-   * 
+   *
    * The type of address to derive.
    *
    * @generated from field: walletrpc.AddressType type = 2;
@@ -227,7 +227,7 @@ export type AddrRequest = Message<"walletrpc.AddrRequest"> & {
   type: AddressType;
 
   /**
-   * 
+   *
    * Whether a change address should be derived.
    *
    * @generated from field: bool change = 3;
@@ -247,7 +247,7 @@ export const AddrRequestSchema: GenMessage<AddrRequest> = /*@__PURE__*/
  */
 export type AddrResponse = Message<"walletrpc.AddrResponse"> & {
   /**
-   * 
+   *
    * The address encoded using a bech32 format.
    *
    * @generated from field: string addr = 1;
@@ -281,7 +281,7 @@ export type Account = Message<"walletrpc.Account"> & {
   addressType: AddressType;
 
   /**
-   * 
+   *
    * The public key backing the account that all keys are derived from
    * represented as an extended key. This will always be empty for the default
    * imported account in which single public keys are imported into.
@@ -291,7 +291,7 @@ export type Account = Message<"walletrpc.Account"> & {
   extendedPublicKey: string;
 
   /**
-   * 
+   *
    * The fingerprint of the root key from which the account public key was
    * derived from. This will always be zero for the default imported account in
    * which single public keys are imported into. The bytes are in big-endian
@@ -302,7 +302,7 @@ export type Account = Message<"walletrpc.Account"> & {
   masterKeyFingerprint: Uint8Array;
 
   /**
-   * 
+   *
    * The derivation path corresponding to the account public key. This will
    * always be empty for the default imported account in which single public keys
    * are imported into.
@@ -312,7 +312,7 @@ export type Account = Message<"walletrpc.Account"> & {
   derivationPath: string;
 
   /**
-   * 
+   *
    * The number of keys derived from the external branch of the account public
    * key. This will always be zero for the default imported account in which
    * single public keys are imported into.
@@ -322,7 +322,7 @@ export type Account = Message<"walletrpc.Account"> & {
   externalKeyCount: number;
 
   /**
-   * 
+   *
    * The number of keys derived from the internal branch of the account public
    * key. This will always be zero for the default imported account in which
    * single public keys are imported into.
@@ -351,10 +351,10 @@ export const AccountSchema: GenMessage<Account> = /*@__PURE__*/
  */
 export type AddressProperty = Message<"walletrpc.AddressProperty"> & {
   /**
-   * 
+   *
    * The address encoded using the appropriate format depending on the
    * address type (base58, bech32, bech32m).
-   * 
+   *
    * Note that lnd's internal/custom keys for channels and other
    * functionality are derived from the same scope. Since they
    * aren't really used as addresses and will never have an
@@ -406,7 +406,7 @@ export type AccountWithAddresses = Message<"walletrpc.AccountWithAddresses"> & {
   addressType: AddressType;
 
   /**
-   * 
+   *
    * The derivation path corresponding to the account public key. This will
    * always be empty for the default imported account in which single public keys
    * are imported into.
@@ -416,7 +416,7 @@ export type AccountWithAddresses = Message<"walletrpc.AccountWithAddresses"> & {
   derivationPath: string;
 
   /**
-   * 
+   *
    * List of address, its type internal/external & balance.
    * Note that the order of addresses will be random and not according to the
    * derivation index, since that information is not stored by the underlying
@@ -682,7 +682,7 @@ export type ImportAccountRequest = Message<"walletrpc.ImportAccountRequest"> & {
   name: string;
 
   /**
-   * 
+   *
    * A public key that corresponds to a wallet account represented as an extended
    * key. It must conform to a derivation path of the form
    * m/purpose'/coin_type'/account'.
@@ -692,7 +692,7 @@ export type ImportAccountRequest = Message<"walletrpc.ImportAccountRequest"> & {
   extendedPublicKey: string;
 
   /**
-   * 
+   *
    * The fingerprint of the root key (also known as the key with derivation path
    * m/) from which the account public key was derived from. This may be required
    * by some hardware wallets for proper identification and signing. The bytes
@@ -703,7 +703,7 @@ export type ImportAccountRequest = Message<"walletrpc.ImportAccountRequest"> & {
   masterKeyFingerprint: Uint8Array;
 
   /**
-   * 
+   *
    * An address type is only required when the extended account public key has a
    * legacy version (xpub, tpub, etc.), such that the wallet cannot detect what
    * address scheme it belongs to.
@@ -713,7 +713,7 @@ export type ImportAccountRequest = Message<"walletrpc.ImportAccountRequest"> & {
   addressType: AddressType;
 
   /**
-   * 
+   *
    * Whether a dry run should be attempted when importing the account. This
    * serves as a way to confirm whether the account is being imported correctly
    * by returning the first N addresses for the external and internal branches of
@@ -744,7 +744,7 @@ export type ImportAccountResponse = Message<"walletrpc.ImportAccountResponse"> &
   account?: Account;
 
   /**
-   * 
+   *
    * The first N addresses that belong to the external branch of the account.
    * The external branch is typically used for external non-change addresses.
    * These are only returned if a dry run was specified within the request.
@@ -754,7 +754,7 @@ export type ImportAccountResponse = Message<"walletrpc.ImportAccountResponse"> &
   dryRunExternalAddrs: string[];
 
   /**
-   * 
+   *
    * The first N addresses that belong to the internal branch of the account.
    * The internal branch is typically used for change addresses. These are only
    * returned if a dry run was specified within the request.
@@ -815,7 +815,7 @@ export const ImportPublicKeyResponseSchema: GenMessage<ImportPublicKeyResponse> 
  */
 export type ImportTapscriptRequest = Message<"walletrpc.ImportTapscriptRequest"> & {
   /**
-   * 
+   *
    * The internal public key, serialized as 32-byte x-only public key.
    *
    * @generated from field: bytes internal_public_key = 1;
@@ -827,7 +827,7 @@ export type ImportTapscriptRequest = Message<"walletrpc.ImportTapscriptRequest">
    */
   script: {
     /**
-     * 
+     *
      * The full script tree with all individual leaves is known and the root
      * hash can be constructed from the full tree directly.
      *
@@ -837,7 +837,7 @@ export type ImportTapscriptRequest = Message<"walletrpc.ImportTapscriptRequest">
     case: "fullTree";
   } | {
     /**
-     * 
+     *
      * Only a single script leaf is known. To construct the root hash, the full
      * inclusion proof must also be provided.
      *
@@ -847,7 +847,7 @@ export type ImportTapscriptRequest = Message<"walletrpc.ImportTapscriptRequest">
     case: "partialReveal";
   } | {
     /**
-     * 
+     *
      * Only the root hash of the Taproot script tree (or other form of Taproot
      * commitment) is known.
      *
@@ -857,7 +857,7 @@ export type ImportTapscriptRequest = Message<"walletrpc.ImportTapscriptRequest">
     case: "rootHashOnly";
   } | {
     /**
-     * 
+     *
      * Only the final, tweaked Taproot key is known and no additional
      * information about the internal key or type of tweak that was used to
      * derive it. When this is set, the wallet treats the key in
@@ -884,7 +884,7 @@ export const ImportTapscriptRequestSchema: GenMessage<ImportTapscriptRequest> = 
  */
 export type TapscriptFullTree = Message<"walletrpc.TapscriptFullTree"> & {
   /**
-   * 
+   *
    * The complete, ordered list of all tap leaves of the tree.
    *
    * @generated from field: repeated walletrpc.TapLeaf all_leaves = 1;
@@ -959,7 +959,7 @@ export const TapscriptPartialRevealSchema: GenMessage<TapscriptPartialReveal> = 
  */
 export type ImportTapscriptResponse = Message<"walletrpc.ImportTapscriptResponse"> & {
   /**
-   * 
+   *
    * The resulting pay-to-Taproot address that represents the imported internal
    * key with the script committed to it.
    *
@@ -980,7 +980,7 @@ export const ImportTapscriptResponseSchema: GenMessage<ImportTapscriptResponse> 
  */
 export type Transaction = Message<"walletrpc.Transaction"> & {
   /**
-   * 
+   *
    * The raw serialized transaction. Despite the field name, this does need to be
    * specified in raw bytes (or base64 encoded when using REST) and not in hex.
    * To not break existing software, the field can't simply be renamed.
@@ -990,7 +990,7 @@ export type Transaction = Message<"walletrpc.Transaction"> & {
   txHex: Uint8Array;
 
   /**
-   * 
+   *
    * An optional label to save with the transaction. Limited to 500 characters.
    *
    * @generated from field: string label = 2;
@@ -1010,11 +1010,11 @@ export const TransactionSchema: GenMessage<Transaction> = /*@__PURE__*/
  */
 export type PublishResponse = Message<"walletrpc.PublishResponse"> & {
   /**
-   * 
+   *
    * If blank, then no error occurred and the transaction was successfully
    * published. If not the empty string, then a string representation of the
    * broadcast error.
-   * 
+   *
    * TODO(roasbeef): map to a proper enum type
    *
    * @generated from field: string publish_error = 1;
@@ -1034,7 +1034,7 @@ export const PublishResponseSchema: GenMessage<PublishResponse> = /*@__PURE__*/
  */
 export type SendOutputsRequest = Message<"walletrpc.SendOutputsRequest"> & {
   /**
-   * 
+   *
    * The number of satoshis per kilo weight that should be used when crafting
    * this transaction.
    *
@@ -1043,7 +1043,7 @@ export type SendOutputsRequest = Message<"walletrpc.SendOutputsRequest"> & {
   satPerKw: bigint;
 
   /**
-   * 
+   *
    * A slice of the outputs that should be created in the transaction produced.
    *
    * @generated from field: repeated signrpc.TxOut outputs = 2;
@@ -1085,7 +1085,7 @@ export const SendOutputsRequestSchema: GenMessage<SendOutputsRequest> = /*@__PUR
  */
 export type SendOutputsResponse = Message<"walletrpc.SendOutputsResponse"> & {
   /**
-   * 
+   *
    * The serialized transaction sent out on the network.
    *
    * @generated from field: bytes raw_tx = 1;
@@ -1105,7 +1105,7 @@ export const SendOutputsResponseSchema: GenMessage<SendOutputsResponse> = /*@__P
  */
 export type EstimateFeeRequest = Message<"walletrpc.EstimateFeeRequest"> & {
   /**
-   * 
+   *
    * The number of confirmations to shoot for when estimating the fee.
    *
    * @generated from field: int32 conf_target = 1;
@@ -1125,7 +1125,7 @@ export const EstimateFeeRequestSchema: GenMessage<EstimateFeeRequest> = /*@__PUR
  */
 export type EstimateFeeResponse = Message<"walletrpc.EstimateFeeResponse"> & {
   /**
-   * 
+   *
    * The amount of satoshis per kw that should be used in order to reach the
    * confirmation target in the request.
    *
@@ -1167,7 +1167,7 @@ export type PendingSweep = Message<"walletrpc.PendingSweep"> & {
   amountSat: number;
 
   /**
-   * 
+   *
    * Deprecated, use sat_per_vbyte.
    * The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
    * rate is only determined once a sweeping transaction for the output is
@@ -1186,7 +1186,7 @@ export type PendingSweep = Message<"walletrpc.PendingSweep"> & {
   broadcastAttempts: number;
 
   /**
-   * 
+   *
    * The next height of the chain at which we'll attempt to broadcast the
    * sweep transaction of the output.
    *
@@ -1211,7 +1211,7 @@ export type PendingSweep = Message<"walletrpc.PendingSweep"> & {
   requestedSatPerByte: number;
 
   /**
-   * 
+   *
    * The fee rate we'll use to sweep the output, expressed in sat/vbyte. The fee
    * rate is only determined once a sweeping transaction for the output is
    * created, so it's possible for this to be 0 before this.
@@ -1228,7 +1228,7 @@ export type PendingSweep = Message<"walletrpc.PendingSweep"> & {
   requestedSatPerVbyte: bigint;
 
   /**
-   * 
+   *
    * Whether this input must be force-swept. This means that it is swept even
    * if it has a negative yield.
    *
@@ -1262,7 +1262,7 @@ export const PendingSweepsRequestSchema: GenMessage<PendingSweepsRequest> = /*@_
  */
 export type PendingSweepsResponse = Message<"walletrpc.PendingSweepsResponse"> & {
   /**
-   * 
+   *
    * The set of outputs currently being swept by lnd's central batching engine.
    *
    * @generated from field: repeated walletrpc.PendingSweep pending_sweeps = 1;
@@ -1296,7 +1296,7 @@ export type BumpFeeRequest = Message<"walletrpc.BumpFeeRequest"> & {
   targetConf: number;
 
   /**
-   * 
+   *
    * Deprecated, use sat_per_vbyte.
    * The fee rate, expressed in sat/vbyte, that should be used to spend the input
    * with.
@@ -1307,7 +1307,7 @@ export type BumpFeeRequest = Message<"walletrpc.BumpFeeRequest"> & {
   satPerByte: number;
 
   /**
-   * 
+   *
    * Whether this input must be force-swept. This means that it is swept even
    * if it has a negative yield.
    *
@@ -1316,7 +1316,7 @@ export type BumpFeeRequest = Message<"walletrpc.BumpFeeRequest"> & {
   force: boolean;
 
   /**
-   * 
+   *
    * The fee rate, expressed in sat/vbyte, that should be used to spend the input
    * with.
    *
@@ -1350,7 +1350,7 @@ export const BumpFeeResponseSchema: GenMessage<BumpFeeResponse> = /*@__PURE__*/
  */
 export type ListSweepsRequest = Message<"walletrpc.ListSweepsRequest"> & {
   /**
-   * 
+   *
    * Retrieve the full sweep transaction details. If false, only the sweep txids
    * will be returned. Note that some sweeps that LND publishes will have been
    * replaced-by-fee, so will not be included in this output.
@@ -1401,7 +1401,7 @@ export const ListSweepsResponseSchema: GenMessage<ListSweepsResponse> = /*@__PUR
  */
 export type ListSweepsResponse_TransactionIDs = Message<"walletrpc.ListSweepsResponse.TransactionIDs"> & {
   /**
-   * 
+   *
    * Reversed, hex-encoded string representing the transaction ids of the
    * sweeps that our node has broadcast. Note that these transactions may
    * not have confirmed yet, we record sweeps on broadcast, not confirmation.
@@ -1474,9 +1474,9 @@ export type FundPsbtRequest = Message<"walletrpc.FundPsbtRequest"> & {
    */
   template: {
     /**
-     * 
+     *
      * Use an existing PSBT packet as the template for the funded PSBT.
-     * 
+     *
      * The packet must contain at least one non-dust output. If one or more
      * inputs are specified, no coin selection is performed. In that case every
      * input must be an UTXO known to the wallet that has not been locked
@@ -1490,7 +1490,7 @@ export type FundPsbtRequest = Message<"walletrpc.FundPsbtRequest"> & {
     case: "psbt";
   } | {
     /**
-     * 
+     *
      * Use the outputs and optional inputs from this raw template.
      *
      * @generated from field: walletrpc.TxTemplate raw = 2;
@@ -1504,7 +1504,7 @@ export type FundPsbtRequest = Message<"walletrpc.FundPsbtRequest"> & {
    */
   fees: {
     /**
-     * 
+     *
      * The target number of blocks that the transaction should be confirmed in.
      *
      * @generated from field: uint32 target_conf = 3;
@@ -1513,7 +1513,7 @@ export type FundPsbtRequest = Message<"walletrpc.FundPsbtRequest"> & {
     case: "targetConf";
   } | {
     /**
-     * 
+     *
      * The fee rate, expressed in sat/vbyte, that should be used to spend the
      * input with.
      *
@@ -1524,7 +1524,7 @@ export type FundPsbtRequest = Message<"walletrpc.FundPsbtRequest"> & {
   } | { case: undefined; value?: undefined };
 
   /**
-   * 
+   *
    * The name of the account to fund the PSBT with. If empty, the default wallet
    * account is used.
    *
@@ -1570,7 +1570,7 @@ export const FundPsbtRequestSchema: GenMessage<FundPsbtRequest> = /*@__PURE__*/
  */
 export type FundPsbtResponse = Message<"walletrpc.FundPsbtResponse"> & {
   /**
-   * 
+   *
    * The funded but not yet signed PSBT packet.
    *
    * @generated from field: bytes funded_psbt = 1;
@@ -1578,7 +1578,7 @@ export type FundPsbtResponse = Message<"walletrpc.FundPsbtResponse"> & {
   fundedPsbt: Uint8Array;
 
   /**
-   * 
+   *
    * The index of the added change output or -1 if no change was left over.
    *
    * @generated from field: int32 change_output_index = 2;
@@ -1586,7 +1586,7 @@ export type FundPsbtResponse = Message<"walletrpc.FundPsbtResponse"> & {
   changeOutputIndex: number;
 
   /**
-   * 
+   *
    * The list of lock leases that were acquired for the inputs in the funded PSBT
    * packet.
    *
@@ -1607,21 +1607,21 @@ export const FundPsbtResponseSchema: GenMessage<FundPsbtResponse> = /*@__PURE__*
  */
 export type TxTemplate = Message<"walletrpc.TxTemplate"> & {
   /**
-   * 
+   *
    * An optional list of inputs to use. Every input must be an UTXO known to the
    * wallet that has not been locked before. The sum of all inputs must be
    * sufficiently greater than the sum of all outputs to pay a miner fee with the
    * fee rate specified in the parent message.
-   * 
+   *
    * If no inputs are specified, coin selection will be performed instead and
    * inputs of sufficient value will be added to the resulting PSBT.
    *
-   * @generated from field: repeated lnrpc.OutPoint inputs = 1;
+   * @generated from field: repeated lnrpc.TxInput inputs = 1;
    */
-  inputs: OutPoint[];
+  inputs: TxInput[];
 
   /**
-   * 
+   *
    * A map of all addresses and the amounts to send to in the funded PSBT.
    *
    * @generated from field: map<string, uint64> outputs = 2;
@@ -1641,7 +1641,7 @@ export const TxTemplateSchema: GenMessage<TxTemplate> = /*@__PURE__*/
  */
 export type UtxoLease = Message<"walletrpc.UtxoLease"> & {
   /**
-   * 
+   *
    * A 32 byte random ID that identifies the lease.
    *
    * @generated from field: bytes id = 1;
@@ -1656,7 +1656,7 @@ export type UtxoLease = Message<"walletrpc.UtxoLease"> & {
   outpoint?: OutPoint;
 
   /**
-   * 
+   *
    * The absolute expiration of the output lease represented as a unix timestamp.
    *
    * @generated from field: uint64 expiration = 3;
@@ -1664,7 +1664,7 @@ export type UtxoLease = Message<"walletrpc.UtxoLease"> & {
   expiration: bigint;
 
   /**
-   * 
+   *
    * The public key script of the leased output.
    *
    * @generated from field: bytes pk_script = 4;
@@ -1672,7 +1672,7 @@ export type UtxoLease = Message<"walletrpc.UtxoLease"> & {
   pkScript: Uint8Array;
 
   /**
-   * 
+   *
    * The value of the leased output in satoshis.
    *
    * @generated from field: uint64 value = 5;
@@ -1692,7 +1692,7 @@ export const UtxoLeaseSchema: GenMessage<UtxoLease> = /*@__PURE__*/
  */
 export type SignPsbtRequest = Message<"walletrpc.SignPsbtRequest"> & {
   /**
-   * 
+   *
    * The PSBT that should be signed. The PSBT must contain all required inputs,
    * outputs, UTXO data and custom fields required to identify the signing key.
    *
@@ -1739,7 +1739,7 @@ export const SignPsbtResponseSchema: GenMessage<SignPsbtResponse> = /*@__PURE__*
  */
 export type FinalizePsbtRequest = Message<"walletrpc.FinalizePsbtRequest"> & {
   /**
-   * 
+   *
    * A PSBT that should be signed and finalized. The PSBT must contain all
    * required inputs, outputs, UTXO data and partial signatures of all other
    * signers.
@@ -1749,7 +1749,7 @@ export type FinalizePsbtRequest = Message<"walletrpc.FinalizePsbtRequest"> & {
   fundedPsbt: Uint8Array;
 
   /**
-   * 
+   *
    * The name of the account to finalize the PSBT with. If empty, the default
    * wallet account is used.
    *
@@ -1869,7 +1869,7 @@ export enum WitnessType {
   UNKNOWN_WITNESS = 0,
 
   /**
-   * 
+   *
    * A witness that allows us to spend the output of a commitment transaction
    * after a relative lock-time lockout.
    *
@@ -1878,7 +1878,7 @@ export enum WitnessType {
   COMMITMENT_TIME_LOCK = 1,
 
   /**
-   * 
+   *
    * A witness that allows us to spend a settled no-delay output immediately on a
    * counterparty's commitment transaction.
    *
@@ -1887,7 +1887,7 @@ export enum WitnessType {
   COMMITMENT_NO_DELAY = 2,
 
   /**
-   * 
+   *
    * A witness that allows us to sweep the settled output of a malicious
    * counterparty's who broadcasts a revoked commitment transaction.
    *
@@ -1896,7 +1896,7 @@ export enum WitnessType {
   COMMITMENT_REVOKE = 3,
 
   /**
-   * 
+   *
    * A witness that allows us to sweep an HTLC which we offered to the remote
    * party in the case that they broadcast a revoked commitment state.
    *
@@ -1905,7 +1905,7 @@ export enum WitnessType {
   HTLC_OFFERED_REVOKE = 4,
 
   /**
-   * 
+   *
    * A witness that allows us to sweep an HTLC output sent to us in the case that
    * the remote party broadcasts a revoked commitment state.
    *
@@ -1914,7 +1914,7 @@ export enum WitnessType {
   HTLC_ACCEPTED_REVOKE = 5,
 
   /**
-   * 
+   *
    * A witness that allows us to sweep an HTLC output that we extended to a
    * party, but was never fulfilled.  This HTLC output isn't directly on the
    * commitment transaction, but is the result of a confirmed second-level HTLC
@@ -1925,7 +1925,7 @@ export enum WitnessType {
   HTLC_OFFERED_TIMEOUT_SECOND_LEVEL = 6,
 
   /**
-   * 
+   *
    * A witness that allows us to sweep an HTLC output that was offered to us, and
    * for which we have a payment preimage. This HTLC output isn't directly on our
    * commitment transaction, but is the result of confirmed second-level HTLC
@@ -1936,7 +1936,7 @@ export enum WitnessType {
   HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL = 7,
 
   /**
-   * 
+   *
    * A witness that allows us to sweep an HTLC that we offered to the remote
    * party which lies in the commitment transaction of the remote party. We can
    * spend this output after the absolute CLTV timeout of the HTLC as passed.
@@ -1946,7 +1946,7 @@ export enum WitnessType {
   HTLC_OFFERED_REMOTE_TIMEOUT = 8,
 
   /**
-   * 
+   *
    * A witness that allows us to sweep an HTLC that was offered to us by the
    * remote party. We use this witness in the case that the remote party goes to
    * chain, and we know the pre-image to the HTLC. We can sweep this without any
@@ -1957,7 +1957,7 @@ export enum WitnessType {
   HTLC_ACCEPTED_REMOTE_SUCCESS = 9,
 
   /**
-   * 
+   *
    * A witness that allows us to sweep an HTLC from the remote party's commitment
    * transaction in the case that the broadcast a revoked commitment, but then
    * also immediately attempt to go to the second level to claim the HTLC.
@@ -1967,7 +1967,7 @@ export enum WitnessType {
   HTLC_SECOND_LEVEL_REVOKE = 10,
 
   /**
-   * 
+   *
    * A witness type that allows us to spend a regular p2wkh output that's sent to
    * an output which is under complete control of the backing wallet.
    *
@@ -1976,7 +1976,7 @@ export enum WitnessType {
   WITNESS_KEY_HASH = 11,
 
   /**
-   * 
+   *
    * A witness type that allows us to sweep an output that sends to a nested P2SH
    * script that pays to a key solely under our control.
    *
@@ -1985,7 +1985,7 @@ export enum WitnessType {
   NESTED_WITNESS_KEY_HASH = 12,
 
   /**
-   * 
+   *
    * A witness type that allows us to spend our anchor on the commitment
    * transaction.
    *
@@ -1994,7 +1994,7 @@ export enum WitnessType {
   COMMITMENT_ANCHOR = 13,
 
   /**
-   * 
+   *
    * A witness type that is similar to the COMMITMENT_NO_DELAY type,
    * but it omits the tweak that randomizes the key we need to
    * spend with a channel peer supplied set of randomness.
@@ -2004,7 +2004,7 @@ export enum WitnessType {
   COMMITMENT_NO_DELAY_TWEAKLESS = 14,
 
   /**
-   * 
+   *
    * A witness type that allows us to spend our output on the counterparty's
    * commitment transaction after a confirmation.
    *
@@ -2013,7 +2013,7 @@ export enum WitnessType {
   COMMITMENT_TO_REMOTE_CONFIRMED = 15,
 
   /**
-   * 
+   *
    * A witness type that allows us to sweep an HTLC output that we extended
    * to a party, but was never fulfilled. This _is_ the HTLC output directly
    * on our commitment transaction, and the input to the second-level HTLC
@@ -2025,7 +2025,7 @@ export enum WitnessType {
   HTLC_OFFERED_TIMEOUT_SECOND_LEVEL_INPUT_CONFIRMED = 16,
 
   /**
-   * 
+   *
    * A witness type that allows us to sweep an HTLC output that was offered
    * to us, and for which we have a payment preimage. This _is_ the HTLC
    * output directly on our commitment transaction, and the input to the
@@ -2037,7 +2037,7 @@ export enum WitnessType {
   HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL_INPUT_CONFIRMED = 17,
 
   /**
-   * 
+   *
    * A witness type that allows us to spend our output on our local
    * commitment transaction after a relative and absolute lock-time lockout as
    * part of the script enforced lease commitment type.
@@ -2047,7 +2047,7 @@ export enum WitnessType {
   LEASE_COMMITMENT_TIME_LOCK = 18,
 
   /**
-   * 
+   *
    * A witness type that allows us to spend our output on the counterparty's
    * commitment transaction after a confirmation and absolute locktime as part
    * of the script enforced lease commitment type.
@@ -2057,7 +2057,7 @@ export enum WitnessType {
   LEASE_COMMITMENT_TO_REMOTE_CONFIRMED = 19,
 
   /**
-   * 
+   *
    * A witness type that allows us to sweep an HTLC output that we extended
    * to a party, but was never fulfilled. This HTLC output isn't directly on
    * the commitment transaction, but is the result of a confirmed second-level
@@ -2069,7 +2069,7 @@ export enum WitnessType {
   LEASE_HTLC_OFFERED_TIMEOUT_SECOND_LEVEL = 20,
 
   /**
-   * 
+   *
    * A witness type that allows us to sweep an HTLC output that was offered
    * to us, and for which we have a payment preimage. This HTLC output isn't
    * directly on our commitment transaction, but is the result of confirmed
@@ -2082,7 +2082,7 @@ export enum WitnessType {
   LEASE_HTLC_ACCEPTED_SUCCESS_SECOND_LEVEL = 21,
 
   /**
-   * 
+   *
    * A witness type that allows us to spend a regular p2tr output that's sent
    * to an output which is under complete control of the backing wallet.
    *
@@ -2124,6 +2124,14 @@ export enum ChangeAddressType {
    * @generated from enum value: CHANGE_ADDRESS_TYPE_P2TR = 1;
    */
   P2TR = 1,
+
+  /**
+   * ChangeAddressType_CHANGE_ADDRESS_TYPE_MWEB indicates to use MWEB address
+   * for change output.
+   *
+   * @generated from enum value: CHANGE_ADDRESS_TYPE_MWEB = 2;
+   */
+  MWEB = 2,
 }
 
 /**
@@ -2140,7 +2148,7 @@ export const ChangeAddressTypeSchema: GenEnum<ChangeAddressType> = /*@__PURE__*/
  */
 export const WalletKit: GenService<{
   /**
-   * 
+   *
    * ListUnspent returns a list of all utxos spendable by the wallet with a
    * number of confirmations between the specified minimum and maximum. By
    * default, all utxos are listed. To list only the unconfirmed utxos, set
@@ -2154,7 +2162,7 @@ export const WalletKit: GenService<{
     output: typeof ListUnspentResponseSchema;
   },
   /**
-   * 
+   *
    * LeaseOutput locks an output to the given ID, preventing it from being
    * available for any future coin selection attempts. The absolute time of the
    * lock's expiration is returned. The expiration of the lock can be extended by
@@ -2169,7 +2177,7 @@ export const WalletKit: GenService<{
     output: typeof LeaseOutputResponseSchema;
   },
   /**
-   * 
+   *
    * ReleaseOutput unlocks an output, allowing it to be available for coin
    * selection if it remains unspent. The ID should match the one used to
    * originally lock the output.
@@ -2182,7 +2190,7 @@ export const WalletKit: GenService<{
     output: typeof ReleaseOutputResponseSchema;
   },
   /**
-   * 
+   *
    * ListLeases lists all currently locked utxos.
    *
    * @generated from rpc walletrpc.WalletKit.ListLeases
@@ -2193,7 +2201,7 @@ export const WalletKit: GenService<{
     output: typeof ListLeasesResponseSchema;
   },
   /**
-   * 
+   *
    * DeriveNextKey attempts to derive the *next* key within the key family
    * (account in BIP43) specified. This method should return the next external
    * child within this branch.
@@ -2206,7 +2214,7 @@ export const WalletKit: GenService<{
     output: typeof KeyDescriptorSchema;
   },
   /**
-   * 
+   *
    * DeriveKey attempts to derive an arbitrary key specified by the passed
    * KeyLocator.
    *
@@ -2218,7 +2226,7 @@ export const WalletKit: GenService<{
     output: typeof KeyDescriptorSchema;
   },
   /**
-   * 
+   *
    * NextAddr returns the next unused address within the wallet.
    *
    * @generated from rpc walletrpc.WalletKit.NextAddr
@@ -2229,7 +2237,7 @@ export const WalletKit: GenService<{
     output: typeof AddrResponseSchema;
   },
   /**
-   * 
+   *
    * ListAccounts retrieves all accounts belonging to the wallet by default. A
    * name and key scope filter can be provided to filter through all of the
    * wallet accounts and return only those matching.
@@ -2242,7 +2250,7 @@ export const WalletKit: GenService<{
     output: typeof ListAccountsResponseSchema;
   },
   /**
-   * 
+   *
    * RequiredReserve returns the minimum amount of satoshis that should be kept
    * in the wallet in order to fee bump anchor channels if necessary. The value
    * scales with the number of public anchor channels but is capped at a maximum.
@@ -2255,7 +2263,7 @@ export const WalletKit: GenService<{
     output: typeof RequiredReserveResponseSchema;
   },
   /**
-   * 
+   *
    * ListAddresses retrieves all the addresses along with their balance. An
    * account name filter can be provided to filter through all of the
    * wallet accounts and return the addresses of only those matching.
@@ -2268,13 +2276,13 @@ export const WalletKit: GenService<{
     output: typeof ListAddressesResponseSchema;
   },
   /**
-   * 
+   *
    * SignMessageWithAddr returns the compact signature (base64 encoded) created
    * with the private key of the provided address. This requires the address
    * to be solely based on a public key lock (no scripts). Obviously the internal
    * lnd wallet has to possess the private key of the address otherwise
    * an error is returned.
-   * 
+   *
    * This method aims to provide full compatibility with the bitcoin-core and
    * btcd implementation. Bitcoin-core's algorithm is not specified in a
    * BIP and only applicable for legacy addresses. This method enhances the
@@ -2290,7 +2298,7 @@ export const WalletKit: GenService<{
     output: typeof SignMessageWithAddrResponseSchema;
   },
   /**
-   * 
+   *
    * VerifyMessageWithAddr returns the validity and the recovered public key of
    * the provided compact signature (base64 encoded). The verification is
    * twofold. First the validity of the signature itself is checked and then
@@ -2299,13 +2307,13 @@ export const WalletKit: GenService<{
    * private key of the address therefore also external addresses are allowed
    * to verify signatures.
    * Supported address types are P2PKH, P2WKH, NP2WKH, P2TR.
-   * 
+   *
    * This method is the counterpart of the related signing method
    * (SignMessageWithAddr) and aims to provide full compatibility to
    * bitcoin-core's implementation. Although bitcoin-core/btcd only provide
    * this functionality for legacy addresses this function enhances it to
    * the address types: P2PKH, P2WKH, NP2WKH, P2TR.
-   * 
+   *
    * The verification for P2TR addresses is a special case and requires the
    * ECDSA compact signature to compare the reovered public key to the internal
    * taproot key. The compact ECDSA signature format was used because there
@@ -2319,27 +2327,27 @@ export const WalletKit: GenService<{
     output: typeof VerifyMessageWithAddrResponseSchema;
   },
   /**
-   * 
+   *
    * ImportAccount imports an account backed by an account extended public key.
    * The master key fingerprint denotes the fingerprint of the root key
    * corresponding to the account public key (also known as the key with
    * derivation path m/). This may be required by some hardware wallets for
    * proper identification and signing.
-   * 
+   *
    * The address type can usually be inferred from the key's version, but may be
    * required for certain keys to map them into the proper scope.
-   * 
+   *
    * For BIP-0044 keys, an address type must be specified as we intend to not
    * support importing BIP-0044 keys into the wallet using the legacy
    * pay-to-pubkey-hash (P2PKH) scheme. A nested witness address type will force
    * the standard BIP-0049 derivation scheme, while a witness address type will
    * force the standard BIP-0084 derivation scheme.
-   * 
+   *
    * For BIP-0049 keys, an address type must also be specified to make a
    * distinction between the standard BIP-0049 address schema (nested witness
    * pubkeys everywhere) and our own BIP-0049Plus address schema (nested pubkeys
    * externally, witness pubkeys internally).
-   * 
+   *
    * NOTE: Events (deposits/spends) for keys derived from an account will only be
    * detected by lnd if they happen after the import. Rescans to detect past
    * events will be supported later on.
@@ -2352,13 +2360,13 @@ export const WalletKit: GenService<{
     output: typeof ImportAccountResponseSchema;
   },
   /**
-   * 
+   *
    * ImportPublicKey imports a public key as watch-only into the wallet. The
    * public key is converted into a simple address of the given type and that
    * address script is watched on chain. For Taproot keys, this will only watch
    * the BIP-0086 style output script. Use ImportTapscript for more advanced key
    * spend or script spend outputs.
-   * 
+   *
    * NOTE: Events (deposits/spends) for a key will only be detected by lnd if
    * they happen after the import. Rescans to detect past events will be
    * supported later on.
@@ -2371,16 +2379,16 @@ export const WalletKit: GenService<{
     output: typeof ImportPublicKeyResponseSchema;
   },
   /**
-   * 
+   *
    * ImportTapscript imports a Taproot script and internal key and adds the
    * resulting Taproot output key as a watch-only output script into the wallet.
    * For BIP-0086 style Taproot keys (no root hash commitment and no script spend
    * path) use ImportPublicKey.
-   * 
+   *
    * NOTE: Events (deposits/spends) for a key will only be detected by lnd if
    * they happen after the import. Rescans to detect past events will be
    * supported later on.
-   * 
+   *
    * NOTE: Taproot keys imported through this RPC currently _cannot_ be used for
    * funding PSBTs. Only tracking the balance and UTXOs is currently supported.
    *
@@ -2392,7 +2400,7 @@ export const WalletKit: GenService<{
     output: typeof ImportTapscriptResponseSchema;
   },
   /**
-   * 
+   *
    * PublishTransaction attempts to publish the passed transaction to the
    * network. Once this returns without an error, the wallet will continually
    * attempt to re-broadcast the transaction on start up, until it enters the
@@ -2406,7 +2414,7 @@ export const WalletKit: GenService<{
     output: typeof PublishResponseSchema;
   },
   /**
-   * 
+   *
    * SendOutputs is similar to the existing sendmany call in Bitcoind, and
    * allows the caller to create a transaction that sends to several outputs at
    * once. This is ideal when wanting to batch create a set of transactions.
@@ -2419,7 +2427,7 @@ export const WalletKit: GenService<{
     output: typeof SendOutputsResponseSchema;
   },
   /**
-   * 
+   *
    * EstimateFee attempts to query the internal fee estimator of the wallet to
    * determine the fee (in sat/kw) to attach to a transaction in order to
    * achieve the confirmation target.
@@ -2432,12 +2440,12 @@ export const WalletKit: GenService<{
     output: typeof EstimateFeeResponseSchema;
   },
   /**
-   * 
+   *
    * PendingSweeps returns lists of on-chain outputs that lnd is currently
    * attempting to sweep within its central batching engine. Outputs with similar
    * fee rates are batched together in order to sweep them within a single
    * transaction.
-   * 
+   *
    * NOTE: Some of the fields within PendingSweepsRequest are not guaranteed to
    * remain supported. This is an advanced API that depends on the internals of
    * the UtxoSweeper, so things may change.
@@ -2450,7 +2458,7 @@ export const WalletKit: GenService<{
     output: typeof PendingSweepsResponseSchema;
   },
   /**
-   * 
+   *
    * BumpFee bumps the fee of an arbitrary input within a transaction. This RPC
    * takes a different approach than bitcoind's bumpfee command. lnd has a
    * central batching engine in which inputs with similar fee rates are batched
@@ -2459,20 +2467,20 @@ export const WalletKit: GenService<{
    * any point with the addition of new inputs. The list of inputs that
    * currently exist within lnd's central batching engine can be retrieved
    * through the PendingSweeps RPC.
-   * 
+   *
    * When bumping the fee of an input that currently exists within lnd's central
    * batching engine, a higher fee transaction will be created that replaces the
    * lower fee transaction through the Replace-By-Fee (RBF) policy. If it
-   * 
+   *
    * This RPC also serves useful when wanting to perform a Child-Pays-For-Parent
    * (CPFP), where the child transaction pays for its parent's fee. This can be
    * done by specifying an outpoint within the low fee transaction that is under
    * the control of the wallet.
-   * 
+   *
    * The fee preference can be expressed either as a specific fee rate or a delta
    * of blocks in which the output should be swept on-chain within. If a fee
    * preference is not explicitly specified, then an error is returned.
-   * 
+   *
    * Note that this RPC currently doesn't perform any validation checks on the
    * fee preference being provided. For now, the responsibility of ensuring that
    * the new fee preference is sufficient is delegated to the user.
@@ -2485,7 +2493,7 @@ export const WalletKit: GenService<{
     output: typeof BumpFeeResponseSchema;
   },
   /**
-   * 
+   *
    * ListSweeps returns a list of the sweep transactions our node has produced.
    * Note that these sweeps may not be confirmed yet, as we record sweeps on
    * broadcast, not confirmation.
@@ -2498,7 +2506,7 @@ export const WalletKit: GenService<{
     output: typeof ListSweepsResponseSchema;
   },
   /**
-   * 
+   *
    * LabelTransaction adds a label to a transaction. If the transaction already
    * has a label the call will fail unless the overwrite bool is set. This will
    * overwrite the exiting transaction label. Labels must not be empty, and
@@ -2512,21 +2520,21 @@ export const WalletKit: GenService<{
     output: typeof LabelTransactionResponseSchema;
   },
   /**
-   * 
+   *
    * FundPsbt creates a fully populated PSBT that contains enough inputs to fund
    * the outputs specified in the template. There are two ways of specifying a
    * template: Either by passing in a PSBT with at least one output declared or
    * by passing in a raw TxTemplate message.
-   * 
+   *
    * If there are no inputs specified in the template, coin selection is
    * performed automatically. If the template does contain any inputs, it is
    * assumed that full coin selection happened externally and no additional
    * inputs are added. If the specified inputs aren't enough to fund the outputs
    * with the given fee rate, an error is returned.
-   * 
+   *
    * After either selecting or verifying the inputs, all input UTXOs are locked
    * with an internal app ID.
-   * 
+   *
    * NOTE: If this method returns without an error, it is the caller's
    * responsibility to either spend the locked UTXOs (by finalizing and then
    * publishing the transaction) or to unlock/release the locked UTXOs in case of
@@ -2540,14 +2548,14 @@ export const WalletKit: GenService<{
     output: typeof FundPsbtResponseSchema;
   },
   /**
-   * 
+   *
    * SignPsbt expects a partial transaction with all inputs and outputs fully
    * declared and tries to sign all unsigned inputs that have all required fields
    * (UTXO information, BIP32 derivation information, witness or sig scripts)
    * set.
    * If no error is returned, the PSBT is ready to be given to the next signer or
    * to be finalized if lnd was the last signer.
-   * 
+   *
    * NOTE: This RPC only signs inputs (and only those it can sign), it does not
    * perform any other tasks (such as coin selection, UTXO locking or
    * input/output/fee value validation, PSBT finalization). Any input that is
@@ -2561,7 +2569,7 @@ export const WalletKit: GenService<{
     output: typeof SignPsbtResponseSchema;
   },
   /**
-   * 
+   *
    * FinalizePsbt expects a partial transaction with all inputs and outputs fully
    * declared and tries to sign all inputs that belong to the wallet. Lnd must be
    * the last signer of the transaction. That means, if there are any unsigned
@@ -2569,7 +2577,7 @@ export const WalletKit: GenService<{
    * without witness data that do not belong to lnd's wallet, this method will
    * fail. If no error is returned, the PSBT is ready to be extracted and the
    * final TX within to be broadcast.
-   * 
+   *
    * NOTE: This method does NOT publish the transaction once finalized. It is the
    * caller's responsibility to either publish the transaction on success or
    * unlock/release any locked UTXOs in case of an error in this method.

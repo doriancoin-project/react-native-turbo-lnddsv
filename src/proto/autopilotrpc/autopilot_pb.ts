@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file autopilotrpc/autopilot.proto.
  */
 export const file_autopilotrpc_autopilot: GenFile = /*@__PURE__*/
-  fileDesc("ChxhdXRvcGlsb3RycGMvYXV0b3BpbG90LnByb3RvEgxhdXRvcGlsb3RycGMiDwoNU3RhdHVzUmVxdWVzdCIgCg5TdGF0dXNSZXNwb25zZRIOCgZhY3RpdmUYASABKAgiJQoTTW9kaWZ5U3RhdHVzUmVxdWVzdBIOCgZlbmFibGUYASABKAgiFgoUTW9kaWZ5U3RhdHVzUmVzcG9uc2UiQQoSUXVlcnlTY29yZXNSZXF1ZXN0Eg8KB3B1YmtleXMYASADKAkSGgoSaWdub3JlX2xvY2FsX3N0YXRlGAIgASgIIv4BChNRdWVyeVNjb3Jlc1Jlc3BvbnNlEkIKB3Jlc3VsdHMYASADKAsyMS5hdXRvcGlsb3RycGMuUXVlcnlTY29yZXNSZXNwb25zZS5IZXVyaXN0aWNSZXN1bHQaogEKD0hldXJpc3RpY1Jlc3VsdBIRCgloZXVyaXN0aWMYASABKAkSTQoGc2NvcmVzGAIgAygLMj0uYXV0b3BpbG90cnBjLlF1ZXJ5U2NvcmVzUmVzcG9uc2UuSGV1cmlzdGljUmVzdWx0LlNjb3Jlc0VudHJ5Gi0KC1Njb3Jlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEikAEKEFNldFNjb3Jlc1JlcXVlc3QSEQoJaGV1cmlzdGljGAEgASgJEjoKBnNjb3JlcxgCIAMoCzIqLmF1dG9waWxvdHJwYy5TZXRTY29yZXNSZXF1ZXN0LlNjb3Jlc0VudHJ5Gi0KC1Njb3Jlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEiEwoRU2V0U2NvcmVzUmVzcG9uc2UyyQIKCUF1dG9waWxvdBJDCgZTdGF0dXMSGy5hdXRvcGlsb3RycGMuU3RhdHVzUmVxdWVzdBocLmF1dG9waWxvdHJwYy5TdGF0dXNSZXNwb25zZRJVCgxNb2RpZnlTdGF0dXMSIS5hdXRvcGlsb3RycGMuTW9kaWZ5U3RhdHVzUmVxdWVzdBoiLmF1dG9waWxvdHJwYy5Nb2RpZnlTdGF0dXNSZXNwb25zZRJSCgtRdWVyeVNjb3JlcxIgLmF1dG9waWxvdHJwYy5RdWVyeVNjb3Jlc1JlcXVlc3QaIS5hdXRvcGlsb3RycGMuUXVlcnlTY29yZXNSZXNwb25zZRJMCglTZXRTY29yZXMSHi5hdXRvcGlsb3RycGMuU2V0U2NvcmVzUmVxdWVzdBofLmF1dG9waWxvdHJwYy5TZXRTY29yZXNSZXNwb25zZUI0WjJnaXRodWIuY29tL2xpZ2h0bmluZ25ldHdvcmsvbG5kL2xucnBjL2F1dG9waWxvdHJwY2IGcHJvdG8z");
+  fileDesc("ChxhdXRvcGlsb3RycGMvYXV0b3BpbG90LnByb3RvEgxhdXRvcGlsb3RycGMiDwoNU3RhdHVzUmVxdWVzdCIgCg5TdGF0dXNSZXNwb25zZRIOCgZhY3RpdmUYASABKAgiJQoTTW9kaWZ5U3RhdHVzUmVxdWVzdBIOCgZlbmFibGUYASABKAgiFgoUTW9kaWZ5U3RhdHVzUmVzcG9uc2UiQQoSUXVlcnlTY29yZXNSZXF1ZXN0Eg8KB3B1YmtleXMYASADKAkSGgoSaWdub3JlX2xvY2FsX3N0YXRlGAIgASgIIv4BChNRdWVyeVNjb3Jlc1Jlc3BvbnNlEkIKB3Jlc3VsdHMYASADKAsyMS5hdXRvcGlsb3RycGMuUXVlcnlTY29yZXNSZXNwb25zZS5IZXVyaXN0aWNSZXN1bHQaogEKD0hldXJpc3RpY1Jlc3VsdBIRCgloZXVyaXN0aWMYASABKAkSTQoGc2NvcmVzGAIgAygLMj0uYXV0b3BpbG90cnBjLlF1ZXJ5U2NvcmVzUmVzcG9uc2UuSGV1cmlzdGljUmVzdWx0LlNjb3Jlc0VudHJ5Gi0KC1Njb3Jlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEikAEKEFNldFNjb3Jlc1JlcXVlc3QSEQoJaGV1cmlzdGljGAEgASgJEjoKBnNjb3JlcxgCIAMoCzIqLmF1dG9waWxvdHJwYy5TZXRTY29yZXNSZXF1ZXN0LlNjb3Jlc0VudHJ5Gi0KC1Njb3Jlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEiEwoRU2V0U2NvcmVzUmVzcG9uc2UyyQIKCUF1dG9waWxvdBJDCgZTdGF0dXMSGy5hdXRvcGlsb3RycGMuU3RhdHVzUmVxdWVzdBocLmF1dG9waWxvdHJwYy5TdGF0dXNSZXNwb25zZRJVCgxNb2RpZnlTdGF0dXMSIS5hdXRvcGlsb3RycGMuTW9kaWZ5U3RhdHVzUmVxdWVzdBoiLmF1dG9waWxvdHJwYy5Nb2RpZnlTdGF0dXNSZXNwb25zZRJSCgtRdWVyeVNjb3JlcxIgLmF1dG9waWxvdHJwYy5RdWVyeVNjb3Jlc1JlcXVlc3QaIS5hdXRvcGlsb3RycGMuUXVlcnlTY29yZXNSZXNwb25zZRJMCglTZXRTY29yZXMSHi5hdXRvcGlsb3RycGMuU2V0U2NvcmVzUmVxdWVzdBofLmF1dG9waWxvdHJwYy5TZXRTY29yZXNSZXNwb25zZUIsWipnaXRodWIuY29tL2x0Y3N1aXRlL2xuZC9sbnJwYy9hdXRvcGlsb3RycGNiBnByb3RvMw");
 
 /**
  * @generated from message autopilotrpc.StatusRequest
@@ -151,7 +151,7 @@ export type SetScoresRequest = Message<"autopilotrpc.SetScoresRequest"> & {
   heuristic: string;
 
   /**
-   * 
+   *
    * A map from hex-encoded public keys to scores. Scores must be in the range
    * [0.0, 1.0].
    *
@@ -189,7 +189,7 @@ export const SetScoresResponseSchema: GenMessage<SetScoresResponse> = /*@__PURE_
  */
 export const Autopilot: GenService<{
   /**
-   * 
+   *
    * Status returns whether the daemon's autopilot agent is active.
    *
    * @generated from rpc autopilotrpc.Autopilot.Status
@@ -200,7 +200,7 @@ export const Autopilot: GenService<{
     output: typeof StatusResponseSchema;
   },
   /**
-   * 
+   *
    * ModifyStatus is used to modify the status of the autopilot agent, like
    * enabling or disabling it.
    *
@@ -212,7 +212,7 @@ export const Autopilot: GenService<{
     output: typeof ModifyStatusResponseSchema;
   },
   /**
-   * 
+   *
    * QueryScores queries all available autopilot heuristics, in addition to any
    * active combination of these heruristics, for the scores they would give to
    * the given nodes.
@@ -225,7 +225,7 @@ export const Autopilot: GenService<{
     output: typeof QueryScoresResponseSchema;
   },
   /**
-   * 
+   *
    * SetScores attempts to set the scores used by the running autopilot agent,
    * if the external scoring heuristic is enabled.
    *

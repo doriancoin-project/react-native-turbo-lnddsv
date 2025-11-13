@@ -5,10 +5,10 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 
 
 Pod::Spec.new do |s|
   if ENV['RCT_NEW_ARCH_ENABLED'] != '1'
-    raise "[react-native-turbo-lnd]: This library only works in react-native new architecture."
+    raise "[react-native-turbo-lndltc]: This library only works in react-native new architecture."
   end
 
-  s.name         = "react-native-turbo-lnd"
+  s.name         = "react-native-turbo-lndltc"
   s.version      = package["version"]
   s.summary      = package["description"]
   s.homepage     = package["homepage"]
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => min_ios_version_supported, :osx => "11.0" }
-  s.source       = { :git => "https://github.com/hsjoberg/react-native-turbo-lnd.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/litecoin-foundation/react-native-turbo-lndltc.git", :tag => "#{s.version}" }
 
   s.source_files = ["cpp/**/*.{h,hpp,cpp}", "ios/OnLoad.mm"]
   s.exclude_files = "cpp/build"

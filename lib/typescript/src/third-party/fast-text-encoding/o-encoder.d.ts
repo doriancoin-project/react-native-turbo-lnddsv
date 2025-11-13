@@ -10,6 +10,6 @@ export declare class FastTextEncoder {
      */
     encode(string: string, options?: {
         stream: boolean;
-    }): Uint8Array;
+    }): Buffer | Uint8Array;
 }
 //# sourceMappingURL=o-encoder.d.ts.map

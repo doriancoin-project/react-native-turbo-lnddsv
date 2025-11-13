@@ -233,8 +233,8 @@ export type WatchOnly = Message<"lnrpc.WatchOnly"> & {
     /**
      *
      * The list of accounts to import. There _must_ be an account for all of lnd's
-     * main key scopes: BIP49/BIP84 (m/49'/0'/0', m/84'/0'/0', note that the
-     * coin type is always 0, even for testnet/regtest) and lnd's internal key
+     * main key scopes: BIP49/BIP84 (m/49'/2'/0', m/84'/2'/0', note that the
+     * coin type is always 2, even for testnet/regtest) and lnd's internal key
      * scope (m/1017'/<coin_type>'/<account>'), where account is the key family as
      * defined in `keychain/derivation.go` (currently indices 0 to 9).
      *

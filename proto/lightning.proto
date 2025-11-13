@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package lnrpc;
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc";
+option go_package = "github.com/ltcsuite/lnd/lnrpc";
 
 /*
  * Comments in this file will be directly parsed into the API
@@ -638,6 +638,53 @@ message SendCustomMessageRequest {
 message SendCustomMessageResponse {
 }
 
+// MwebOutput represents an MWEB output with all its associated data
+message MwebOutput {
+    // The 33-byte commitment for the MWEB output
+    bytes commitment = 1;
+
+    // The 33-byte sender public key
+    bytes sender_pub_key = 2;
+
+    // The 33-byte receiver public key
+    bytes receiver_pub_key = 3;
+
+    // The MWEB output message containing encrypted data
+    MwebOutputMessage message = 4;
+
+    // The 32-byte range proof hash
+    bytes range_proof_hash = 5;
+
+    // The 64-byte signature
+    bytes signature = 6;
+
+    // The full range proof (optional, may be large)
+    bytes range_proof = 7;
+    // The 32-byte output hash identifying this MWEB output
+    bytes hash = 8;
+}
+
+// MwebOutputMessage contains the encrypted message data in an MWEB output
+message MwebOutputMessage {
+    // Feature bits indicating which fields are present
+    uint32 features = 1;
+
+    // The 33-byte key exchange public key
+    bytes key_exchange_pub_key = 2;
+
+    // The view tag (1 byte)
+    uint32 view_tag = 3;
+
+    // The masked value (8 bytes)
+    uint64 masked_value = 4;
+
+    // The masked nonce (16 bytes)
+    bytes masked_nonce = 5;
+
+    // Extra data (variable length)
+    bytes extra_data = 6;
+}
+
 message Utxo {
     // The type of address
     AddressType address_type = 1;
@@ -656,6 +703,9 @@ message Utxo {
 
     // The number of confirmations for the Utxo
     int64 confirmations = 6;
+
+    // The MWEB output data (only present for MWEB address types)
+    MwebOutput mweb_output = 7;
 }
 
 enum OutputScriptType {
@@ -669,6 +719,9 @@ enum OutputScriptType {
     SCRIPT_TYPE_NON_STANDARD = 7;
     SCRIPT_TYPE_WITNESS_UNKNOWN = 8;
     SCRIPT_TYPE_WITNESS_V1_TAPROOT = 9;
+    SCRIPT_TYPE_WITNESS_MWEB_HOGADDR = 10;
+    SCRIPT_TYPE_WITNESS_MWEB_PEGIN = 11;
+    SCRIPT_TYPE_MWEB = 12;
 }
 
 message OutputDetail {
@@ -1065,6 +1118,14 @@ message OutPoint {
     uint32 output_index = 3;
 }
 
+// Accepts either a regular UTXO (lnrpc.OutPoint) or an MWEB input blob.
+message TxInput {
+    oneof input {
+        lnrpc.OutPoint utxo = 1;  // legacy on-chain outpoint
+        bytes mweb_id = 2;        // raw MWEB input/commitment
+    }
+}
+
 message PreviousOutPoint {
     // The outpoint in format txid:n.
     string outpoint = 1;
@@ -1164,9 +1225,8 @@ message SendCoinsRequest {
     int64 sat_per_byte = 5 [deprecated = true];
 
     /*
-    If set, then the amount field will be ignored, and lnd will attempt to
-    send all the coins under control of the internal wallet to the specified
-    address.
+    If set, the amount field should be unset. It indicates lnd will send all
+    wallet coins or all selected coins to the specified address.
     */
     bool send_all = 6;
 
@@ -1179,6 +1239,9 @@ message SendCoinsRequest {
 
     // Whether unconfirmed outputs should be used as inputs for the transaction.
     bool spend_unconfirmed = 9;
+
+    // A list of selected outpoints as inputs for the transaction.
+    repeated OutPoint outpoints = 11;
 }
 message SendCoinsResponse {
     // The transaction ID of the transaction
@@ -1206,6 +1269,7 @@ message ListUnspentResponse {
 - `p2wkh`: Pay to witness key hash (`WITNESS_PUBKEY_HASH` = 0)
 - `np2wkh`: Pay to nested witness key hash (`NESTED_PUBKEY_HASH` = 1)
 - `p2tr`: Pay to taproot pubkey (`TAPROOT_PUBKEY` = 4)
+- `mweb`: MWEB (`MWEB` = 6)
 */
 enum AddressType {
     WITNESS_PUBKEY_HASH = 0;
@@ -1214,6 +1278,8 @@ enum AddressType {
     UNUSED_NESTED_PUBKEY_HASH = 3;
     TAPROOT_PUBKEY = 4;
     UNUSED_TAPROOT_PUBKEY = 5;
+    MWEB = 6;
+    UNUSED_MWEB = 7;
 }
 
 message NewAddressRequest {
@@ -3665,11 +3731,6 @@ message Invoice {
     Note: Output only, don't specify for creating an invoice.
     */
     map<string, AMPInvoiceState> amp_invoice_state = 28;
-
-    /*
-    The minimum number of hop hints to include in this invoice.
-    */
-    int32 min_hop_hints = 29;
 }
 
 enum InvoiceHTLCState {

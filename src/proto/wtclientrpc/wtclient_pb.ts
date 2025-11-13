@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file wtclientrpc/wtclient.proto.
  */
 export const file_wtclientrpc_wtclient: GenFile = /*@__PURE__*/
-  fileDesc("Chp3dGNsaWVudHJwYy93dGNsaWVudC5wcm90bxILd3RjbGllbnRycGMiMgoPQWRkVG93ZXJSZXF1ZXN0Eg4KBnB1YmtleRgBIAEoDBIPCgdhZGRyZXNzGAIgASgJIhIKEEFkZFRvd2VyUmVzcG9uc2UiNQoSUmVtb3ZlVG93ZXJSZXF1ZXN0Eg4KBnB1YmtleRgBIAEoDBIPCgdhZGRyZXNzGAIgASgJIhUKE1JlbW92ZVRvd2VyUmVzcG9uc2UiYwoTR2V0VG93ZXJJbmZvUmVxdWVzdBIOCgZwdWJrZXkYASABKAwSGAoQaW5jbHVkZV9zZXNzaW9ucxgCIAEoCBIiChpleGNsdWRlX2V4aGF1c3RlZF9zZXNzaW9ucxgDIAEoCCKSAQoMVG93ZXJTZXNzaW9uEhMKC251bV9iYWNrdXBzGAEgASgNEhsKE251bV9wZW5kaW5nX2JhY2t1cHMYAiABKA0SEwoLbWF4X2JhY2t1cHMYAyABKA0SHgoSc3dlZXBfc2F0X3Blcl9ieXRlGAQgASgNQgIYARIbChNzd2VlcF9zYXRfcGVyX3ZieXRlGAUgASgNItABCgVUb3dlchIOCgZwdWJrZXkYASABKAwSEQoJYWRkcmVzc2VzGAIgAygJEiQKGGFjdGl2ZV9zZXNzaW9uX2NhbmRpZGF0ZRgDIAEoCEICGAESGAoMbnVtX3Nlc3Npb25zGAQgASgNQgIYARIvCghzZXNzaW9ucxgFIAMoCzIZLnd0Y2xpZW50cnBjLlRvd2VyU2Vzc2lvbkICGAESMwoMc2Vzc2lvbl9pbmZvGAYgAygLMh0ud3RjbGllbnRycGMuVG93ZXJTZXNzaW9uSW5mbyKlAQoQVG93ZXJTZXNzaW9uSW5mbxIgChhhY3RpdmVfc2Vzc2lvbl9jYW5kaWRhdGUYASABKAgSFAoMbnVtX3Nlc3Npb25zGAIgASgNEisKCHNlc3Npb25zGAMgAygLMhkud3RjbGllbnRycGMuVG93ZXJTZXNzaW9uEiwKC3BvbGljeV90eXBlGAQgASgOMhcud3RjbGllbnRycGMuUG9saWN5VHlwZSJRChFMaXN0VG93ZXJzUmVxdWVzdBIYChBpbmNsdWRlX3Nlc3Npb25zGAEgASgIEiIKGmV4Y2x1ZGVfZXhoYXVzdGVkX3Nlc3Npb25zGAIgASgIIjgKEkxpc3RUb3dlcnNSZXNwb25zZRIiCgZ0b3dlcnMYASADKAsyEi53dGNsaWVudHJwYy5Ub3dlciIOCgxTdGF0c1JlcXVlc3QinAEKDVN0YXRzUmVzcG9uc2USEwoLbnVtX2JhY2t1cHMYASABKA0SGwoTbnVtX3BlbmRpbmdfYmFja3VwcxgCIAEoDRIaChJudW1fZmFpbGVkX2JhY2t1cHMYAyABKA0SHQoVbnVtX3Nlc3Npb25zX2FjcXVpcmVkGAQgASgNEh4KFm51bV9zZXNzaW9uc19leGhhdXN0ZWQYBSABKA0iPQoNUG9saWN5UmVxdWVzdBIsCgtwb2xpY3lfdHlwZRgBIAEoDjIXLnd0Y2xpZW50cnBjLlBvbGljeVR5cGUiYgoOUG9saWN5UmVzcG9uc2USEwoLbWF4X3VwZGF0ZXMYASABKA0SHgoSc3dlZXBfc2F0X3Blcl9ieXRlGAIgASgNQgIYARIbChNzd2VlcF9zYXRfcGVyX3ZieXRlGAMgASgNKiQKClBvbGljeVR5cGUSCgoGTEVHQUNZEAASCgoGQU5DSE9SEAEyxQMKEFdhdGNodG93ZXJDbGllbnQSRwoIQWRkVG93ZXISHC53dGNsaWVudHJwYy5BZGRUb3dlclJlcXVlc3QaHS53dGNsaWVudHJwYy5BZGRUb3dlclJlc3BvbnNlElAKC1JlbW92ZVRvd2VyEh8ud3RjbGllbnRycGMuUmVtb3ZlVG93ZXJSZXF1ZXN0GiAud3RjbGllbnRycGMuUmVtb3ZlVG93ZXJSZXNwb25zZRJNCgpMaXN0VG93ZXJzEh4ud3RjbGllbnRycGMuTGlzdFRvd2Vyc1JlcXVlc3QaHy53dGNsaWVudHJwYy5MaXN0VG93ZXJzUmVzcG9uc2USRAoMR2V0VG93ZXJJbmZvEiAud3RjbGllbnRycGMuR2V0VG93ZXJJbmZvUmVxdWVzdBoSLnd0Y2xpZW50cnBjLlRvd2VyEj4KBVN0YXRzEhkud3RjbGllbnRycGMuU3RhdHNSZXF1ZXN0Ghoud3RjbGllbnRycGMuU3RhdHNSZXNwb25zZRJBCgZQb2xpY3kSGi53dGNsaWVudHJwYy5Qb2xpY3lSZXF1ZXN0Ghsud3RjbGllbnRycGMuUG9saWN5UmVzcG9uc2VCM1oxZ2l0aHViLmNvbS9saWdodG5pbmduZXR3b3JrL2xuZC9sbnJwYy93dGNsaWVudHJwY2IGcHJvdG8z");
+  fileDesc("Chp3dGNsaWVudHJwYy93dGNsaWVudC5wcm90bxILd3RjbGllbnRycGMiMgoPQWRkVG93ZXJSZXF1ZXN0Eg4KBnB1YmtleRgBIAEoDBIPCgdhZGRyZXNzGAIgASgJIhIKEEFkZFRvd2VyUmVzcG9uc2UiNQoSUmVtb3ZlVG93ZXJSZXF1ZXN0Eg4KBnB1YmtleRgBIAEoDBIPCgdhZGRyZXNzGAIgASgJIhUKE1JlbW92ZVRvd2VyUmVzcG9uc2UiYwoTR2V0VG93ZXJJbmZvUmVxdWVzdBIOCgZwdWJrZXkYASABKAwSGAoQaW5jbHVkZV9zZXNzaW9ucxgCIAEoCBIiChpleGNsdWRlX2V4aGF1c3RlZF9zZXNzaW9ucxgDIAEoCCKSAQoMVG93ZXJTZXNzaW9uEhMKC251bV9iYWNrdXBzGAEgASgNEhsKE251bV9wZW5kaW5nX2JhY2t1cHMYAiABKA0SEwoLbWF4X2JhY2t1cHMYAyABKA0SHgoSc3dlZXBfc2F0X3Blcl9ieXRlGAQgASgNQgIYARIbChNzd2VlcF9zYXRfcGVyX3ZieXRlGAUgASgNItABCgVUb3dlchIOCgZwdWJrZXkYASABKAwSEQoJYWRkcmVzc2VzGAIgAygJEiQKGGFjdGl2ZV9zZXNzaW9uX2NhbmRpZGF0ZRgDIAEoCEICGAESGAoMbnVtX3Nlc3Npb25zGAQgASgNQgIYARIvCghzZXNzaW9ucxgFIAMoCzIZLnd0Y2xpZW50cnBjLlRvd2VyU2Vzc2lvbkICGAESMwoMc2Vzc2lvbl9pbmZvGAYgAygLMh0ud3RjbGllbnRycGMuVG93ZXJTZXNzaW9uSW5mbyKlAQoQVG93ZXJTZXNzaW9uSW5mbxIgChhhY3RpdmVfc2Vzc2lvbl9jYW5kaWRhdGUYASABKAgSFAoMbnVtX3Nlc3Npb25zGAIgASgNEisKCHNlc3Npb25zGAMgAygLMhkud3RjbGllbnRycGMuVG93ZXJTZXNzaW9uEiwKC3BvbGljeV90eXBlGAQgASgOMhcud3RjbGllbnRycGMuUG9saWN5VHlwZSJRChFMaXN0VG93ZXJzUmVxdWVzdBIYChBpbmNsdWRlX3Nlc3Npb25zGAEgASgIEiIKGmV4Y2x1ZGVfZXhoYXVzdGVkX3Nlc3Npb25zGAIgASgIIjgKEkxpc3RUb3dlcnNSZXNwb25zZRIiCgZ0b3dlcnMYASADKAsyEi53dGNsaWVudHJwYy5Ub3dlciIOCgxTdGF0c1JlcXVlc3QinAEKDVN0YXRzUmVzcG9uc2USEwoLbnVtX2JhY2t1cHMYASABKA0SGwoTbnVtX3BlbmRpbmdfYmFja3VwcxgCIAEoDRIaChJudW1fZmFpbGVkX2JhY2t1cHMYAyABKA0SHQoVbnVtX3Nlc3Npb25zX2FjcXVpcmVkGAQgASgNEh4KFm51bV9zZXNzaW9uc19leGhhdXN0ZWQYBSABKA0iPQoNUG9saWN5UmVxdWVzdBIsCgtwb2xpY3lfdHlwZRgBIAEoDjIXLnd0Y2xpZW50cnBjLlBvbGljeVR5cGUiYgoOUG9saWN5UmVzcG9uc2USEwoLbWF4X3VwZGF0ZXMYASABKA0SHgoSc3dlZXBfc2F0X3Blcl9ieXRlGAIgASgNQgIYARIbChNzd2VlcF9zYXRfcGVyX3ZieXRlGAMgASgNKiQKClBvbGljeVR5cGUSCgoGTEVHQUNZEAASCgoGQU5DSE9SEAEyxQMKEFdhdGNodG93ZXJDbGllbnQSRwoIQWRkVG93ZXISHC53dGNsaWVudHJwYy5BZGRUb3dlclJlcXVlc3QaHS53dGNsaWVudHJwYy5BZGRUb3dlclJlc3BvbnNlElAKC1JlbW92ZVRvd2VyEh8ud3RjbGllbnRycGMuUmVtb3ZlVG93ZXJSZXF1ZXN0GiAud3RjbGllbnRycGMuUmVtb3ZlVG93ZXJSZXNwb25zZRJNCgpMaXN0VG93ZXJzEh4ud3RjbGllbnRycGMuTGlzdFRvd2Vyc1JlcXVlc3QaHy53dGNsaWVudHJwYy5MaXN0VG93ZXJzUmVzcG9uc2USRAoMR2V0VG93ZXJJbmZvEiAud3RjbGllbnRycGMuR2V0VG93ZXJJbmZvUmVxdWVzdBoSLnd0Y2xpZW50cnBjLlRvd2VyEj4KBVN0YXRzEhkud3RjbGllbnRycGMuU3RhdHNSZXF1ZXN0Ghoud3RjbGllbnRycGMuU3RhdHNSZXNwb25zZRJBCgZQb2xpY3kSGi53dGNsaWVudHJwYy5Qb2xpY3lSZXF1ZXN0Ghsud3RjbGllbnRycGMuUG9saWN5UmVzcG9uc2VCK1opZ2l0aHViLmNvbS9sdGNzdWl0ZS9sbmQvbG5ycGMvd3RjbGllbnRycGNiBnByb3RvMw");
 
 /**
  * @generated from message wtclientrpc.AddTowerRequest
@@ -63,7 +63,7 @@ export type RemoveTowerRequest = Message<"wtclientrpc.RemoveTowerRequest"> & {
   pubkey: Uint8Array;
 
   /**
-   * 
+   *
    * If set, then the record for this address will be removed, indicating that is
    * is stale. Otherwise, the watchtower will no longer be used for future
    * session negotiations and backups.
@@ -132,7 +132,7 @@ export const GetTowerInfoRequestSchema: GenMessage<GetTowerInfoRequest> = /*@__P
  */
 export type TowerSession = Message<"wtclientrpc.TowerSession"> & {
   /**
-   * 
+   *
    * The total number of successful backups that have been made to the
    * watchtower session.
    *
@@ -141,7 +141,7 @@ export type TowerSession = Message<"wtclientrpc.TowerSession"> & {
   numBackups: number;
 
   /**
-   * 
+   *
    * The total number of backups in the session that are currently pending to be
    * acknowledged by the watchtower.
    *
@@ -157,7 +157,7 @@ export type TowerSession = Message<"wtclientrpc.TowerSession"> & {
   maxBackups: number;
 
   /**
-   * 
+   *
    * Deprecated, use sweep_sat_per_vbyte.
    * The fee rate, in satoshis per vbyte, that will be used by the watchtower for
    * the justice transaction in the event of a channel breach.
@@ -168,7 +168,7 @@ export type TowerSession = Message<"wtclientrpc.TowerSession"> & {
   sweepSatPerByte: number;
 
   /**
-   * 
+   *
    * The fee rate, in satoshis per vbyte, that will be used by the watchtower for
    * the justice transaction in the event of a channel breach.
    *
@@ -351,7 +351,7 @@ export const StatsRequestSchema: GenMessage<StatsRequest> = /*@__PURE__*/
  */
 export type StatsResponse = Message<"wtclientrpc.StatsResponse"> & {
   /**
-   * 
+   *
    * The total number of backups made to all active and exhausted watchtower
    * sessions.
    *
@@ -360,7 +360,7 @@ export type StatsResponse = Message<"wtclientrpc.StatsResponse"> & {
   numBackups: number;
 
   /**
-   * 
+   *
    * The total number of backups that are pending to be acknowledged by all
    * active and exhausted watchtower sessions.
    *
@@ -369,7 +369,7 @@ export type StatsResponse = Message<"wtclientrpc.StatsResponse"> & {
   numPendingBackups: number;
 
   /**
-   * 
+   *
    * The total number of backups that all active and exhausted watchtower
    * sessions have failed to acknowledge.
    *
@@ -404,7 +404,7 @@ export const StatsResponseSchema: GenMessage<StatsResponse> = /*@__PURE__*/
  */
 export type PolicyRequest = Message<"wtclientrpc.PolicyRequest"> & {
   /**
-   * 
+   *
    * The client type from which to retrieve the active offering policy.
    *
    * @generated from field: wtclientrpc.PolicyType policy_type = 1;
@@ -424,7 +424,7 @@ export const PolicyRequestSchema: GenMessage<PolicyRequest> = /*@__PURE__*/
  */
 export type PolicyResponse = Message<"wtclientrpc.PolicyResponse"> & {
   /**
-   * 
+   *
    * The maximum number of updates each session we negotiate with watchtowers
    * should allow.
    *
@@ -433,7 +433,7 @@ export type PolicyResponse = Message<"wtclientrpc.PolicyResponse"> & {
   maxUpdates: number;
 
   /**
-   * 
+   *
    * Deprecated, use sweep_sat_per_vbyte.
    * The fee rate, in satoshis per vbyte, that will be used by watchtowers for
    * justice transactions in response to channel breaches.
@@ -444,7 +444,7 @@ export type PolicyResponse = Message<"wtclientrpc.PolicyResponse"> & {
   sweepSatPerByte: number;
 
   /**
-   * 
+   *
    * The fee rate, in satoshis per vbyte, that will be used by watchtowers for
    * justice transactions in response to channel breaches.
    *
@@ -493,7 +493,7 @@ export const PolicyTypeSchema: GenEnum<PolicyType> = /*@__PURE__*/
  */
 export const WatchtowerClient: GenService<{
   /**
-   * 
+   *
    * AddTower adds a new watchtower reachable at the given address and
    * considers it for new sessions. If the watchtower already exists, then
    * any new addresses included will be considered when dialing it for
@@ -507,7 +507,7 @@ export const WatchtowerClient: GenService<{
     output: typeof AddTowerResponseSchema;
   },
   /**
-   * 
+   *
    * RemoveTower removes a watchtower from being considered for future session
    * negotiations and from being used for any subsequent backups until it's added
    * again. If an address is provided, then this RPC only serves as a way of

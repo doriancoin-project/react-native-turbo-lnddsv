@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file invoicesrpc/invoices.proto.
  */
 export const file_invoicesrpc_invoices: GenFile = /*@__PURE__*/
-  fileDesc("ChppbnZvaWNlc3JwYy9pbnZvaWNlcy5wcm90bxILaW52b2ljZXNycGMiKAoQQ2FuY2VsSW52b2ljZU1zZxIUCgxwYXltZW50X2hhc2gYASABKAwiEwoRQ2FuY2VsSW52b2ljZVJlc3Ai5AEKFUFkZEhvbGRJbnZvaWNlUmVxdWVzdBIMCgRtZW1vGAEgASgJEgwKBGhhc2gYAiABKAwSDQoFdmFsdWUYAyABKAMSEgoKdmFsdWVfbXNhdBgKIAEoAxIYChBkZXNjcmlwdGlvbl9oYXNoGAQgASgMEg4KBmV4cGlyeRgFIAEoAxIVCg1mYWxsYmFja19hZGRyGAYgASgJEhMKC2NsdHZfZXhwaXJ5GAcgASgEEiUKC3JvdXRlX2hpbnRzGAggAygLMhAubG5ycGMuUm91dGVIaW50Eg8KB3ByaXZhdGUYCSABKAgiVgoSQWRkSG9sZEludm9pY2VSZXNwEhcKD3BheW1lbnRfcmVxdWVzdBgBIAEoCRIRCglhZGRfaW5kZXgYAiABKAQSFAoMcGF5bWVudF9hZGRyGAMgASgMIiQKEFNldHRsZUludm9pY2VNc2cSEAoIcHJlaW1hZ2UYASABKAwiEwoRU2V0dGxlSW52b2ljZVJlc3AiNQodU3Vic2NyaWJlU2luZ2xlSW52b2ljZVJlcXVlc3QSDgoGcl9oYXNoGAIgASgMSgQIARACIpkBChBMb29rdXBJbnZvaWNlTXNnEhYKDHBheW1lbnRfaGFzaBgBIAEoDEgAEhYKDHBheW1lbnRfYWRkchgCIAEoDEgAEhAKBnNldF9pZBgDIAEoDEgAEjQKD2xvb2t1cF9tb2RpZmllchgEIAEoDjIbLmludm9pY2VzcnBjLkxvb2t1cE1vZGlmaWVyQg0KC2ludm9pY2VfcmVmKkQKDkxvb2t1cE1vZGlmaWVyEgsKB0RFRkFVTFQQABIRCg1IVExDX1NFVF9PTkxZEAESEgoOSFRMQ19TRVRfQkxBTksQAjKbAwoISW52b2ljZXMSVgoWU3Vic2NyaWJlU2luZ2xlSW52b2ljZRIqLmludm9pY2VzcnBjLlN1YnNjcmliZVNpbmdsZUludm9pY2VSZXF1ZXN0Gg4ubG5ycGMuSW52b2ljZTABEk4KDUNhbmNlbEludm9pY2USHS5pbnZvaWNlc3JwYy5DYW5jZWxJbnZvaWNlTXNnGh4uaW52b2ljZXNycGMuQ2FuY2VsSW52b2ljZVJlc3ASVQoOQWRkSG9sZEludm9pY2USIi5pbnZvaWNlc3JwYy5BZGRIb2xkSW52b2ljZVJlcXVlc3QaHy5pbnZvaWNlc3JwYy5BZGRIb2xkSW52b2ljZVJlc3ASTgoNU2V0dGxlSW52b2ljZRIdLmludm9pY2VzcnBjLlNldHRsZUludm9pY2VNc2caHi5pbnZvaWNlc3JwYy5TZXR0bGVJbnZvaWNlUmVzcBJACg9Mb29rdXBJbnZvaWNlVjISHS5pbnZvaWNlc3JwYy5Mb29rdXBJbnZvaWNlTXNnGg4ubG5ycGMuSW52b2ljZUIzWjFnaXRodWIuY29tL2xpZ2h0bmluZ25ldHdvcmsvbG5kL2xucnBjL2ludm9pY2VzcnBjYgZwcm90bzM", [file_lightning]);
+  fileDesc("ChppbnZvaWNlc3JwYy9pbnZvaWNlcy5wcm90bxILaW52b2ljZXNycGMiKAoQQ2FuY2VsSW52b2ljZU1zZxIUCgxwYXltZW50X2hhc2gYASABKAwiEwoRQ2FuY2VsSW52b2ljZVJlc3Ai5AEKFUFkZEhvbGRJbnZvaWNlUmVxdWVzdBIMCgRtZW1vGAEgASgJEgwKBGhhc2gYAiABKAwSDQoFdmFsdWUYAyABKAMSEgoKdmFsdWVfbXNhdBgKIAEoAxIYChBkZXNjcmlwdGlvbl9oYXNoGAQgASgMEg4KBmV4cGlyeRgFIAEoAxIVCg1mYWxsYmFja19hZGRyGAYgASgJEhMKC2NsdHZfZXhwaXJ5GAcgASgEEiUKC3JvdXRlX2hpbnRzGAggAygLMhAubG5ycGMuUm91dGVIaW50Eg8KB3ByaXZhdGUYCSABKAgiVgoSQWRkSG9sZEludm9pY2VSZXNwEhcKD3BheW1lbnRfcmVxdWVzdBgBIAEoCRIRCglhZGRfaW5kZXgYAiABKAQSFAoMcGF5bWVudF9hZGRyGAMgASgMIiQKEFNldHRsZUludm9pY2VNc2cSEAoIcHJlaW1hZ2UYASABKAwiEwoRU2V0dGxlSW52b2ljZVJlc3AiNQodU3Vic2NyaWJlU2luZ2xlSW52b2ljZVJlcXVlc3QSDgoGcl9oYXNoGAIgASgMSgQIARACIpkBChBMb29rdXBJbnZvaWNlTXNnEhYKDHBheW1lbnRfaGFzaBgBIAEoDEgAEhYKDHBheW1lbnRfYWRkchgCIAEoDEgAEhAKBnNldF9pZBgDIAEoDEgAEjQKD2xvb2t1cF9tb2RpZmllchgEIAEoDjIbLmludm9pY2VzcnBjLkxvb2t1cE1vZGlmaWVyQg0KC2ludm9pY2VfcmVmKkQKDkxvb2t1cE1vZGlmaWVyEgsKB0RFRkFVTFQQABIRCg1IVExDX1NFVF9PTkxZEAESEgoOSFRMQ19TRVRfQkxBTksQAjKbAwoISW52b2ljZXMSVgoWU3Vic2NyaWJlU2luZ2xlSW52b2ljZRIqLmludm9pY2VzcnBjLlN1YnNjcmliZVNpbmdsZUludm9pY2VSZXF1ZXN0Gg4ubG5ycGMuSW52b2ljZTABEk4KDUNhbmNlbEludm9pY2USHS5pbnZvaWNlc3JwYy5DYW5jZWxJbnZvaWNlTXNnGh4uaW52b2ljZXNycGMuQ2FuY2VsSW52b2ljZVJlc3ASVQoOQWRkSG9sZEludm9pY2USIi5pbnZvaWNlc3JwYy5BZGRIb2xkSW52b2ljZVJlcXVlc3QaHy5pbnZvaWNlc3JwYy5BZGRIb2xkSW52b2ljZVJlc3ASTgoNU2V0dGxlSW52b2ljZRIdLmludm9pY2VzcnBjLlNldHRsZUludm9pY2VNc2caHi5pbnZvaWNlc3JwYy5TZXR0bGVJbnZvaWNlUmVzcBJACg9Mb29rdXBJbnZvaWNlVjISHS5pbnZvaWNlc3JwYy5Mb29rdXBJbnZvaWNlTXNnGg4ubG5ycGMuSW52b2ljZUIrWilnaXRodWIuY29tL2x0Y3N1aXRlL2xuZC9sbnJwYy9pbnZvaWNlc3JwY2IGcHJvdG8z", [file_lightning]);
 
 /**
  * @generated from message invoicesrpc.CancelInvoiceMsg
@@ -52,7 +52,7 @@ export const CancelInvoiceRespSchema: GenMessage<CancelInvoiceResp> = /*@__PURE_
  */
 export type AddHoldInvoiceRequest = Message<"invoicesrpc.AddHoldInvoiceRequest"> & {
   /**
-   * 
+   *
    * An optional memo to attach along with the invoice. Used for record keeping
    * purposes for the invoice's creator, and will also be set in the description
    * field of the encoded payment request if the description_hash field is not
@@ -70,9 +70,9 @@ export type AddHoldInvoiceRequest = Message<"invoicesrpc.AddHoldInvoiceRequest">
   hash: Uint8Array;
 
   /**
-   * 
+   *
    * The value of this invoice in satoshis
-   * 
+   *
    * The fields value and value_msat are mutually exclusive.
    *
    * @generated from field: int64 value = 3;
@@ -80,9 +80,9 @@ export type AddHoldInvoiceRequest = Message<"invoicesrpc.AddHoldInvoiceRequest">
   value: bigint;
 
   /**
-   * 
+   *
    * The value of this invoice in millisatoshis
-   * 
+   *
    * The fields value and value_msat are mutually exclusive.
    *
    * @generated from field: int64 value_msat = 10;
@@ -90,7 +90,7 @@ export type AddHoldInvoiceRequest = Message<"invoicesrpc.AddHoldInvoiceRequest">
   valueMsat: bigint;
 
   /**
-   * 
+   *
    * Hash (SHA-256) of a description of the payment. Used if the description of
    * payment (memo) is too long to naturally fit within the description field
    * of an encoded payment request.
@@ -121,7 +121,7 @@ export type AddHoldInvoiceRequest = Message<"invoicesrpc.AddHoldInvoiceRequest">
   cltvExpiry: bigint;
 
   /**
-   * 
+   *
    * Route hints that can each be individually used to assist in reaching the
    * invoice's destination.
    *
@@ -149,7 +149,7 @@ export const AddHoldInvoiceRequestSchema: GenMessage<AddHoldInvoiceRequest> = /*
  */
 export type AddHoldInvoiceResp = Message<"invoicesrpc.AddHoldInvoiceResp"> & {
   /**
-   * 
+   *
    * A bare-bones invoice for a payment within the Lightning Network. With the
    * details of the invoice, the sender has all the data necessary to send a
    * payment to the recipient.
@@ -159,7 +159,7 @@ export type AddHoldInvoiceResp = Message<"invoicesrpc.AddHoldInvoiceResp"> & {
   paymentRequest: string;
 
   /**
-   * 
+   *
    * The "add" index of this invoice. Each newly created invoice will increment
    * this index making it monotonically increasing. Callers to the
    * SubscribeInvoices call can use this to instantly get notified of all added
@@ -170,7 +170,7 @@ export type AddHoldInvoiceResp = Message<"invoicesrpc.AddHoldInvoiceResp"> & {
   addIndex: bigint;
 
   /**
-   * 
+   *
    * The payment address of the generated invoice. This value should be used
    * in all payments for this invoice as we require it for end to end
    * security.
@@ -294,7 +294,7 @@ export enum LookupModifier {
   DEFAULT = 0,
 
   /**
-   * 
+   *
    * Indicates that when a look up is done based on a set_id, then only that set
    * of HTLCs related to that set ID should be returned.
    *
@@ -303,7 +303,7 @@ export enum LookupModifier {
   HTLC_SET_ONLY = 1,
 
   /**
-   * 
+   *
    * Indicates that when a look up is done using a payment_addr, then no HTLCs
    * related to the payment_addr should be returned. This is useful when one
    * wants to be able to obtain the set of associated setIDs with a given
@@ -328,7 +328,7 @@ export const LookupModifierSchema: GenEnum<LookupModifier> = /*@__PURE__*/
  */
 export const Invoices: GenService<{
   /**
-   * 
+   *
    * SubscribeSingleInvoice returns a uni-directional stream (server -> client)
    * to notify the client of state transitions of the specified invoice.
    * Initially the current invoice state is always sent out.
@@ -341,7 +341,7 @@ export const Invoices: GenService<{
     output: typeof InvoiceSchema;
   },
   /**
-   * 
+   *
    * CancelInvoice cancels a currently open invoice. If the invoice is already
    * canceled, this call will succeed. If the invoice is already settled, it will
    * fail.
@@ -354,7 +354,7 @@ export const Invoices: GenService<{
     output: typeof CancelInvoiceRespSchema;
   },
   /**
-   * 
+   *
    * AddHoldInvoice creates a hold invoice. It ties the invoice to the hash
    * supplied in the request.
    *
@@ -366,7 +366,7 @@ export const Invoices: GenService<{
     output: typeof AddHoldInvoiceRespSchema;
   },
   /**
-   * 
+   *
    * SettleInvoice settles an accepted invoice. If the invoice is already
    * settled, this call will succeed.
    *
@@ -378,7 +378,7 @@ export const Invoices: GenService<{
     output: typeof SettleInvoiceRespSchema;
   },
   /**
-   * 
+   *
    * LookupInvoiceV2 attempts to look up at invoice. An invoice can be refrenced
    * using either its payment hash, payment address, or set ID.
    *

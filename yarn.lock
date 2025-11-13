@@ -11168,9 +11168,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-turbo-lnd-example@workspace:example":
+"react-native-turbo-lndltc-example@workspace:example":
   version: 0.0.0-use.local
-  resolution: "react-native-turbo-lnd-example@workspace:example"
+  resolution: "react-native-turbo-lndltc-example@workspace:example"
   dependencies:
     "@babel/core": ^7.25.2
     "@babel/preset-env": ^7.25.3
@@ -11194,9 +11194,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-turbo-lnd@workspace:.":
+"react-native-turbo-lndltc@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-turbo-lnd@workspace:."
+  resolution: "react-native-turbo-lndltc@workspace:."
   dependencies:
     "@bufbuild/protobuf": ^2.0.0
     "@commitlint/config-conventional": ^17.0.2

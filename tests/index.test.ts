@@ -1,6 +1,3 @@
-import { subscribeState } from "../src/";
-import { WalletState } from "../src/proto/lightning_pb";
-
 describe("TurboLnd mock", () => {
   beforeEach(() => {
     // Reset the module before each test
