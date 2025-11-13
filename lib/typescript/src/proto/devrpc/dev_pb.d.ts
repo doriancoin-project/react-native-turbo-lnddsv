@@ -1,4 +1,4 @@
-import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
+import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import type { ChannelGraphSchema } from "../lightning_pb";
 import type { Message } from "@bufbuild/protobuf";
 /**

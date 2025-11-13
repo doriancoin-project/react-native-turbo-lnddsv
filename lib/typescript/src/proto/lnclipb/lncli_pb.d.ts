@@ -1,4 +1,4 @@
-import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv1";
+import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
 import type { Version } from "../verrpc/verrpc_pb";
 import type { Message } from "@bufbuild/protobuf";
 /**

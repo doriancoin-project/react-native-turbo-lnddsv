@@ -1,4 +1,4 @@
-import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
+import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import type { FeatureBit, Op } from "../lightning_pb";
 import type { Message } from "@bufbuild/protobuf";
 /**

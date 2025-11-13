@@ -170,24 +170,29 @@
       "dependencies": [
         "npm:@bufbuild/protobuf@^2.0.0",
         "npm:@commitlint/config-conventional@^17.0.2",
+        "npm:@eslint/compat@^1.3.2",
+        "npm:@eslint/eslintrc@^3.3.1",
+        "npm:@eslint/js@^9.35.0",
         "npm:@evilmartians/lefthook@^1.5.0",
-        "npm:@react-native/eslint-config@^0.73.1",
+        "npm:@react-native-community/cli@20.0.1",
+        "npm:@react-native/babel-preset@0.81.1",
+        "npm:@react-native/eslint-config@0.78.3",
         "npm:@release-it/conventional-changelog@^5.0.0",
         "npm:@types/jest@^29.5.5",
-        "npm:@types/react@^18.2.44",
+        "npm:@types/react@^19.1.0",
         "npm:commitlint@^17.0.2",
         "npm:del-cli@^5.1.0",
         "npm:eslint-config-prettier@^9.0.0",
         "npm:eslint-plugin-prettier@^5.0.1",
-        "npm:eslint@^8.51.0",
+        "npm:eslint@^9.36.0",
         "npm:jest@^29.7.0",
         "npm:prettier@^3.0.3",
-        "npm:react-native-builder-bob@0.30.0",
-        "npm:react-native@0.76.1",
-        "npm:react@18.3.1",
+        "npm:react-native-builder-bob@0.40.13",
+        "npm:react-native@0.81.4",
+        "npm:react@19.1.0",
         "npm:release-it@^15.0.0",
         "npm:turbo@^1.10.7",
-        "npm:typescript@^5.2.2"
+        "npm:typescript@^5.8.3"
       ]
     },
     "members": {
@@ -200,24 +205,26 @@
             "npm:@bufbuild/buf@^1.39.0",
             "npm:@bufbuild/protobuf@^2.0.0",
             "npm:@bufbuild/protoc-gen-es@^2.0.0",
-            "npm:@dr.pogodin/react-native-fs@2.29.1",
-            "npm:@react-native-community/cli-platform-android@15.0.0",
-            "npm:@react-native-community/cli-platform-ios@15.0.0",
-            "npm:@react-native-community/cli@15.0.0",
-            "npm:@react-native/babel-preset@0.76.1",
-            "npm:@react-native/metro-config@0.76.1",
-            "npm:@react-native/typescript-config@0.76.1",
+            "npm:@dr.pogodin/react-native-fs@2.35.1",
+            "npm:@react-native-community/cli-platform-android@20.0.0",
+            "npm:@react-native-community/cli-platform-ios@20.0.0",
+            "npm:@react-native-community/cli@20.0.0",
+            "npm:@react-native/babel-preset@0.81.4",
+            "npm:@react-native/metro-config@0.81.4",
+            "npm:@react-native/typescript-config@0.81.4",
             "npm:babel-plugin-module-resolver@^5.0.0",
             "npm:base64-js@^1.5.1",
             "npm:fast-text-encoding@^1.0.6",
-            "npm:react-native@0.76.1",
-            "npm:react@18.3.1"
+            "npm:react-native-monorepo-config@^0.1.9",
+            "npm:react-native@0.81.4",
+            "npm:react@19.1.0"
           ]
         }
       },
       "protoc-generator": {
         "packageJson": {
           "dependencies": [
+            "npm:@bufbuild/buf@^1.57.2",
             "npm:@bufbuild/protoc-gen-es@^2.0.0"
           ]
         }
