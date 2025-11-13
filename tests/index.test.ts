@@ -6,4 +6,14 @@ describe("TurboLnd mock", () => {
       return require("../src/").default;
     });
   });
+
+  test("subscribeState should initially return LOCKED state", (done) => {
+    const onResponse = jest.fn((state: any) => {
+      expect(state.state).toBe(WalletState.LOCKED);
+      done();
+    });
+    const onError = jest.fn();
+
+    subscribeState("" as any, onResponse, onError);
+  });
 });
