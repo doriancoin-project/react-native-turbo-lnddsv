@@ -1,7 +1,7 @@
 {
-  "name": "react-native-turbo-lndltc",
+  "name": "react-native-turbo-lnddsv",
   "version": "0.1.5",
-  "description": "C++ TurboModule for lndltc! ⚡️",
+  "description": "C++ TurboModule for lnddsv! ⚡️",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -48,7 +48,7 @@
     }
   },
   "scripts": {
-    "example": "yarn workspace react-native-turbo-lndltc-example",
+    "example": "yarn workspace react-native-turbo-lnddsv-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -65,14 +65,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/litecoin-foundation/react-native-turbo-lndltc.git"
+    "url": "git+https://github.com/doriancoin-project/react-native-turbo-lnddsv.git"
   },
   "author": "Loshan <losh11@litecoin.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/litecoin-foundation/react-native-turbo-lndltc/issues"
+    "url": "https://github.com/doriancoin-project/react-native-turbo-lnddsv/issues"
   },
-  "homepage": "https://github.com/litecoin-foundation/react-native-turbo-lndltc#readme",
+  "homepage": "https://github.com/doriancoin-project/react-native-turbo-lnddsv#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

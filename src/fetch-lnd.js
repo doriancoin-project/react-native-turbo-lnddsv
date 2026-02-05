@@ -8,7 +8,7 @@ const util = require("util");
 const execPromise = util.promisify(exec);
 
 const lndDownloadUrl =
-  "https://github.com/litecoin-foundation/react-native-turbo-lndltc/releases/download/0.0.0";
+  "https://github.com/doriancoin-project/react-native-turbo-lnddsv/releases/download/0.0.0";
 
 async function downloadFile(url, outputPath) {
   return new Promise((resolve, reject) => {
