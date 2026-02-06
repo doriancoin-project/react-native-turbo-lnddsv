@@ -46,20 +46,16 @@ endif()
 set(LND_LIBRARY_PATH "${FINAL_LND_JNILIBS_PATH}/${CMAKE_ANDROID_ARCH_ABI}/liblnd.so")
 
 if(NOT EXISTS ${LND_LIBRARY_PATH})
-    message(FATAL_ERROR "liblnd.so not found at ${LND_LIBRARY_PATH}")
+    message(WARNING "liblnd.so not found at ${LND_LIBRARY_PATH} - skipping LND linking for ${CMAKE_ANDROID_ARCH_ABI}")
+else()
+    add_library(lib_lnd SHARED IMPORTED)
+    set_property(TARGET lib_lnd PROPERTY IMPORTED_NO_SONAME 1)
+    set_target_properties(lib_lnd PROPERTIES IMPORTED_LOCATION ${LND_LIBRARY_PATH})
+
+    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/liblnd/${CMAKE_ANDROID_ARCH_ABI}/)
+
+    target_link_libraries(TurboLnd lib_lnd)
 endif()
-
-
-add_library(lib_lnd SHARED IMPORTED)
-set_property(TARGET lib_lnd PROPERTY IMPORTED_NO_SONAME 1)
-set_target_properties(lib_lnd PROPERTIES IMPORTED_LOCATION ${LND_LIBRARY_PATH})
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/liblnd/${CMAKE_ANDROID_ARCH_ABI}/)
-
-# target_include_directories(TurboLnd PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/liblnd/${CMAKE_ANDROID_ARCH_ABI}/)
-
-
-target_link_libraries(TurboLnd lib_lnd)
 
 find_library( # Sets the name of the path variable.
         log-lib

@@ -16,6 +16,8 @@ add_library(
 
 target_include_directories(react_codegen_RNTurboLndSpec PUBLIC . react/renderer/components/RNTurboLndSpec)
 
+target_compile_features(react_codegen_RNTurboLndSpec PRIVATE cxx_std_20)
+
 target_link_libraries(
   react_codegen_RNTurboLndSpec
   fbjni
@@ -24,5 +26,3 @@ target_link_libraries(
   # because we want to break a circular dependency between react_codegen_rncore and reactnative
   reactnative
 )
-
-target_compile_reactnative_options(react_codegen_RNTurboLndSpec PRIVATE)
